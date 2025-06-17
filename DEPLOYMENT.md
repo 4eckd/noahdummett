@@ -1,6 +1,6 @@
-# 🚀 FUSED GAMING - Deployment Guide
+# 🚀 Noah Dummett Investigation Projects - Deployment Guide
 
-Complete deployment guide for the FUSED GAMING Investment Pitch Deck.
+Complete deployment guide for the Noah Dummett Investigation Projects website.
 
 ## 🎯 Quick Deployment
 
@@ -13,7 +13,8 @@ npm i -g vercel
 vercel --prod
 
 # Custom domain setup
-vercel domains add your-domain.com
+vercel domains add noahdummett.com
+vercel domains add www.noahdummett.com
 ```
 
 ### **Netlify**
@@ -44,8 +45,8 @@ npm run deploy
 ### **Development Environment**
 ```bash
 # Clone repository
-git clone [repository-url]
-cd vc-fused
+git clone https://github.com/4eckd/noahdummett.git
+cd noahdummett
 
 # Install dependencies
 npm install
@@ -127,12 +128,14 @@ module.exports = {
 ### **Custom Domain Configuration**
 ```bash
 # Vercel custom domain
-vercel domains add fused.gg
-vercel domains add www.fused.gg
+vercel domains add noahdummett.com
+vercel domains add www.noahdummett.com
+vercel domains add docs.noahdummett.com
 
 # DNS Records (Example)
 A     @     76.76.19.61
-CNAME www   fused.vercel.app
+CNAME www   noahdummett.vercel.app
+CNAME docs  noahdummett-docs.vercel.app
 ```
 
 ### **SSL Certificate**

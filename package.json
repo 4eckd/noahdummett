@@ -1,11 +1,12 @@
 {
-  "name": "fused-gaming-boilerplate",
+  "name": "noahdummett-website",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "FUSED GAMING React TypeScript Vite Boilerplate",
+  "description": "Noah Dummett Investigation Projects - React TypeScript Vite Website",
   "author": "Its Different Productions",
   "license": "MIT",
+  "homepage": "https://noahdummett.com",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

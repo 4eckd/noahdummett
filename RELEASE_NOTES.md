@@ -1,4 +1,40 @@
-# Release Notes - Noah Dummett Investigation v1.0.0
+# Release Notes - Noah Dummett Investigation
+
+## Version 2.0.0 - "Domain Migration & Security Enhancement" (2024-12-17)
+
+### 🌐 Domain Configuration & Migration
+- **Custom Domain Setup**: Complete migration to noahdummett.com infrastructure
+- **Subdomain Configuration**: docs.noahdummett.com for comprehensive documentation
+- **Domain Redirects**: Automatic www → non-www redirects with proper HTTP status codes
+- **SSL Certificates**: Automatic HTTPS with Let's Encrypt integration
+
+### 🛡️ Security Infrastructure Enhancements
+- **Security Headers**: Comprehensive protection against XSS, clickjacking, and MIME sniffing
+- **Content Security Policy**: Enhanced protection for user data and investigation content
+- **Referrer Policy**: Strict origin control for external links and evidence sources
+- **Permissions Policy**: Restricted access to sensitive browser APIs
+
+### 🔧 Infrastructure & Deployment Improvements
+- **Vercel Configuration**: Optimized deployment settings for both main site and documentation
+- **GitHub Actions**: Automated CI/CD pipeline with dual deployment strategy
+- **Environment Variables**: Updated configuration for noahdummett.com domain ecosystem
+- **Performance Headers**: Optimized caching strategies for static assets and evidence files
+
+### 📚 Documentation & Automation
+- **Deployment Guides**: Comprehensive setup instructions for domain configuration
+- **Domain Setup Guide**: Step-by-step domain configuration and DNS management
+- **Automated Scripts**: One-click deployment automation with deploy-domains.sh
+- **Troubleshooting**: Common issues and solutions for domain and deployment problems
+
+### 🎨 Branding & Identity Updates
+- **Project Identity**: Rebranded to Noah Dummett Investigation Projects
+- **Repository Links**: Updated to github.com/4eckd/noahdummett
+- **Contact Information**: Updated email and social links for investigation platform
+- **Company Information**: Aligned with Its Different Productions standards
+
+---
+
+## Version 1.0.0 - "Investigation Platform Launch" (2024-12-17)
 
 ## 🚨 BREAKING: Web3 Accountability Investigation Platform
 

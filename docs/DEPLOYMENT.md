@@ -1,16 +1,16 @@
 # 🚀 Documentation Deployment Guide
 
-This guide explains how to deploy the FUSED GAMING documentation to Vercel.
+This guide explains how to deploy the Noah Dummett Investigation Projects documentation to Vercel.
 
 ## 📋 Prerequisites
 
-- GitHub repository: https://github.com/4eckd/react-boilerplate
+- GitHub repository: https://github.com/4eckd/noahdummett
 - Vercel account: https://vercel.com
 - Documentation files in `/docs` directory
 
 ## 🌐 Target Deployment
 
-**Subdomain**: `docs.react-boilerplate-taupe.vercel.app`
+**Domain**: `docs.noahdummett.com`
 
 ## 📁 Deployment Structure
 
@@ -59,16 +59,16 @@ docs/
    vercel --prod
    ```
 
-5. **Configure custom domain** (if needed):
+5. **Configure custom domain**:
    ```bash
-   vercel domains add docs.react-boilerplate-taupe.vercel.app
+   vercel domains add docs.noahdummett.com
    ```
 
 ### Method 2: Vercel Dashboard
 
 1. **Go to Vercel Dashboard**: https://vercel.com/dashboard
 2. **Click "New Project"**
-3. **Import from GitHub**: Select `4eckd/react-boilerplate`
+3. **Import from GitHub**: Select `4eckd/noahdummett`
 4. **Configure Project**:
    - **Framework Preset**: Other
    - **Root Directory**: `docs`
@@ -88,7 +88,7 @@ docs/
 ```json
 {
   "version": 2,
-  "name": "fused-gaming-docs",
+  "name": "noahdummett-docs",
   "builds": [
     {
       "src": "**/*.md",
@@ -190,5 +190,5 @@ If you want to use a custom domain:
 
 For deployment issues:
 - **Vercel Docs**: https://vercel.com/docs
-- **GitHub Issues**: https://github.com/4eckd/react-boilerplate/issues
+- **GitHub Issues**: https://github.com/4eckd/noahdummett/issues
 - **Vercel Support**: https://vercel.com/support

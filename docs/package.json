@@ -1,7 +1,7 @@
 {
-  "name": "fused-gaming-docs",
+  "name": "noahdummett-docs",
   "version": "1.0.0",
-  "description": "Documentation for FUSED GAMING React TypeScript Boilerplate",
+  "description": "Documentation for Noah Dummett Investigation Projects",
   "main": "index.html",
   "scripts": {
     "dev": "python -m http.server 3000",
@@ -12,16 +12,17 @@
     "react",
     "typescript",
     "vite",
-    "boilerplate",
     "documentation",
-    "fused-gaming"
+    "noah-dummett",
+    "investigation",
+    "projects"
   ],
   "author": "Its Different Productions",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/4eckd/react-boilerplate.git",
+    "url": "https://github.com/4eckd/noahdummett.git",
     "directory": "docs"
   },
-  "homepage": "https://docs.react-boilerplate-taupe.vercel.app"
+  "homepage": "https://docs.noahdummett.com"
 }
