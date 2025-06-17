@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🎮 FUSED GAMING - React TypeScript Boilerplate
 
 > **Production-ready React TypeScript boilerplate with elegant solutions to complex user experience challenges**
@@ -300,3 +301,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Ready to build something amazing? 🚀**
+=======
+# noahdummett
+>>>>>>> a6f87bd46c2879d79787b7b555a7da9670c4a429
