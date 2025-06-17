@@ -4,6 +4,7 @@ import { ThemeProvider } from '@/context/ThemeContext';
 import { Layout } from '@/components/layout/Layout';
 import { Home, About, Contact, ThemeDemo, NotFound } from '@/pages';
 import NoahDummett from '@/pages/NoahDummett';
+import Legal from '@/pages/Legal';
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="about" element={<About />} />
             <Route path="noah-dummett" element={<NoahDummett />} />
+            <Route path="about" element={<About />} />
+            <Route path="legal" element={<Legal />} />
             <Route path="contact" element={<Contact />} />
             <Route path="themes" element={<ThemeDemo />} />
             <Route path="*" element={<NotFound />} />

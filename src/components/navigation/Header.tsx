@@ -22,10 +22,9 @@ export interface NavigationItem {
 
 const defaultNavigation: NavigationItem[] = [
   { label: 'Home', href: '/' },
+  { label: 'Investigation', href: '/noah-dummett' },
   { label: 'About', href: '/about' },
-  { label: 'Noah Dummett Investigation', href: '/noah-dummett' },
-  { label: 'Themes', href: '/themes' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Legal', href: '/legal' },
 ];
 
 export const Header: React.FC<HeaderProps> = ({
@@ -47,13 +46,13 @@ export const Header: React.FC<HeaderProps> = ({
 
   const renderLogo = () => {
     if (logo) return logo;
-    
+
     return (
       <Link to="/" className="flex items-center space-x-2 group">
         <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center shadow-primary-sm group-hover:shadow-primary group-hover:glow-red transition-all duration-300 group-hover:scale-110">
-          <span className="text-primary-foreground font-bold text-lg">F</span>
+          <span className="text-primary-foreground font-bold text-lg">N</span>
         </div>
-        <span className="font-bold text-xl text-foreground group-hover:text-primary transition-colors duration-300">FUSED</span>
+        <span className="font-bold text-xl text-foreground group-hover:text-primary transition-colors duration-300">NigRNoah</span>
       </Link>
     );
   };
@@ -105,12 +104,12 @@ export const Header: React.FC<HeaderProps> = ({
             <Button
               variant="outline"
               size="sm"
-              onClick={() => window.open('https://docs.react-boilerplate-taupe.vercel.app', '_blank')}
+              onClick={() => window.open('/service', '_blank')}
               leftIcon={<BookOpen className="h-4 w-4" />}
               rightIcon={<ExternalLink className="h-3 w-3" />}
               className="hover:shadow-primary border-primary/20 hover:border-primary/40"
             >
-              Docs
+              Evidence
             </Button>
             {showThemeToggle && <ThemeToggle />}
           </div>
@@ -174,16 +173,16 @@ export const Header: React.FC<HeaderProps> = ({
                   )
                 ))}
 
-                {/* Mobile Documentation Link */}
+                {/* Mobile Evidence Link */}
                 <a
-                  href="https://docs.react-boilerplate-taupe.vercel.app"
+                  href="/service"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors text-muted-foreground hover:text-foreground hover:bg-accent border-t border-border pt-4 mt-4"
                 >
                   <BookOpen className="h-4 w-4" />
-                  <span>Documentation</span>
+                  <span>Evidence Repository</span>
                   <ExternalLink className="h-3 w-3 ml-auto" />
                 </a>
                 
