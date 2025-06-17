@@ -2,16 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import {
   AlertTriangle,
-  Search,
   FileText,
   TrendingDown,
   Shield,
   Eye,
   DollarSign,
   Users,
-  Clock,
-  Target,
-  ExternalLink
+  Clock
 } from 'lucide-react';
 import { Card, CardHeader, CardContent } from '@/components/ui/Card';
 import { PageLayout, SectionLayout } from '@/components/layout/Layout';
