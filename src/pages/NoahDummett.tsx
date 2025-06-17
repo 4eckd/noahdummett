@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import { Card, CardHeader, CardContent } from '@/components/ui/Card';
 import { PageLayout, SectionLayout } from '@/components/layout/Layout';
+import { NoahDummettHeroImage } from '@/components/ui/HeroImage';
 
 const keyAllegations = [
   {
@@ -118,25 +119,9 @@ export const NoahDummett: React.FC = () => {
             <CardContent className="p-8">
               <div className="flex flex-col lg:flex-row items-center lg:items-start space-y-6 lg:space-y-0 lg:space-x-8">
                 {/* Hero Portrait */}
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  className="flex-shrink-0"
-                >
-                  <div className="relative">
-                    <div className="w-32 h-32 lg:w-40 lg:h-40 rounded-full overflow-hidden border-4 border-red-500/50 shadow-2xl">
-                      <img
-                        src="/hero-noahdummett.png"
-                        alt="Noah Dummett - Founder of Shuffle.com"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
-                      <AlertTriangle className="h-5 w-5 text-white" />
-                    </div>
-                  </div>
-                </motion.div>
+                <div className="flex-shrink-0">
+                  <NoahDummettHeroImage size="md" />
+                </div>
 
                 <div className="space-y-4 text-center lg:text-left">
                   <h3 className="text-2xl font-bold text-foreground">

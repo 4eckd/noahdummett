@@ -4,23 +4,24 @@ import { ArrowRight, AlertTriangle, FileText, Search, Eye, DollarSign } from 'lu
 import { Button } from '@/components/ui/Button';
 import { Card, CardHeader, CardContent } from '@/components/ui/Card';
 import { PageLayout, SectionLayout } from '@/components/layout/Layout';
+import { NoahDummettHeroImage } from '@/components/ui/HeroImage';
 import { Link } from 'react-router-dom';
 
 const investigationHighlights = [
   {
     icon: <DollarSign className="h-8 w-8 text-red-500" />,
     title: '$20M+ Alleged Misappropriation',
-    description: 'Claims of funds taken from FTX bankruptcy estate to fund Shuffle.com operations.',
+    description: 'Claims of substantial funds taken from FTX bankruptcy estate to fund Shuffle.com operations.',
   },
   {
-    icon: <Eye className="h-8 w-8 text-orange-500" />,
+    icon: <Search className="h-8 w-8 text-orange-500" />,
     title: 'Anonymous Leadership',
-    description: 'Key personnel operating under aliases, making accountability impossible.',
+    description: 'Concerning lack of transparency around company leadership and beneficial ownership.',
   },
   {
-    icon: <AlertTriangle className="h-8 w-8 text-red-500" />,
-    title: 'Community Concerns',
-    description: 'Growing allegations about unethical practices and treatment of vulnerable users.',
+    icon: <Eye className="h-8 w-8 text-yellow-500" />,
+    title: 'Community Investigations',
+    description: 'Growing body of evidence from independent researchers and concerned community members.',
   },
 ];
 
@@ -43,25 +44,7 @@ export const Home: React.FC = () => {
           </div>
 
           {/* Hero Portrait */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex justify-center mb-8"
-          >
-            <div className="relative">
-              <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-red-500/30 shadow-2xl">
-                <img
-                  src="/hero-noahdummett.png"
-                  alt="Noah Dummett - Founder of Shuffle.com"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -top-2 -right-2 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
-                <AlertTriangle className="h-5 w-5 text-white" />
-              </div>
-            </div>
-          </motion.div>
+          <NoahDummettHeroImage size="lg" className="mb-8" />
 
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground">
             The Noah Dummett
@@ -80,16 +63,15 @@ export const Home: React.FC = () => {
                 rightIcon={<ArrowRight className="h-5 w-5" />}
                 className="shadow-glow hover:shadow-glow-lg bg-red-600 hover:bg-red-700"
               >
-                View Full Investigation
+                Read Full Investigation
               </Button>
             </Link>
             <Button
               variant="outline"
               size="lg"
-              className="hover:shadow-primary border-red-500/30 hover:border-red-500/50"
-              leftIcon={<FileText className="h-5 w-5" />}
+              className="hover:shadow-primary border-red-500/30 text-red-400 hover:text-red-300"
             >
-              Evidence Documents
+              View Evidence
             </Button>
           </div>
         </motion.div>
@@ -152,45 +134,36 @@ export const Home: React.FC = () => {
                   </div>
                   <ul className="space-y-2 text-muted-foreground">
                     <li className="flex items-start space-x-2">
-                      <span className="text-red-500 mt-1">•</span>
-                      <span>IRS Form 211 - Whistleblower Report</span>
+                      <span className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></span>
+                      <span>IRS Form 211 whistleblower complaint</span>
                     </li>
                     <li className="flex items-start space-x-2">
-                      <span className="text-red-500 mt-1">•</span>
-                      <span>Shuffle Chain Data Analysis</span>
+                      <span className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></span>
+                      <span>Blockchain analysis and transaction records</span>
                     </li>
                     <li className="flex items-start space-x-2">
-                      <span className="text-red-500 mt-1">•</span>
-                      <span>Legal Pleadings and Demands</span>
-                    </li>
-                    <li className="flex items-start space-x-2">
-                      <span className="text-red-500 mt-1">•</span>
-                      <span>Synopsis Reports</span>
+                      <span className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></span>
+                      <span>Legal pleadings and court documents</span>
                     </li>
                   </ul>
                 </div>
-
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <Search className="h-6 w-6 text-orange-500" />
-                    <h3 className="text-xl font-bold text-foreground">Community Investigation</h3>
+                    <h3 className="text-xl font-bold text-foreground">Community Research</h3>
                   </div>
                   <ul className="space-y-2 text-muted-foreground">
                     <li className="flex items-start space-x-2">
-                      <span className="text-orange-500 mt-1">•</span>
-                      <span>Bitcoin Talk Forum Analysis</span>
+                      <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+                      <span>Bitcoin Talk forum investigations</span>
                     </li>
                     <li className="flex items-start space-x-2">
-                      <span className="text-orange-500 mt-1">•</span>
-                      <span>User Testimonials</span>
+                      <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+                      <span>User testimonials and concerns</span>
                     </li>
                     <li className="flex items-start space-x-2">
-                      <span className="text-orange-500 mt-1">•</span>
-                      <span>Transaction Pattern Analysis</span>
-                    </li>
-                    <li className="flex items-start space-x-2">
-                      <span className="text-orange-500 mt-1">•</span>
-                      <span>Background Investigations</span>
+                      <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+                      <span>Timeline analysis and connections</span>
                     </li>
                   </ul>
                 </div>
@@ -199,6 +172,8 @@ export const Home: React.FC = () => {
           </Card>
         </motion.div>
       </SectionLayout>
+
+
 
       {/* CTA Section */}
       <SectionLayout className="text-center py-16">
@@ -222,16 +197,15 @@ export const Home: React.FC = () => {
                 rightIcon={<ArrowRight className="h-5 w-5" />}
                 className="shadow-glow hover:shadow-glow-lg bg-red-600 hover:bg-red-700"
               >
-                Read Full Investigation
+                Full Investigation
               </Button>
             </Link>
             <Button
               variant="outline"
               size="lg"
-              className="hover:shadow-primary border-red-500/30 hover:border-red-500/50"
-              leftIcon={<AlertTriangle className="h-5 w-5" />}
+              className="border-red-500/30 text-red-400 hover:text-red-300 hover:border-red-500/50"
             >
-              Report Concerns
+              Share Evidence
             </Button>
           </div>
         </motion.div>
