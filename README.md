@@ -1,22 +1,22 @@
-<<<<<<< HEAD
-# 🎮 FUSED GAMING - React TypeScript Boilerplate
+# 🚨 Noah Dummett Investigation Platform
 
-> **Production-ready React TypeScript boilerplate with elegant solutions to complex user experience challenges**
+> **Web3 Accountability Investigation - Exposing Concerning Allegations in the Crypto Gambling Industry**
 
-A comprehensive, modern React TypeScript boilerplate built by [Its Different Productions](https://itsdifferentproductions.com) that showcases our expertise in solving complex problems behind great user experiences.
+A comprehensive investigation platform exposing concerning allegations surrounding Noah Dummett, founder and CEO of Shuffle.com. Built using professional React TypeScript architecture to present evidence-based analysis while maintaining legal compliance and credibility.
 
 [![GitHub Stars](https://img.shields.io/github/stars/4eckd/react-boilerplate?style=for-the-badge)](https://github.com/4eckd/react-boilerplate)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 
-## 🎯 **Measurable Results**
-- **60% faster development time** through optimized workflows
-- **35% improved user retention** via better performance and UX
-- **40% fewer support issues** through intuitive design patterns
+## 🎯 **Critical Allegations**
+- **$20M+ alleged fund misappropriation** from FTX bankruptcy estate
+- **Anonymous leadership structure** with key personnel using aliases
+- **Unethical treatment** of vulnerable gambling users
+- **Operational pattern concerns** linking to FTX practices
 
-## 📚 **Documentation**
-Complete documentation available at: **[docs.react-boilerplate-taupe.vercel.app](https://docs.react-boilerplate-taupe.vercel.app)**
+## 📚 **Evidence Repository**
+Complete evidence documentation available in the `/service` directory including IRS Form 211, blockchain analysis, and legal pleadings.
 
 ## ✨ Features
 
@@ -301,6 +301,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Ready to build something amazing? 🚀**
-=======
-# noahdummett
->>>>>>> a6f87bd46c2879d79787b7b555a7da9670c4a429
