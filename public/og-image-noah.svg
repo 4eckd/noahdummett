@@ -1,0 +1,83 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f23;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc2626;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b91c1c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ea580c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c2410c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  
+  <!-- Warning Banner -->
+  <rect x="0" y="0" width="1200" height="80" fill="url(#redGrad)" opacity="0.9"/>
+  <text x="60" y="50" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="white">🚨 BREAKING INVESTIGATION</text>
+  
+  <!-- Main Content Area -->
+  <rect x="40" y="120" width="1120" height="450" rx="20" fill="rgba(220, 38, 38, 0.1)" stroke="url(#redGrad)" stroke-width="3"/>
+  
+  <!-- Hero Portrait Circle -->
+  <circle cx="200" cy="300" r="80" fill="url(#redGrad)" opacity="0.3"/>
+  <circle cx="200" cy="300" r="70" fill="rgba(220, 38, 38, 0.2)" stroke="url(#redGrad)" stroke-width="4"/>
+  
+  <!-- Warning Icon on Portrait -->
+  <polygon points="190,280 210,280 205,300 195,300" fill="#dc2626"/>
+  <circle cx="200" cy="310" r="3" fill="#dc2626"/>
+  
+  <!-- Main Title -->
+  <text x="320" y="220" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white">NOAH DUMMETT</text>
+  <text x="320" y="280" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="url(#redGrad)">INVESTIGATION</text>
+  
+  <!-- Subtitle -->
+  <text x="320" y="320" font-family="Arial, sans-serif" font-size="24" fill="#e5e7eb">Exposing Web3 Accountability Issues</text>
+  
+  <!-- Key Allegations -->
+  <text x="320" y="370" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#fbbf24">🔍 $20M+ Alleged Fund Misappropriation</text>
+  <text x="320" y="400" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#fb923c">👥 Anonymous Leadership Structure</text>
+  <text x="320" y="430" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#f87171">📋 Legal Documentation Filed</text>
+  
+  <!-- Domain -->
+  <text x="320" y="480" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="url(#orangeGrad)">noahdummett.com</text>
+  
+  <!-- Shuffle.com Reference -->
+  <text x="320" y="520" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af">Founder of Shuffle.com under investigation</text>
+  
+  <!-- Evidence Icons -->
+  <g transform="translate(900, 200)">
+    <!-- Document Icon -->
+    <rect x="0" y="0" width="40" height="50" rx="5" fill="rgba(220, 38, 38, 0.2)" stroke="#dc2626" stroke-width="2"/>
+    <text x="20" y="30" font-family="Arial, sans-serif" font-size="16" fill="#dc2626" text-anchor="middle">📄</text>
+    <text x="20" y="70" font-family="Arial, sans-serif" font-size="12" fill="#e5e7eb" text-anchor="middle">Legal Docs</text>
+    
+    <!-- Blockchain Icon -->
+    <rect x="60" y="0" width="40" height="50" rx="5" fill="rgba(234, 88, 12, 0.2)" stroke="#ea580c" stroke-width="2"/>
+    <text x="80" y="30" font-family="Arial, sans-serif" font-size="16" fill="#ea580c" text-anchor="middle">⛓️</text>
+    <text x="80" y="70" font-family="Arial, sans-serif" font-size="12" fill="#e5e7eb" text-anchor="middle">Blockchain</text>
+    
+    <!-- Investigation Icon -->
+    <rect x="120" y="0" width="40" height="50" rx="5" fill="rgba(251, 191, 36, 0.2)" stroke="#fbbf24" stroke-width="2"/>
+    <text x="140" y="30" font-family="Arial, sans-serif" font-size="16" fill="#fbbf24" text-anchor="middle">🔍</text>
+    <text x="140" y="70" font-family="Arial, sans-serif" font-size="12" fill="#e5e7eb" text-anchor="middle">Evidence</text>
+  </g>
+  
+  <!-- Bottom Attribution -->
+  <text x="60" y="600" font-family="Arial, sans-serif" font-size="16" fill="#6b7280">Investigation by Its Different Productions</text>
+  
+  <!-- Decorative Elements -->
+  <circle cx="1000" cy="150" r="60" fill="url(#redGrad)" opacity="0.1"/>
+  <circle cx="1050" cy="400" r="40" fill="url(#orangeGrad)" opacity="0.1"/>
+  <circle cx="950" cy="500" r="30" fill="#fbbf24" opacity="0.1"/>
+  
+  <!-- Border -->
+  <rect x="2" y="2" width="1196" height="626" fill="none" stroke="url(#redGrad)" stroke-width="4" rx="8"/>
+</svg>

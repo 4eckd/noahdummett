@@ -12,30 +12,31 @@ export interface SEOConfig {
 }
 
 export const defaultSEO: SEOConfig = {
-  title: '🎮 FUSED GAMING - React TypeScript Boilerplate | Modern Web Development',
-  description: 'Production-ready React TypeScript boilerplate with 5 beautiful themes, Vite, Tailwind CSS, comprehensive testing, and complete documentation. Built by Its Different Productions.',
+  title: '🔍 Noah Dummett Investigation | Exposing Web3 Accountability Issues',
+  description: 'Comprehensive investigation into Noah Dummett, founder of Shuffle.com. Uncovering allegations of fund misappropriation, anonymous leadership, and Web3 accountability issues. Evidence-based analysis of a potential crypto scandal.',
   keywords: [
-    'React',
-    'TypeScript', 
-    'Vite',
-    'Tailwind CSS',
-    'Boilerplate',
-    'Gaming',
-    'Web Development',
-    'Frontend',
-    'JavaScript',
-    'Modern',
-    'Production Ready',
-    'FUSED GAMING',
-    'Its Different Productions',
-    'Themes',
-    'Components',
-    'Testing',
-    'Vitest',
-    'Framer Motion',
-    'React Router'
+    'Noah Dummett',
+    'Shuffle.com',
+    'Web3 Investigation',
+    'Crypto Scandal',
+    'FTX',
+    'Gambling',
+    'Accountability',
+    'Whistleblower',
+    'Blockchain Analysis',
+    'Cryptocurrency',
+    'Investigation',
+    'Evidence',
+    'Legal Documents',
+    'Fund Misappropriation',
+    'Anonymous Leadership',
+    'Web3 Ethics',
+    'Crypto Fraud',
+    'Financial Misconduct',
+    'Regulatory Compliance',
+    'Transparency'
   ],
-  ogImage: '/og-image.svg',
+  ogImage: '/hero-noahdummett.png',
   twitterCard: 'summary_large_image',
   author: 'Its Different Productions',
   type: 'website'
@@ -43,10 +44,17 @@ export const defaultSEO: SEOConfig = {
 
 export const pageSEO: Record<string, Partial<SEOConfig>> = {
   home: {
-    title: '🎮 FUSED GAMING - React TypeScript Boilerplate | Modern Web Development',
-    description: 'Production-ready React TypeScript boilerplate with 5 beautiful themes, Vite, Tailwind CSS, comprehensive testing, and complete documentation. Start building amazing web applications today!',
-    keywords: ['React boilerplate', 'TypeScript starter', 'Vite template', 'modern web development'],
-    canonicalUrl: 'https://react-boilerplate-taupe.vercel.app/'
+    title: '🔍 Noah Dummett Investigation | Web3 Accountability Exposed',
+    description: 'BREAKING: Comprehensive investigation into Shuffle.com founder Noah Dummett reveals allegations of $20M+ fund misappropriation from FTX bankruptcy estate. Anonymous leadership, unethical practices, and mounting evidence demand immediate attention.',
+    keywords: ['Noah Dummett investigation', 'Shuffle.com scandal', 'Web3 accountability', 'crypto fraud investigation'],
+    canonicalUrl: 'https://noahdummett.com/'
+  },
+  'noah-dummett': {
+    title: '🚨 The Noah Dummett Files | Complete Investigation Report',
+    description: 'Detailed analysis of allegations against Noah Dummett, founder of Shuffle.com. Evidence of fund misappropriation, anonymous leadership structure, and unethical treatment of vulnerable users. Legal documents, blockchain analysis, and community investigations.',
+    keywords: ['Noah Dummett files', 'Shuffle.com investigation', 'crypto scandal evidence', 'Web3 fraud'],
+    canonicalUrl: 'https://noahdummett.com/noah-dummett',
+    type: 'article'
   },
   about: {
     title: 'About FUSED GAMING - Elegant Solutions to Complex UX Challenges',
@@ -69,27 +77,27 @@ export const pageSEO: Record<string, Partial<SEOConfig>> = {
 };
 
 export const socialLinks = {
-  github: import.meta.env.VITE_SOCIAL_GITHUB || 'https://github.com/4eckd/react-boilerplate',
-  twitter: import.meta.env.VITE_SOCIAL_TWITTER || 'https://twitter.com/itsdifferentpro',
+  github: import.meta.env.VITE_SOCIAL_GITHUB || 'https://github.com/4eckd/noahdummett',
+  twitter: import.meta.env.VITE_SOCIAL_TWITTER || 'https://twitter.com/noahdummett_inv',
   linkedin: import.meta.env.VITE_SOCIAL_LINKEDIN || 'https://linkedin.com/company/its-different-productions',
   discord: import.meta.env.VITE_SOCIAL_DISCORD,
   youtube: import.meta.env.VITE_SOCIAL_YOUTUBE,
-  email: import.meta.env.VITE_COMPANY_EMAIL || 'hello@itsdifferentproductions.com'
+  email: import.meta.env.VITE_COMPANY_EMAIL || 'hello@noahdummett.com'
 };
 
 export const companyInfo = {
-  name: import.meta.env.VITE_COMPANY_NAME || 'Its Different Productions',
-  url: import.meta.env.VITE_COMPANY_URL || 'https://itsdifferentproductions.com',
-  email: import.meta.env.VITE_COMPANY_EMAIL || 'hello@itsdifferentproductions.com',
-  description: 'Creating exceptional developer experiences and elegant solutions to complex user experience challenges'
+  name: import.meta.env.VITE_COMPANY_NAME || 'Noah Dummett Investigation Projects',
+  url: import.meta.env.VITE_COMPANY_URL || 'https://noahdummett.com',
+  email: import.meta.env.VITE_COMPANY_EMAIL || 'hello@noahdummett.com',
+  description: 'Exposing Web3 accountability issues and investigating potential cryptocurrency fraud and misconduct'
 };
 
 export const projectInfo = {
-  name: 'FUSED GAMING React TypeScript Boilerplate',
-  version: '1.0.0',
-  repository: 'https://github.com/4eckd/react-boilerplate',
-  documentation: 'https://docs.react-boilerplate-taupe.vercel.app',
-  demo: 'https://react-boilerplate-taupe.vercel.app',
+  name: 'Noah Dummett Investigation Projects',
+  version: '2.0.0',
+  repository: 'https://github.com/4eckd/noahdummett',
+  documentation: 'https://docs.noahdummett.com',
+  demo: 'https://noahdummett.com',
   license: 'MIT'
 };
 

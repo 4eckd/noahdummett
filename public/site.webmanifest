@@ -1,0 +1,35 @@
+{
+  "name": "Noah Dummett Investigation",
+  "short_name": "Noah Investigation",
+  "description": "Comprehensive investigation into Noah Dummett, founder of Shuffle.com. Exposing Web3 accountability issues, fund misappropriation allegations, and crypto industry misconduct.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0f23",
+  "theme_color": "#dc2626",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["news", "reference", "investigation"],
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/hero-noahdummett.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "label": "Noah Dummett Investigation Homepage"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "web",
+      "url": "https://docs.react-boilerplate-taupe.vercel.app/"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://react-boilerplate-taupe.vercel.app/#software",
+      "name": "FUSED GAMING React TypeScript Boilerplate",
+      "description": "Production-ready React TypeScript boilerplate with 5 beautiful themes, Vite, Tailwind CSS, comprehensive testing, and complete documentation.",
+      "url": "https://react-boilerplate-taupe.vercel.app/",
+      "downloadUrl": "https://github.com/4eckd/react-boilerplate",
+      "codeRepository": "https://github.com/4eckd/react-boilerplate",
+      "programmingLanguage": ["TypeScript", "JavaScript", "CSS"],
+      "runtimePlatform": "Web Browser",
+      "operatingSystem": "Cross-platform",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "Web Development Framework",
+      "softwareVersion": "1.0.0",
+      "releaseNotes": "Initial release with 5 themes, modern tech stack, and comprehensive documentation",
+      "license": "https://opensource.org/licenses/MIT",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://react-boilerplate-taupe.vercel.app/#organization"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "screenshot": "https://react-boilerplate-taupe.vercel.app/og-image.svg",
+      "featureList": [
+        "5 Beautiful Themes (Dark, Violet, Emerald, Amber, Aurora)",
+        "React 18 with TypeScript",
+        "Vite for fast development",
+        "Tailwind CSS for styling",
+        "Framer Motion animations",
+        "Comprehensive testing with Vitest",
+        "Complete documentation",
+        "Production-ready build system"
+      ],
+      "requirements": "Node.js 18+, npm 9+",
+      "softwareHelp": {
+        "@type": "CreativeWork",
+        "url": "https://docs.react-boilerplate-taupe.vercel.app/"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://react-boilerplate-taupe.vercel.app/#organization",
+      "name": "Its Different Productions",
+      "url": "https://itsdifferentproductions.com",
+      "description": "Creating exceptional developer experiences and elegant solutions to complex user experience challenges",
+      "foundingDate": "2024",
+      "sameAs": [
+        "https://github.com/itsdifferentproductions",
+        "https://twitter.com/itsdifferentpro",
+        "https://linkedin.com/company/its-different-productions"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "hello@itsdifferentproductions.com"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://react-boilerplate-taupe.vercel.app/#website",
+      "url": "https://react-boilerplate-taupe.vercel.app/",
+      "name": "FUSED GAMING React TypeScript Boilerplate",
+      "description": "Modern, production-ready React TypeScript boilerplate with 5 beautiful themes and comprehensive tooling",
+      "publisher": {
+        "@id": "https://react-boilerplate-taupe.vercel.app/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://docs.react-boilerplate-taupe.vercel.app/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "TechArticle",
+      "@id": "https://docs.react-boilerplate-taupe.vercel.app/#documentation",
+      "headline": "FUSED GAMING Documentation",
+      "description": "Comprehensive documentation for the FUSED GAMING React TypeScript Boilerplate",
+      "url": "https://docs.react-boilerplate-taupe.vercel.app/",
+      "author": {
+        "@id": "https://react-boilerplate-taupe.vercel.app/#organization"
+      },
+      "publisher": {
+        "@id": "https://react-boilerplate-taupe.vercel.app/#organization"
+      },
+      "datePublished": "2025-06-17",
+      "dateModified": "2025-06-17",
+      "articleSection": "Documentation",
+      "keywords": "React, TypeScript, Vite, Tailwind CSS, Web Development, Frontend, Boilerplate"
+    }
+  ]
+}
