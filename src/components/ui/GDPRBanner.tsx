@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Cookie, Shield, X, Check, Settings } from 'lucide-react';
+import { Shield, X, Check, Settings } from 'lucide-react';
 import { Button } from './Button';
 import { Card, CardContent } from './Card';
 

@@ -6,7 +6,7 @@ import { Button } from './Button';
 
 interface Testimonial {
   id: string;
-  platform: 'reddit' | 'bitcointalk' | 'twitter' | 'linkedin' | 'discord';
+  platform: 'reddit' | 'bitcointalk' | 'twitter' | 'linkedin' | 'discord' | 'trustpilot';
   author: string;
   content: string;
   date: string;
@@ -19,69 +19,104 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    id: 'reddit-1',
-    platform: 'reddit',
-    author: 'CryptoInvestigator2024',
-    content: 'The timing of Shuffle.com launch right after FTX collapse is extremely suspicious. Noah Dummett had inside knowledge and used it to extract funds before bankruptcy. This needs serious investigation.',
-    date: '2024-11-15',
-    url: 'https://reddit.com/r/cryptocurrency/comments/noah_dummett_investigation',
-    upvotes: 847,
-    replies: 156,
-    category: 'investigation'
-  },
-  {
-    id: 'bitcointalk-1',
-    platform: 'bitcointalk',
-    author: 'BlockchainAnalyst',
-    content: 'I\'ve been tracking the blockchain evidence for months. The connections between FTX hack addresses and Shuffle operations are undeniable. $25M+ can be traced directly.',
-    date: '2024-08-22',
-    url: 'https://bitcointalk.org/index.php?topic=noah-dummett-shuffle-investigation',
-    replies: 89,
+    id: 'trustpilot-1',
+    platform: 'trustpilot',
+    author: 'İsmail (Turkey)',
+    content: 'After becoming a new member, I invested 4000 USD on 05.06.2025. After making a profit, I requested a withdrawal of 5857 USD on 12.06.2025. My withdrawal request has not been processed for 16 days. I cannot connect to live support and get information. My emails are not being answered.',
+    date: '2025-06-28',
+    url: 'https://ca.trustpilot.com/reviews/68605c9e37a3606c4270c8a0',
     verified: true,
-    category: 'evidence'
-  },
-  {
-    id: 'twitter-1',
-    platform: 'twitter',
-    author: '@CryptoWhistleblower',
-    content: 'THREAD: Why Noah Dummett and Shuffle.com represent everything wrong with crypto. Anonymous leadership, stolen funds, zero accountability. When will authorities act? 🧵',
-    date: '2024-12-01',
-    url: 'https://twitter.com/cryptowhistleblower/status/noah_dummett_thread',
-    upvotes: 2341,
-    replies: 567,
-    category: 'warning'
-  },
-  {
-    id: 'linkedin-1',
-    platform: 'linkedin',
-    author: 'Professional Blockchain Analyst',
-    content: 'As a professional in the space, I\'ve analyzed the evidence. The blockchain doesn\'t lie - there are clear connections between FTX theft and Shuffle operations that demand investigation.',
-    date: '2024-12-10',
-    url: 'https://linkedin.com/posts/blockchain-analyst-noah-dummett-evidence',
-    verified: true,
-    category: 'evidence'
-  },
-  {
-    id: 'reddit-2',
-    platform: 'reddit',
-    author: 'FTXVictim2022',
-    content: 'I lost everything in FTX collapse. Knowing that Noah Dummett potentially stole $20M+ that should have gone to victims like me makes me sick. Justice needs to be served.',
-    date: '2024-11-28',
-    url: 'https://reddit.com/r/ftx/comments/noah_dummett_victim_impact',
-    upvotes: 1205,
-    replies: 234,
     category: 'concern'
   },
   {
-    id: 'bitcointalk-2',
-    platform: 'bitcointalk',
-    author: 'CryptoForensics',
-    content: 'The forensic evidence is overwhelming. Transaction patterns, timing, amounts - everything points to systematic extraction of FTX funds into Shuffle operations.',
-    date: '2024-09-15',
-    url: 'https://bitcointalk.org/index.php?topic=shuffle-forensic-analysis',
-    replies: 156,
+    id: 'trustpilot-2',
+    platform: 'trustpilot',
+    author: 'peshko gumata (Bulgaria)',
+    content: 'SCAM THEY DONT SEND WITHDRAW. ONCE YOU TRY CASHING OUT IT SAYS IN REVIEW AND YOU WILL NEVER GET YOUR MONEY DONT DEPO HERE',
+    date: '2025-06-26',
+    url: 'https://ca.trustpilot.com/reviews/685d452990cfa8dfc7c6a0f0',
     verified: true,
-    category: 'evidence'
+    category: 'warning'
+  },
+  {
+    id: 'trustpilot-3',
+    platform: 'trustpilot',
+    author: 'Boychevww (Bulgaria)',
+    content: 'The RTP of the site is so bad, my first bet was a scam as i had 19 bj hand and they somehow pulled 20 its obvious scam dont depo there please!',
+    date: '2025-06-21',
+    url: 'https://ca.trustpilot.com/reviews/6856b9deb9c66a7ddb92e6a2',
+    verified: true,
+    category: 'warning'
+  },
+  {
+    id: 'trustpilot-4',
+    platform: 'trustpilot',
+    author: 'Mystical Myth (Pakistan)',
+    content: 'Scam and worst site i have ever seen, i have been playing over 6 months on this site, not a single day with profit always ends with same red stats, isn\'t it pathetic using ai in casinos. Why they paid 5$ to people for positive review?',
+    date: '2025-06-21',
+    url: 'https://ca.trustpilot.com/reviews/68569da1a2a21cdcbedeec78',
+    verified: true,
+    category: 'warning'
+  },
+  {
+    id: 'trustpilot-5',
+    platform: 'trustpilot',
+    author: 'facundo voria (Argentina)',
+    content: 'take so long for withdraw, sometimes they dont even do them and they keep your money',
+    date: '2025-06-16',
+    url: 'https://ca.trustpilot.com/reviews/684f966598bb9f561e5d576a',
+    verified: true,
+    category: 'concern'
+  },
+  {
+    id: 'trustpilot-6',
+    platform: 'trustpilot',
+    author: 'Андрей Москаленко (Austria)',
+    content: 'my nickname on shuffle is kryakter and for a month now I have not been able to receive my withdrawal of funds, even after passing full verification, the support on the site is bots that do not answer your questions',
+    date: '2025-06-15',
+    url: 'https://ca.trustpilot.com/reviews/684e8fa5b277fdfb6846f890',
+    verified: true,
+    category: 'concern'
+  },
+  {
+    id: 'trustpilot-7',
+    platform: 'trustpilot',
+    author: 'Anh (United States)',
+    content: 'thought i would give this website a try but ended up realizing this was a scam like most people said. i deposited and won some money but they wouldn\'t allow me to withdraw the money. would not recommend this site',
+    date: '2025-06-08',
+    url: 'https://ca.trustpilot.com/reviews/684588de75dc863f22d0325c',
+    verified: true,
+    category: 'warning'
+  },
+  {
+    id: 'trustpilot-8',
+    platform: 'trustpilot',
+    author: 'DynaMic FX (Estonia)',
+    content: 'Shuffel is a scammer site. They do everything shady and dont let people withdraw when they want to withdraw big money. But they let u deposit always. Never play on this site. Its very bad!',
+    date: '2025-06-07',
+    url: 'https://ca.trustpilot.com/reviews/684493061c7fd1cae31dacc0',
+    verified: true,
+    category: 'warning'
+  },
+  {
+    id: 'trustpilot-9',
+    platform: 'trustpilot',
+    author: 'Mushi (Pakistan)',
+    content: 'after waiting a lot and passing all the procedure now I have finally understood that I lost my funds. and the shuffle has scammed me. on shuffle.com their is no withdrawal option for users who will win',
+    date: '2025-06-07',
+    url: 'https://ca.trustpilot.com/reviews/68437caca86e161cb76fc805',
+    verified: true,
+    category: 'concern'
+  },
+  {
+    id: 'trustpilot-10',
+    platform: 'trustpilot',
+    author: 'WWoohoo (Canada)',
+    content: 'Won some money with sportsbetting and tried to cash it out. Now my withdrawals are stuck in review and I just get the same message over and over again. It\'s been 8 days now and I still haven\'t received any money. Just go play on Roobet or Stake instead of these scammers',
+    date: '2025-06-05',
+    url: 'https://ca.trustpilot.com/reviews/68420d831d820796110ca225',
+    verified: true,
+    category: 'concern'
   }
 ];
 
@@ -90,7 +125,8 @@ const platformIcons = {
   bitcointalk: '₿',
   twitter: '🐦',
   linkedin: '💼',
-  discord: '💬'
+  discord: '💬',
+  trustpilot: '⭐'
 };
 
 const platformColors = {
@@ -98,7 +134,8 @@ const platformColors = {
   bitcointalk: 'from-yellow-500/10 to-orange-500/10 border-yellow-500/20',
   twitter: 'from-blue-500/10 to-cyan-500/10 border-blue-500/20',
   linkedin: 'from-blue-600/10 to-blue-700/10 border-blue-600/20',
-  discord: 'from-purple-500/10 to-indigo-500/10 border-purple-500/20'
+  discord: 'from-purple-500/10 to-indigo-500/10 border-purple-500/20',
+  trustpilot: 'from-green-500/10 to-emerald-500/10 border-green-500/20'
 };
 
 const categoryColors = {

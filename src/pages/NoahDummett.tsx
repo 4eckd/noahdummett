@@ -17,6 +17,7 @@ import { Card, CardHeader, CardContent } from '@/components/ui/Card';
 import { PageLayout, SectionLayout } from '@/components/layout/Layout';
 import { NoahDummettHeroImage } from '@/components/ui/HeroImage';
 import { TestimonialsCarousel } from '@/components/ui/TestimonialsCarousel';
+import { TrustpilotEvidence } from '@/components/ui/TrustpilotEvidence';
 
 const keyAllegations = [
   {
@@ -445,6 +446,20 @@ export const NoahDummett: React.FC = () => {
           transition={{ duration: 0.6 }}
         >
           <TestimonialsCarousel />
+        </motion.div>
+      </SectionLayout>
+
+      {/* Trustpilot Evidence */}
+      <SectionLayout
+        title="Trustpilot Scam Reports"
+        description="Verified customer reviews showing systematic withdrawal issues and scam allegations"
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <TrustpilotEvidence />
         </motion.div>
       </SectionLayout>
 
