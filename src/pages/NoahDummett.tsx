@@ -19,6 +19,7 @@ import { NoahDummettHeroImage } from '@/components/ui/HeroImage';
 import { TestimonialsCarousel } from '@/components/ui/TestimonialsCarousel';
 import { TrustpilotEvidence } from '@/components/ui/TrustpilotEvidence';
 import { ComprehensiveEvidence } from '@/components/ui/ComprehensiveEvidence';
+import { TrustpilotManipulation } from '@/components/ui/TrustpilotManipulation';
 
 const keyAllegations = [
   {
@@ -461,6 +462,20 @@ export const NoahDummett: React.FC = () => {
           transition={{ duration: 0.6 }}
         >
           <TrustpilotEvidence />
+        </motion.div>
+      </SectionLayout>
+
+      {/* Trustpilot Platform Manipulation */}
+      <SectionLayout
+        title="Platform Manipulation Analysis"
+        description="Evidence of systematic manipulation of Trustpilot reviews and ratings"
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <TrustpilotManipulation />
         </motion.div>
       </SectionLayout>
 
