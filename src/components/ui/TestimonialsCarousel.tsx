@@ -6,7 +6,7 @@ import { Button } from './Button';
 
 interface Testimonial {
   id: string;
-  platform: 'reddit' | 'bitcointalk' | 'twitter' | 'linkedin' | 'discord' | 'trustpilot';
+  platform: 'reddit' | 'bitcointalk' | 'twitter' | 'linkedin' | 'discord' | 'trustpilot' | 'casinoguru';
   author: string;
   content: string;
   date: string;
@@ -31,20 +31,40 @@ const testimonials: Testimonial[] = [
   {
     id: 'trustpilot-2',
     platform: 'trustpilot',
-    author: 'peshko gumata (Bulgaria)',
-    content: 'SCAM THEY DONT SEND WITHDRAW. ONCE YOU TRY CASHING OUT IT SAYS IN REVIEW AND YOU WILL NEVER GET YOUR MONEY DONT DEPO HERE',
-    date: '2025-06-26',
-    url: 'https://ca.trustpilot.com/reviews/685d452990cfa8dfc7c6a0f0',
+    author: 'Evren (Austria)',
+    content: 'Hahahhaha this casino is very poor. 😂😂😂😂😂',
+    date: '2025-06-27',
+    url: 'https://ca.trustpilot.com/reviews/685ed5f8141785c388e534de',
     verified: true,
     category: 'warning'
   },
   {
     id: 'trustpilot-3',
     platform: 'trustpilot',
-    author: 'Boychevww (Bulgaria)',
-    content: 'The RTP of the site is so bad, my first bet was a scam as i had 19 bj hand and they somehow pulled 20 its obvious scam dont depo there please!',
-    date: '2025-06-21',
-    url: 'https://ca.trustpilot.com/reviews/6856b9deb9c66a7ddb92e6a2',
+    author: 'Jiro Bassit (Philippines)',
+    content: 'I was withdrawing funds for all of a sudden it takes too long for them to review it. I contacted them through email and chat support and they said i need to submit documents for LVL 4 Proof of address. They let me submit a proof of address and it was accepted after that i contacted them that i completed it its been a week and they still keep saying in review will I get my funds back',
+    date: '2025-06-22',
+    url: 'https://ca.trustpilot.com/reviews/6857db1972437444d81246ad',
+    verified: true,
+    category: 'concern'
+  },
+  {
+    id: 'casinoguru-1',
+    platform: 'casinoguru',
+    author: 'oleje0353 (Lithuania)',
+    content: 'On August 7th I requested withdrawal of 521.58 usdt. Before they proceed withdrawal, they asked to pass KYC. I have provided all requested documents, but they state they are still checking them. They do not provide time frames, nothing. It is way too long for KYC verification and they are not providing me any details.',
+    date: '2024-08-30',
+    url: 'https://casino.guru/shuffle-casino-player-s-withdrawal-is-delayed-due-1',
+    verified: true,
+    category: 'concern'
+  },
+  {
+    id: 'reddit-banned',
+    platform: 'reddit',
+    author: 'Reddit Community',
+    content: 'r/ShufflecomCasino is banned - This subreddit was banned due to a violation of Reddit\'s rules against transactions involving prohibited goods or services.',
+    date: '2024-12-01',
+    url: 'https://www.reddit.com/r/ShufflecomCasino/',
     verified: true,
     category: 'warning'
   },
@@ -61,22 +81,22 @@ const testimonials: Testimonial[] = [
   {
     id: 'trustpilot-5',
     platform: 'trustpilot',
-    author: 'facundo voria (Argentina)',
-    content: 'take so long for withdraw, sometimes they dont even do them and they keep your money',
-    date: '2025-06-16',
-    url: 'https://ca.trustpilot.com/reviews/684f966598bb9f561e5d576a',
+    author: 'Boychevww (Bulgaria)',
+    content: 'The RTP of the site is so bad, my first bet was a scam as i had 19 bj hand and they somehow pulled 20 its obvious scam dont depo there please!',
+    date: '2025-06-21',
+    url: 'https://ca.trustpilot.com/reviews/6856b9deb9c66a7ddb92e6a2',
     verified: true,
-    category: 'concern'
+    category: 'warning'
   },
   {
     id: 'trustpilot-6',
     platform: 'trustpilot',
-    author: 'Андрей Москаленко (Austria)',
-    content: 'my nickname on shuffle is kryakter and for a month now I have not been able to receive my withdrawal of funds, even after passing full verification, the support on the site is bots that do not answer your questions',
-    date: '2025-06-15',
-    url: 'https://ca.trustpilot.com/reviews/684e8fa5b277fdfb6846f890',
+    author: 'DynaMic FX (Estonia)',
+    content: 'Shuffel is a scammer site. They do everything shady and dont let people withdraw when they want to withdraw big money. But they let u deposit always. Never play on this site. Its very bad!',
+    date: '2025-06-07',
+    url: 'https://ca.trustpilot.com/reviews/684493061c7fd1cae31dacc0',
     verified: true,
-    category: 'concern'
+    category: 'warning'
   },
   {
     id: 'trustpilot-7',
@@ -91,30 +111,10 @@ const testimonials: Testimonial[] = [
   {
     id: 'trustpilot-8',
     platform: 'trustpilot',
-    author: 'DynaMic FX (Estonia)',
-    content: 'Shuffel is a scammer site. They do everything shady and dont let people withdraw when they want to withdraw big money. But they let u deposit always. Never play on this site. Its very bad!',
-    date: '2025-06-07',
-    url: 'https://ca.trustpilot.com/reviews/684493061c7fd1cae31dacc0',
-    verified: true,
-    category: 'warning'
-  },
-  {
-    id: 'trustpilot-9',
-    platform: 'trustpilot',
     author: 'Mushi (Pakistan)',
     content: 'after waiting a lot and passing all the procedure now I have finally understood that I lost my funds. and the shuffle has scammed me. on shuffle.com their is no withdrawal option for users who will win',
     date: '2025-06-07',
     url: 'https://ca.trustpilot.com/reviews/68437caca86e161cb76fc805',
-    verified: true,
-    category: 'concern'
-  },
-  {
-    id: 'trustpilot-10',
-    platform: 'trustpilot',
-    author: 'WWoohoo (Canada)',
-    content: 'Won some money with sportsbetting and tried to cash it out. Now my withdrawals are stuck in review and I just get the same message over and over again. It\'s been 8 days now and I still haven\'t received any money. Just go play on Roobet or Stake instead of these scammers',
-    date: '2025-06-05',
-    url: 'https://ca.trustpilot.com/reviews/68420d831d820796110ca225',
     verified: true,
     category: 'concern'
   }
@@ -126,7 +126,8 @@ const platformIcons = {
   twitter: '🐦',
   linkedin: '💼',
   discord: '💬',
-  trustpilot: '⭐'
+  trustpilot: '⭐',
+  casinoguru: '🎰'
 };
 
 const platformColors = {
@@ -135,7 +136,8 @@ const platformColors = {
   twitter: 'from-blue-500/10 to-cyan-500/10 border-blue-500/20',
   linkedin: 'from-blue-600/10 to-blue-700/10 border-blue-600/20',
   discord: 'from-purple-500/10 to-indigo-500/10 border-purple-500/20',
-  trustpilot: 'from-green-500/10 to-emerald-500/10 border-green-500/20'
+  trustpilot: 'from-green-500/10 to-emerald-500/10 border-green-500/20',
+  casinoguru: 'from-indigo-500/10 to-purple-500/10 border-indigo-500/20'
 };
 
 const categoryColors = {

@@ -172,11 +172,11 @@ export const TrustpilotEvidence: React.FC = () => {
                 <div className="text-sm text-muted-foreground">1-Star Reviews</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-yellow-400">521</div>
-                <div className="text-sm text-muted-foreground">Total Reviews</div>
+                <div className="text-2xl font-bold text-yellow-400">100+</div>
+                <div className="text-sm text-muted-foreground">Evidence URLs</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-red-400">10+</div>
+                <div className="text-2xl font-bold text-red-400">50+</div>
                 <div className="text-sm text-muted-foreground">Scam Reports</div>
               </div>
             </div>
