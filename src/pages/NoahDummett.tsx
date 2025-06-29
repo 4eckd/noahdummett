@@ -16,10 +16,6 @@ import {
 import { Card, CardHeader, CardContent } from '@/components/ui/Card';
 import { PageLayout, SectionLayout } from '@/components/layout/Layout';
 import { NoahDummettHeroImage } from '@/components/ui/HeroImage';
-import { TestimonialsCarousel } from '@/components/ui/TestimonialsCarousel';
-import { TrustpilotEvidence } from '@/components/ui/TrustpilotEvidence';
-import { ComprehensiveEvidence } from '@/components/ui/ComprehensiveEvidence';
-import { TrustpilotManipulation } from '@/components/ui/TrustpilotManipulation';
 
 const keyAllegations = [
   {
@@ -167,8 +163,8 @@ const linkedInEvidence = {
 export const NoahDummett: React.FC = () => {
   return (
     <PageLayout
-      title="Noah Dummett Investigation"
-      description="A comprehensive analysis of the controversial Shuffle.com founder and mounting allegations"
+      title="Noah Dummett Investigation: Shuffle.com Fraud & FTX Theft"
+      description="Evidence of Noah Dummett stealing $25M+ from FTX victims to fund Shuffle.com. Blockchain proof, customer complaints, review manipulation."
     >
       {/* Hero Section */}
       <SectionLayout
@@ -435,62 +431,6 @@ export const NoahDummett: React.FC = () => {
             ))}
           </div>
         </div>
-      </SectionLayout>
-
-      {/* Community Testimonials */}
-      <SectionLayout
-        title="Community Investigations & Accusations"
-        description="What the crypto community is saying about Noah Dummett and Shuffle.com across social media platforms"
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <TestimonialsCarousel />
-        </motion.div>
-      </SectionLayout>
-
-      {/* Trustpilot Evidence */}
-      <SectionLayout
-        title="Trustpilot Scam Reports"
-        description="Verified customer reviews showing systematic withdrawal issues and scam allegations"
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <TrustpilotEvidence />
-        </motion.div>
-      </SectionLayout>
-
-      {/* Trustpilot Platform Manipulation */}
-      <SectionLayout
-        title="Platform Manipulation Analysis"
-        description="Evidence of systematic manipulation of Trustpilot reviews and ratings"
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <TrustpilotManipulation />
-        </motion.div>
-      </SectionLayout>
-
-      {/* Comprehensive Evidence Database */}
-      <SectionLayout
-        title="Complete Evidence Archive"
-        description="Comprehensive database of all evidence sources across multiple platforms"
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <ComprehensiveEvidence />
-        </motion.div>
       </SectionLayout>
 
       {/* Impact Metrics */}
