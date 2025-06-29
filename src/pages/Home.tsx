@@ -9,19 +9,19 @@ import { Link } from 'react-router-dom';
 
 const investigationHighlights = [
   {
-    icon: <DollarSign className="h-8 w-8 text-red-500" />,
-    title: '$20M+ Alleged Misappropriation',
-    description: 'Claims of substantial funds taken from FTX bankruptcy estate to fund Shuffle.com operations.',
+    icon: <DollarSign className="h-8 w-8 text-red-500 animate-pulse" />,
+    title: '💰 $20M+ STOLEN FROM VICTIMS',
+    description: 'SHOCKING: Evidence suggests Noah Dummett allegedly diverted millions from FTX bankruptcy victims to fund his gambling empire. The victims deserve justice!',
   },
   {
-    icon: <Search className="h-8 w-8 text-orange-500" />,
-    title: 'Anonymous Leadership',
-    description: 'Concerning lack of transparency around company leadership and beneficial ownership.',
+    icon: <Search className="h-8 w-8 text-orange-500 animate-bounce" />,
+    title: '🕵️ HIDDEN CRIMINAL IDENTITIES',
+    description: 'EXPOSED: Anonymous leadership structure designed to hide the true criminals behind Shuffle.com. What are they trying to hide from law enforcement?',
   },
   {
-    icon: <Eye className="h-8 w-8 text-yellow-500" />,
-    title: 'Community Investigations',
-    description: 'Growing body of evidence from independent researchers and concerned community members.',
+    icon: <Eye className="h-8 w-8 text-yellow-500 animate-pulse" />,
+    title: '📋 EVIDENCE THAT COULD DESTROY THEM',
+    description: 'BOMBSHELL: Legal documents, blockchain evidence, and whistleblower testimonies that could send them to prison for DECADES. The walls are closing in...',
   },
 ];
 
@@ -37,50 +37,60 @@ export const Home: React.FC = () => {
           className="space-y-8"
         >
           <div className="flex items-center justify-center mb-4">
-            <AlertTriangle className="h-12 w-12 text-red-500 mr-4" />
-            <span className="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm font-medium">
-              BREAKING INVESTIGATION
+            <AlertTriangle className="h-12 w-12 text-red-500 mr-4 animate-pulse" />
+            <span className="px-4 py-2 bg-red-500/30 text-red-300 rounded-full text-sm font-bold uppercase tracking-wider border border-red-500/50">
+              🚨 EXPLOSIVE INVESTIGATION 🚨
             </span>
           </div>
 
           {/* Hero Portrait */}
           <NoahDummettHeroImage size="lg" className="mb-8" />
 
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground">
-            The Noah Dummett
-            <span className="block text-red-500">Investigation</span>
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground leading-tight">
+            <span className="text-red-500">The Disturbing Truth</span>
+            <span className="block text-foreground">About Shuffle's Founders</span>
+            <span className="block text-red-400 text-3xl md:text-4xl">That Could Put Them In Prison</span>
+            <span className="block text-red-300 text-2xl md:text-3xl">For A Long, Long Time...</span>
           </h1>
 
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Uncovering the truth behind Shuffle.com's controversial founder and the mounting
-            allegations that threaten to expose a Web3 scandal of unprecedented proportions.
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            <span className="text-red-400 font-bold">SHOCKING DISCOVERY:</span> What we uncovered about Noah Dummett and Shuffle.com will make your blood boil.
+            <span className="text-yellow-400 font-semibold">$20M+ allegedly stolen from FTX bankruptcy victims</span>, anonymous leadership hiding dark secrets,
+            and evidence that could send them to prison for <span className="text-red-400 font-bold">DECADES</span>.
+            The crypto world will never be the same...
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
             <Link to="/noah-dummett">
               <Button
                 size="lg"
                 rightIcon={<ArrowRight className="h-5 w-5" />}
-                className="shadow-glow hover:shadow-glow-lg bg-red-600 hover:bg-red-700"
+                className="shadow-glow hover:shadow-glow-lg bg-red-600 hover:bg-red-700 text-lg px-8 py-4 font-bold animate-pulse"
               >
-                Read Full Investigation
+                🔥 EXPOSE THE TRUTH NOW 🔥
               </Button>
             </Link>
             <Button
               variant="outline"
               size="lg"
-              className="hover:shadow-primary border-red-500/30 text-red-400 hover:text-red-300"
+              className="hover:shadow-primary border-red-500/30 text-red-400 hover:text-red-300 text-lg px-8 py-4 font-semibold"
             >
-              View Evidence
+              💰 See The Stolen Millions 💰
             </Button>
+          </div>
+
+          <div className="mt-6 text-center">
+            <p className="text-sm text-red-400 font-medium animate-bounce">
+              ⚠️ WARNING: This investigation contains disturbing evidence of financial crimes ⚠️
+            </p>
           </div>
         </motion.div>
       </SectionLayout>
 
       {/* Investigation Highlights */}
       <SectionLayout
-        title="Key Allegations"
-        description="The most serious concerns that demand immediate investigation"
+        title="🚨 CRIMES THAT COULD SEND THEM TO PRISON FOR LIFE"
+        description="These shocking revelations will make you question everything you thought you knew about the crypto industry"
         className="py-16"
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

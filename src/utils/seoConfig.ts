@@ -12,31 +12,31 @@ export interface SEOConfig {
 }
 
 export const defaultSEO: SEOConfig = {
-  title: '🔍 Noah Dummett Investigation | Exposing Web3 Accountability Issues',
-  description: 'Comprehensive investigation into Noah Dummett, founder of Shuffle.com. Uncovering allegations of fund misappropriation, anonymous leadership, and Web3 accountability issues. Evidence-based analysis of a potential crypto scandal.',
+  title: '🚨 The Disturbing Truth About Shuffle\'s Founders That Could Put Them In Prison For A Long, Long Time...',
+  description: 'SHOCKING INVESTIGATION: What we discovered about Noah Dummett and Shuffle.com will make your blood boil. $20M+ allegedly stolen from FTX victims, anonymous leadership hiding dark secrets, and evidence that could send them to prison for DECADES. The crypto world will never be the same...',
   keywords: [
-    'Noah Dummett',
-    'Shuffle.com',
-    'Web3 Investigation',
-    'Crypto Scandal',
-    'FTX',
-    'Gambling',
-    'Accountability',
-    'Whistleblower',
-    'Blockchain Analysis',
-    'Cryptocurrency',
-    'Investigation',
-    'Evidence',
-    'Legal Documents',
-    'Fund Misappropriation',
-    'Anonymous Leadership',
-    'Web3 Ethics',
-    'Crypto Fraud',
-    'Financial Misconduct',
-    'Regulatory Compliance',
-    'Transparency'
+    'Noah Dummett prison',
+    'Shuffle.com criminal investigation',
+    'crypto fraud scandal',
+    'FTX victims stolen money',
+    'decades in prison',
+    'crypto crime exposed',
+    'gambling empire fraud',
+    'anonymous criminals',
+    'blockchain evidence',
+    'whistleblower testimony',
+    'criminal investigation',
+    'stolen millions',
+    'legal documents',
+    'fund misappropriation',
+    'hidden identities',
+    'crypto scandal',
+    'financial crimes',
+    'criminal misconduct',
+    'law enforcement',
+    'justice for victims'
   ],
-  ogImage: '/social-preview.png',
+  ogImage: '/hero-noahdummett.png',
   twitterCard: 'summary_large_image',
   author: 'Its Different Productions',
   type: 'website'
@@ -44,15 +44,15 @@ export const defaultSEO: SEOConfig = {
 
 export const pageSEO: Record<string, Partial<SEOConfig>> = {
   home: {
-    title: '🔍 Noah Dummett Investigation | Web3 Accountability Exposed',
-    description: 'BREAKING: Comprehensive investigation into Shuffle.com founder Noah Dummett reveals allegations of $20M+ fund misappropriation from FTX bankruptcy estate. Anonymous leadership, unethical practices, and mounting evidence demand immediate attention.',
-    keywords: ['Noah Dummett investigation', 'Shuffle.com scandal', 'Web3 accountability', 'crypto fraud investigation'],
+    title: '🚨 SHOCKING: Shuffle Founders Could Face DECADES In Prison',
+    description: 'EXPLOSIVE INVESTIGATION: Noah Dummett and Shuffle.com allegedly stole $20M+ from FTX bankruptcy victims. Anonymous leadership, hidden identities, and evidence that could destroy the entire operation. This scandal will SHOCK the crypto world and could send them to prison for DECADES...',
+    keywords: ['Noah Dummett prison', 'Shuffle.com criminal investigation', 'crypto fraud scandal', 'FTX victims stolen money'],
     canonicalUrl: 'https://noahdummett.com/'
   },
   'noah-dummett': {
-    title: '🚨 The Noah Dummett Files | Complete Investigation Report',
-    description: 'Detailed analysis of allegations against Noah Dummett, founder of Shuffle.com. Evidence of fund misappropriation, anonymous leadership structure, and unethical treatment of vulnerable users. Legal documents, blockchain analysis, and community investigations.',
-    keywords: ['Noah Dummett files', 'Shuffle.com investigation', 'crypto scandal evidence', 'Web3 fraud'],
+    title: '🔥 EXPOSED: The Noah Dummett Criminal Files That Will DESTROY Shuffle.com',
+    description: 'BOMBSHELL EVIDENCE: Legal documents, blockchain analysis, and whistleblower testimonies reveal the shocking truth about Noah Dummett. $20M+ allegedly stolen, anonymous criminal leadership, and evidence that could send them to prison for LIFE. The walls are closing in...',
+    keywords: ['Noah Dummett criminal files', 'Shuffle.com evidence', 'crypto crime investigation', 'prison sentences'],
     canonicalUrl: 'https://noahdummett.com/noah-dummett',
     type: 'article'
   },
@@ -89,7 +89,7 @@ export const companyInfo = {
   name: import.meta.env.VITE_COMPANY_NAME || 'Noah Dummett Investigation Projects',
   url: import.meta.env.VITE_COMPANY_URL || 'https://noahdummett.com',
   email: import.meta.env.VITE_COMPANY_EMAIL || 'hello@noahdummett.com',
-  description: 'Exposing Web3 accountability issues and investigating potential cryptocurrency fraud and misconduct'
+  description: 'EXPOSING the shocking truth about crypto criminals who stole millions from victims. Bringing justice to the Web3 industry through fearless investigative journalism.'
 };
 
 export const projectInfo = {
