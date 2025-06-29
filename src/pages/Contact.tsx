@@ -52,7 +52,7 @@ const contactReasons = [
     title: 'Collaboration',
     description: 'Interested in contributing or partnering with us?',
     action: 'Let\'s Connect',
-    href: `mailto:${import.meta.env.VITE_COMPANY_EMAIL || 'hello@itsdifferentproductions.com'}`,
+    href: 'mailto:hello@noahdummett.com',
     color: 'pink'
   }
 ];
@@ -312,7 +312,7 @@ export const Contact: React.FC = () => {
                   <div>
                     <h4 className="font-medium text-foreground">Email</h4>
                     <p className="text-sm text-muted-foreground">
-                      {import.meta.env.VITE_COMPANY_EMAIL || 'hello@itsdifferentproductions.com'}
+                      hello@noahdummett.com
                     </p>
                   </div>
                 </div>

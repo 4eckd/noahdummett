@@ -2,9 +2,12 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from '@/context/ThemeContext';
 import { Layout } from '@/components/layout/Layout';
+import { GDPRBanner } from '@/components/ui/GDPRBanner';
 import { Home, About, Contact, ThemeDemo, NotFound } from '@/pages';
 import NoahDummett from '@/pages/NoahDummett';
 import Legal from '@/pages/Legal';
+import CookiePolicy from '@/pages/CookiePolicy';
+import FAQ from '@/pages/FAQ';
 
 function App() {
   return (
@@ -17,10 +20,13 @@ function App() {
             <Route path="about" element={<About />} />
             <Route path="legal" element={<Legal />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="faq" element={<FAQ />} />
+            <Route path="cookie-policy" element={<CookiePolicy />} />
             <Route path="themes" element={<ThemeDemo />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
+        <GDPRBanner />
       </Router>
     </ThemeProvider>
   );

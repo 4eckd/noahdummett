@@ -269,6 +269,48 @@ export const Privacy: React.FC = () => {
           </Card>
         </motion.div>
       </SectionLayout>
+
+      {/* Contact Information */}
+      <SectionLayout
+        title="Privacy Contact Information"
+        description="Get in touch with our privacy team for questions or concerns"
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <Card className="bg-gradient-to-br from-green-500/5 to-blue-500/5 border-green-500/20">
+            <CardContent className="p-8 text-center">
+              <div className="w-16 h-16 rounded-full bg-green-500/10 flex items-center justify-center mx-auto mb-6">
+                <Shield className="h-8 w-8 text-green-500" />
+              </div>
+              <h3 className="text-2xl font-semibold text-foreground mb-4">
+                Privacy Questions or Concerns?
+              </h3>
+              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                We take privacy seriously and are committed to transparency. If you have any questions about our privacy practices,
+                data handling, or would like to exercise your privacy rights, please contact us.
+              </p>
+              <div className="space-y-4">
+                <div>
+                  <p className="text-sm text-muted-foreground mb-2">Privacy Team Email:</p>
+                  <a
+                    href="mailto:hello@noahdummett.com"
+                    className="text-green-400 hover:text-green-300 font-medium text-lg"
+                  >
+                    hello@noahdummett.com
+                  </a>
+                </div>
+                <div className="text-sm text-muted-foreground">
+                  <p>Response time: Within 48 hours</p>
+                  <p>GDPR requests: Within 30 days as required by law</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
+      </SectionLayout>
     </PageLayout>
   );
 };

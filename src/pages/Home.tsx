@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, AlertTriangle, FileText, Search, Eye, DollarSign, Hash } from 'lucide-react';
+import { ArrowRight, AlertTriangle, FileText, Search, Eye, DollarSign, Hash, Clock, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Card, CardHeader, CardContent } from '@/components/ui/Card';
 import { PageLayout, SectionLayout } from '@/components/layout/Layout';
@@ -47,13 +47,13 @@ export const Home: React.FC = () => {
           <NoahDummettHeroImage size="lg" className="mb-8" />
 
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground">
-            Noah Dummett Investigation:
-            <span className="block text-red-500">Shuffle Prison Evidence</span>
+            The Noah Dummett
+            <span className="block text-red-500">Investigation</span>
           </h1>
 
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            SHOCKING investigation reveals Noah Dummett and Shuffle.com allegedly stole $20M+ from FTX victims.
-            Blockchain evidence and criminal allegations that could send them to prison for decades.
+            Uncovering the truth behind Shuffle.com's controversial founder and the mounting
+            allegations that threaten to expose a Web3 scandal of unprecedented proportions.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
@@ -79,8 +79,8 @@ export const Home: React.FC = () => {
 
       {/* Investigation Highlights */}
       <SectionLayout
-        title="Noah Dummett Shuffle.com Criminal Allegations"
-        description="$20M+ FTX theft evidence and prison allegations against Shuffle founders"
+        title="Key Allegations"
+        description="The most serious concerns that demand immediate investigation"
         className="py-16"
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -239,7 +239,86 @@ export const Home: React.FC = () => {
         </motion.div>
       </SectionLayout>
 
+      {/* Evidence Downloads */}
+      <SectionLayout
+        title="Download Investigation Evidence"
+        description="Access comprehensive investigation documents and blockchain evidence"
+        className="py-16"
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <Card hover className="border-blue-500/20 bg-gradient-to-br from-blue-500/5 to-blue-600/5">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 rounded-full bg-blue-500/10 flex items-center justify-center mx-auto mb-4">
+                  <FileText className="h-8 w-8 text-blue-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">
+                  Blockchain Evidence
+                </h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Complete blockchain analysis with transaction evidence
+                </p>
+                <a
+                  href="/downloads/blockchain-evidence-report.pdf"
+                  download
+                  className="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 font-medium"
+                >
+                  <span>Download PDF</span>
+                  <FileText className="h-4 w-4" />
+                </a>
+              </CardContent>
+            </Card>
 
+            <Card hover className="border-green-500/20 bg-gradient-to-br from-green-500/5 to-green-600/5">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 rounded-full bg-green-500/10 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="h-8 w-8 text-green-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">
+                  Investigation Timeline
+                </h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Complete timeline from FTX to Shuffle allegations
+                </p>
+                <a
+                  href="/downloads/noah-dummett-timeline.json"
+                  download
+                  className="inline-flex items-center space-x-2 text-green-400 hover:text-green-300 font-medium"
+                >
+                  <span>Download JSON</span>
+                  <Clock className="h-4 w-4" />
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card hover className="border-purple-500/20 bg-gradient-to-br from-purple-500/5 to-purple-600/5">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 rounded-full bg-purple-500/10 flex items-center justify-center mx-auto mb-4">
+                  <Shield className="h-8 w-8 text-purple-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">
+                  Investigation Summary
+                </h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Executive summary of all findings and evidence
+                </p>
+                <a
+                  href="/downloads/investigation-summary.md"
+                  download
+                  className="inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 font-medium"
+                >
+                  <span>Download MD</span>
+                  <Shield className="h-4 w-4" />
+                </a>
+              </CardContent>
+            </Card>
+          </div>
+        </motion.div>
+      </SectionLayout>
 
       {/* CTA Section */}
       <SectionLayout className="text-center py-16">

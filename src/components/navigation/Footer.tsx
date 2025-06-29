@@ -209,9 +209,9 @@ export const Footer: React.FC<FooterProps> = ({
                 © {currentYear} {companyName}. All rights reserved.
               </p>
               <p className="text-sm text-muted-foreground flex items-center space-x-1">
-                <span>Made with</span>
+                <span>Investigation by</span>
                 <Heart className="h-4 w-4 text-red-500" />
-                <span>by Its Different Productions</span>
+                <span>N.D. Investigations Team</span>
               </p>
             </div>
           </div>

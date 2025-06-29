@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, BookOpen, ExternalLink } from 'lucide-react';
+import { Menu, X, BookOpen, ExternalLink, Search } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
+import { SearchModal } from '@/components/ui/SearchModal';
 import { clsx } from 'clsx';
 
 export interface HeaderProps {
@@ -24,6 +25,7 @@ const defaultNavigation: NavigationItem[] = [
   { label: 'Home', href: '/' },
   { label: 'Investigation', href: '/noah-dummett' },
   { label: 'About', href: '/about' },
+  { label: 'FAQ', href: '/faq' },
   { label: 'Legal', href: '/legal' },
 ];
 
@@ -34,6 +36,7 @@ export const Header: React.FC<HeaderProps> = ({
   className,
 }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const location = useLocation();
 
   const toggleMobileMenu = () => {
@@ -101,6 +104,14 @@ export const Header: React.FC<HeaderProps> = ({
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-3">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setIsSearchOpen(true)}
+              className="h-10 w-10 p-0 hover:bg-primary/10"
+            >
+              <Search className="h-5 w-5" />
+            </Button>
             <Button
               variant="outline"
               size="sm"
@@ -173,6 +184,18 @@ export const Header: React.FC<HeaderProps> = ({
                   )
                 ))}
 
+                {/* Mobile Search */}
+                <button
+                  onClick={() => {
+                    setIsSearchOpen(true);
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className="flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors text-muted-foreground hover:text-foreground hover:bg-accent border-t border-border pt-4 mt-4"
+                >
+                  <Search className="h-4 w-4" />
+                  <span>Search Investigation</span>
+                </button>
+
                 {/* Mobile Evidence Link */}
                 <a
                   href="/service"
@@ -201,6 +224,12 @@ export const Header: React.FC<HeaderProps> = ({
           )}
         </AnimatePresence>
       </div>
+
+      {/* Search Modal */}
+      <SearchModal
+        isOpen={isSearchOpen}
+        onClose={() => setIsSearchOpen(false)}
+      />
     </header>
   );
 };

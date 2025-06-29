@@ -274,23 +274,33 @@ export const About: React.FC = () => {
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start space-x-2">
                     <span className="text-red-500 mt-1">•</span>
-                    <span><strong>IRS Form 211:</strong> Whistleblower documentation filed with federal authorities</span>
+                    <span><strong>IRS Form 211:</strong> Whistleblower documentation filed with federal authorities
+                      <a href="/downloads/terry IRS_Form_211.pdf" download className="ml-2 text-blue-400 hover:text-blue-300 text-sm">[Download PDF]</a>
+                    </span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <span className="text-red-500 mt-1">•</span>
-                    <span><strong>Shuffle Pleadings:</strong> Legal documents outlining specific allegations</span>
+                    <span><strong>Shuffle Pleadings:</strong> Legal documents outlining specific allegations
+                      <a href="/downloads/Shuffle-Pleading.pdf" download className="ml-2 text-blue-400 hover:text-blue-300 text-sm">[Download PDF]</a>
+                    </span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <span className="text-red-500 mt-1">•</span>
-                    <span><strong>Chain Data Analysis:</strong> Blockchain evidence of suspicious transactions</span>
+                    <span><strong>Chain Data Analysis:</strong> Blockchain evidence of suspicious transactions
+                      <a href="/downloads/Shuffle-Chain-Data.pdf" download className="ml-2 text-blue-400 hover:text-blue-300 text-sm">[Download PDF]</a>
+                    </span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <span className="text-red-500 mt-1">•</span>
-                    <span><strong>Demand Letters:</strong> Formal requests for transparency and accountability</span>
+                    <span><strong>Demand Letters:</strong> Formal requests for transparency and accountability
+                      <a href="/downloads/Shuffle-Demand.pdf" download className="ml-2 text-blue-400 hover:text-blue-300 text-sm">[Download PDF]</a>
+                    </span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <span className="text-red-500 mt-1">•</span>
-                    <span><strong>Synopsis Reports:</strong> Comprehensive analysis of operational concerns</span>
+                    <span><strong>Synopsis Reports:</strong> Comprehensive analysis of operational concerns
+                      <a href="/downloads/Shuffle Synapsis (2).pdf" download className="ml-2 text-blue-400 hover:text-blue-300 text-sm">[Download PDF]</a>
+                    </span>
                   </li>
                 </ul>
               </CardContent>

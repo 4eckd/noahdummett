@@ -1,0 +1,119 @@
+{
+  "title": "Noah Dummett Investigation Timeline",
+  "description": "Comprehensive timeline of events related to Noah Dummett, FTX, and Shuffle.com",
+  "version": "2.0.0",
+  "lastUpdated": "2024-12-17",
+  "source": "Its Different Productions Investigation Team",
+  "events": [
+    {
+      "date": "2018",
+      "title": "Noah Dummett Enters Crypto",
+      "description": "Self-taught coder begins involvement in cryptocurrency markets",
+      "significance": "Background",
+      "sources": ["Shuffle.com interviews", "Public statements"]
+    },
+    {
+      "date": "2019-10",
+      "title": "Joins Alameda Research",
+      "description": "Noah Dummett becomes trader at Alameda Research under Sam Bankman-Fried",
+      "significance": "Critical",
+      "sources": ["The Org profile", "Business Insider interviews"]
+    },
+    {
+      "date": "2019-2021",
+      "title": "FTX/Alameda Employment Period",
+      "description": "Works as trader at Alameda Research and OTC/Operations at FTX",
+      "significance": "Critical",
+      "sources": ["LinkedIn profiles", "Company records"]
+    },
+    {
+      "date": "2021-04",
+      "title": "Leaves FTX/Alameda",
+      "description": "Noah Dummett departs FTX and Alameda Research operations",
+      "significance": "High",
+      "sources": ["Employment records", "The Org timeline"]
+    },
+    {
+      "date": "2022-05",
+      "title": "Shuffle.com Founded",
+      "description": "Co-founds Shuffle.com crypto gambling platform with Ishan Haque",
+      "significance": "Critical",
+      "sources": ["Company registration", "Shuffle.com about page"]
+    },
+    {
+      "date": "2022-11-07",
+      "title": "FTX Hack Transactions",
+      "description": "Blockchain evidence shows suspicious transactions involving Noah Dummett addresses",
+      "significance": "Critical",
+      "transactions": [
+        "0x3e2563cdc27f1e6be1f5995b9669660431d7e9e60d5cfb1c74320c27bbf2536b",
+        "0xdce984dccd4378b331591bcda03f9a0f5260bc53d16b863ef8f348b8ebe6c232"
+      ],
+      "sources": ["Blockchain analysis", "LinkedIn investigation"]
+    },
+    {
+      "date": "2022-11-11",
+      "title": "FTX Files for Bankruptcy",
+      "description": "FTX Trading Ltd. files for Chapter 11 bankruptcy protection",
+      "significance": "Critical",
+      "sources": ["Court filings", "Public records"]
+    },
+    {
+      "date": "2023-2024",
+      "title": "Shuffle Rapid Growth",
+      "description": "Shuffle.com grows from $200M to nearly $1B in wager volume",
+      "significance": "High",
+      "sources": ["Company statements", "Industry reports"]
+    },
+    {
+      "date": "2024-07",
+      "title": "Public Interviews",
+      "description": "Noah Dummett gives interviews about plans to outshine Stake",
+      "significance": "Medium",
+      "sources": ["Next.io podcast", "Industry publications"]
+    },
+    {
+      "date": "2024-08",
+      "title": "Community Concerns Raised",
+      "description": "BitcoinTalk forum raises serious questions about Shuffle.com",
+      "significance": "High",
+      "sources": ["BitcoinTalk forum", "Community investigations"]
+    },
+    {
+      "date": "2024-11",
+      "title": "Theft Allegations Surface",
+      "description": "Allegations emerge that Noah stole $20M from FTX after bankruptcy",
+      "significance": "Critical",
+      "sources": ["BitcoinTalk investigations", "Community research"]
+    },
+    {
+      "date": "2024-12",
+      "title": "LinkedIn Investigation Published",
+      "description": "Professional blockchain analyst publishes evidence of $25M+ theft",
+      "significance": "Critical",
+      "sources": ["LinkedIn post by supitsj", "Blockchain analysis"]
+    }
+  ],
+  "keyAllegations": [
+    {
+      "allegation": "Fund Misappropriation",
+      "amount": "$25,000,000+",
+      "source": "FTX bankruptcy estate",
+      "evidence": "Blockchain transactions",
+      "status": "Under investigation"
+    },
+    {
+      "allegation": "Money Laundering",
+      "method": "Crypto gambling platform",
+      "evidence": "Transaction patterns",
+      "status": "Alleged"
+    },
+    {
+      "allegation": "Anonymous Leadership",
+      "concern": "Lack of transparency",
+      "evidence": "Company structure",
+      "status": "Documented"
+    }
+  ],
+  "disclaimer": "This timeline contains allegations and claims that are under investigation. All blockchain data is publicly verifiable. This document is for informational purposes only."
+}

@@ -236,6 +236,93 @@ export const Legal: React.FC = () => {
           </Card>
         </motion.div>
       </SectionLayout>
+
+      {/* Legal Contact Information */}
+      <SectionLayout
+        title="Legal Contact & Terms"
+        description="Contact information and terms of use for this investigation platform"
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="bg-gradient-to-br from-blue-500/5 to-purple-500/5 border-blue-500/20">
+              <CardHeader>
+                <div className="flex items-center space-x-3">
+                  <Scale className="h-6 w-6 text-blue-500" />
+                  <h3 className="text-xl font-semibold text-foreground">Legal Contact</h3>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-sm text-muted-foreground mb-2">Legal Team Email:</p>
+                    <a
+                      href="mailto:hello@noahdummett.com"
+                      className="text-blue-400 hover:text-blue-300 font-medium"
+                    >
+                      hello@noahdummett.com
+                    </a>
+                  </div>
+                  <div className="text-sm text-muted-foreground space-y-2">
+                    <p>• Legal inquiries and corrections</p>
+                    <p>• Right to response requests</p>
+                    <p>• Evidence submissions</p>
+                    <p>• Whistleblower communications</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-green-500/5 to-teal-500/5 border-green-500/20">
+              <CardHeader>
+                <div className="flex items-center space-x-3">
+                  <FileText className="h-6 w-6 text-green-500" />
+                  <h3 className="text-xl font-semibold text-foreground">Terms of Use</h3>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3 text-sm text-muted-foreground">
+                  <p>
+                    <strong className="text-foreground">Acceptance:</strong> By accessing this site, you agree to these terms and our privacy policy.
+                  </p>
+                  <p>
+                    <strong className="text-foreground">Content Use:</strong> Information is provided for educational and accountability purposes. Commercial use prohibited.
+                  </p>
+                  <p>
+                    <strong className="text-foreground">Accuracy:</strong> While we strive for accuracy, information is provided "as is" without warranties.
+                  </p>
+                  <p>
+                    <strong className="text-foreground">Updates:</strong> Terms may be updated. Continued use constitutes acceptance of changes.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <Card className="mt-8 bg-gradient-to-br from-red-500/5 to-orange-500/5 border-red-500/20">
+            <CardContent className="p-6">
+              <div className="flex items-start space-x-4">
+                <AlertTriangle className="h-6 w-6 text-red-500 flex-shrink-0 mt-1" />
+                <div>
+                  <h4 className="font-semibold text-foreground mb-2">Important Legal Notice</h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    This website contains allegations and claims currently under investigation. Noah Dummett and Shuffle.com
+                    have not been formally charged with crimes related to these allegations. All blockchain data referenced
+                    is publicly verifiable. This platform serves the public interest in accountability and transparency.
+                  </p>
+                  <div className="mt-4 text-xs text-muted-foreground">
+                    <p>Last updated: December 17, 2024</p>
+                    <p>Governing law: International public interest journalism standards</p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
+      </SectionLayout>
     </PageLayout>
   );
 };

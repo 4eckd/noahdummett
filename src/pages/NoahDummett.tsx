@@ -16,6 +16,7 @@ import {
 import { Card, CardHeader, CardContent } from '@/components/ui/Card';
 import { PageLayout, SectionLayout } from '@/components/layout/Layout';
 import { NoahDummettHeroImage } from '@/components/ui/HeroImage';
+import { TestimonialsCarousel } from '@/components/ui/TestimonialsCarousel';
 
 const keyAllegations = [
   {
@@ -431,6 +432,20 @@ export const NoahDummett: React.FC = () => {
             ))}
           </div>
         </div>
+      </SectionLayout>
+
+      {/* Community Testimonials */}
+      <SectionLayout
+        title="Community Investigations & Accusations"
+        description="What the crypto community is saying about Noah Dummett and Shuffle.com across social media platforms"
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <TestimonialsCarousel />
+        </motion.div>
       </SectionLayout>
 
       {/* Impact Metrics */}
