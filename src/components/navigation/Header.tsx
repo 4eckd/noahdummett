@@ -52,7 +52,7 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center shadow-primary-sm group-hover:shadow-primary group-hover:glow-red transition-all duration-300 group-hover:scale-110">
           <span className="text-primary-foreground font-bold text-lg">N</span>
         </div>
-        <span className="font-bold text-xl text-foreground group-hover:text-primary transition-colors duration-300">NigRNoah</span>
+        <span className="font-bold text-xl text-foreground group-hover:text-primary transition-colors duration-300">N.D.</span>
       </Link>
     );
   };
