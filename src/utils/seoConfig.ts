@@ -36,7 +36,7 @@ export const defaultSEO: SEOConfig = {
     'Regulatory Compliance',
     'Transparency'
   ],
-  ogImage: '/hero-noahdummett.png',
+  ogImage: '/social-preview.png',
   twitterCard: 'summary_large_image',
   author: 'Its Different Productions',
   type: 'website'
