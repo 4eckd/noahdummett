@@ -47,13 +47,13 @@ export const Home: React.FC = () => {
           <NoahDummettHeroImage size="lg" className="mb-8" />
 
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground">
-            The Noah Dummett
-            <span className="block text-red-500">Investigation</span>
+            Noah Dummett Investigation:
+            <span className="block text-red-500">Shuffle Prison Evidence</span>
           </h1>
 
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Uncovering the truth behind Shuffle.com's controversial founder and the mounting
-            allegations that threaten to expose a Web3 scandal of unprecedented proportions.
+            SHOCKING investigation reveals Noah Dummett and Shuffle.com allegedly stole $20M+ from FTX victims.
+            Blockchain evidence and criminal allegations that could send them to prison for decades.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
@@ -79,8 +79,8 @@ export const Home: React.FC = () => {
 
       {/* Investigation Highlights */}
       <SectionLayout
-        title="Key Allegations"
-        description="The most serious concerns that demand immediate investigation"
+        title="Noah Dummett Shuffle.com Criminal Allegations"
+        description="$20M+ FTX theft evidence and prison allegations against Shuffle founders"
         className="py-16"
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

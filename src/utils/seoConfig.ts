@@ -12,8 +12,8 @@ export interface SEOConfig {
 }
 
 export const defaultSEO: SEOConfig = {
-  title: '🚨 The Disturbing Truth About Shuffle\'s Founders That Could Put Them In Prison For A Long, Long Time...',
-  description: 'SHOCKING INVESTIGATION: What we discovered about Noah Dummett and Shuffle.com will make your blood boil. $20M+ allegedly stolen from FTX victims, anonymous leadership hiding dark secrets, and evidence that could send them to prison for DECADES. The crypto world will never be the same...',
+  title: '🚨 Noah Dummett Investigation: Shuffle Founders Prison Evidence',
+  description: 'SHOCKING: Noah Dummett & Shuffle.com investigation reveals $20M+ allegedly stolen from FTX victims. Blockchain evidence could send them to prison.',
   keywords: [
     'Noah Dummett prison',
     'Shuffle.com criminal investigation',
@@ -44,14 +44,14 @@ export const defaultSEO: SEOConfig = {
 
 export const pageSEO: Record<string, Partial<SEOConfig>> = {
   home: {
-    title: '🚨 SHOCKING: Shuffle Founders Could Face DECADES In Prison',
-    description: 'EXPLOSIVE INVESTIGATION: Noah Dummett and Shuffle.com allegedly stole $20M+ from FTX bankruptcy victims. Anonymous leadership, hidden identities, and evidence that could destroy the entire operation. This scandal will SHOCK the crypto world and could send them to prison for DECADES...',
+    title: '🚨 Noah Dummett Shuffle Investigation: $20M FTX Theft Evidence',
+    description: 'EXPLOSIVE: Noah Dummett Shuffle.com investigation reveals $20M+ allegedly stolen from FTX victims. Blockchain evidence, prison allegations.',
     keywords: ['Noah Dummett prison', 'Shuffle.com criminal investigation', 'crypto fraud scandal', 'FTX victims stolen money'],
     canonicalUrl: 'https://noahdummett.com/'
   },
   'noah-dummett': {
-    title: '🔥 EXPOSED: The Noah Dummett Criminal Files That Will DESTROY Shuffle.com',
-    description: 'BOMBSHELL EVIDENCE: Legal documents, blockchain analysis, and whistleblower testimonies reveal the shocking truth about Noah Dummett. $20M+ allegedly stolen, anonymous criminal leadership, and evidence that could send them to prison for LIFE. The walls are closing in...',
+    title: '🔥 Noah Dummett Files: Shuffle.com Criminal Evidence Exposed',
+    description: 'BOMBSHELL: Noah Dummett criminal files reveal $20M+ allegedly stolen from FTX. Blockchain evidence, legal docs, prison allegations.',
     keywords: ['Noah Dummett criminal files', 'Shuffle.com evidence', 'crypto crime investigation', 'prison sentences'],
     canonicalUrl: 'https://noahdummett.com/noah-dummett',
     type: 'article'
