@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, ExternalLink, MessageSquare, Users, Calendar } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ExternalLink, MessageSquare } from 'lucide-react';
 import { Card, CardContent } from './Card';
 import { Button } from './Button';
 
@@ -184,6 +184,10 @@ export const TestimonialsCarousel: React.FC<TestimonialsCarouselProps> = ({
   };
 
   const currentTestimonial = testimonials[currentIndex];
+
+  if (!currentTestimonial) {
+    return null;
+  }
 
   return (
     <div className="space-y-6">

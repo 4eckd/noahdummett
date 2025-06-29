@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, AlertTriangle, TrendingDown, Users, Calendar, Star } from 'lucide-react';
+import { ExternalLink, AlertTriangle, Star } from 'lucide-react';
 import { Card, CardHeader, CardContent } from './Card';
 import { Button } from './Button';
 

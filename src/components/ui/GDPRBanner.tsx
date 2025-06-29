@@ -6,13 +6,11 @@ import { Card, CardContent } from './Card';
 
 interface GDPRBannerProps {
   onAccept?: () => void;
-  onDecline?: () => void;
   onCustomize?: () => void;
 }
 
 export const GDPRBanner: React.FC<GDPRBannerProps> = ({
   onAccept,
-  onDecline,
   onCustomize
 }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -28,6 +26,7 @@ export const GDPRBanner: React.FC<GDPRBannerProps> = ({
       }, 2000);
       return () => clearTimeout(timer);
     }
+    return undefined;
   }, []);
 
   const handleAccept = () => {
@@ -35,13 +34,6 @@ export const GDPRBanner: React.FC<GDPRBannerProps> = ({
     localStorage.setItem('gdpr-timestamp', new Date().toISOString());
     setIsVisible(false);
     onAccept?.();
-  };
-
-  const handleDecline = () => {
-    localStorage.setItem('gdpr-consent', 'declined');
-    localStorage.setItem('gdpr-timestamp', new Date().toISOString());
-    setIsVisible(false);
-    onDecline?.();
   };
 
   const handleCustomize = () => {

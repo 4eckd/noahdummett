@@ -7,8 +7,7 @@ import {
   Eye,
   AlertTriangle,
   CheckCircle,
-  XCircle,
-  Info
+  XCircle
 } from 'lucide-react';
 import { Card, CardHeader, CardContent } from '@/components/ui/Card';
 import { PageLayout, SectionLayout } from '@/components/layout/Layout';
