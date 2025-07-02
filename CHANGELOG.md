@@ -5,6 +5,39 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.0] - 2024-12-02
+
+### Added
+- **Complete Documentation Reorganization**: Professional documentation structure with 5 organized categories
+  - Investigation Documentation: Complete methodology, timeline, and findings
+  - Evidence Analysis: Platform-specific evidence documentation
+  - Legal Documentation: Whistleblower reports and legal analysis
+  - Technical Documentation: Architecture and implementation details
+  - Project Documentation: Development history and project management
+
+- **Single Documentation Hub**: Unified documentation solution at `/docs`
+  - Professional documentation landing page with category overview
+  - Statistics dashboard showing investigation metrics
+  - Quick access to all documentation categories
+  - Removed auto-redirect for better user experience
+
+- **File Organization**: Moved all root directory files to proper documentation structure
+  - Project files moved to `/docs/project/` (environment setup, deployment, domain setup)
+  - SEO files moved to `/docs/technical/` (SEO optimization, fixes, verification)
+  - Development summaries organized in `/docs/project/` (commit summaries, feature updates)
+  - Social media and content files organized in `/docs/project/`
+
+### Enhanced
+- **Documentation Navigation**: Updated footer with dedicated Documentation section
+- **Professional Structure**: Comprehensive README files for each documentation category
+- **Cross-References**: Links between related documentation sections
+- **Verification Guidelines**: Clear instructions for independent evidence verification
+
+### Technical Improvements
+- **Clean Root Directory**: Organized all markdown files into proper documentation structure
+- **Enhanced Documentation Component**: Improved DocsRedirect component as main documentation hub
+- **Better File Organization**: Logical categorization of all project documentation
+
 ## [2.0.0] - 2024-12-02
 
 ### Added
@@ -39,67 +72,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Organized downloadable files by category and type
   - Added comprehensive file descriptions and metadata
 
-### Enhanced
-- **Footer Navigation**: Complete redesign focused on investigation evidence
-  - Investigation section with key pages
-  - Evidence Sources with platform-specific links
-  - External Links for direct platform access
-  - Legal section with proper policy links
-
-- **Evidence Components**: Enhanced existing evidence components
-  - TrustpilotEvidence component with filtering and analysis
-  - TrustpilotManipulation component with detailed manipulation tactics
-  - ComprehensiveEvidence component with cross-platform overview
-
-- **File Organization**: Structured evidence files for easy access
-  - Legal documentation (IRS forms, pleadings, demands)
-  - Blockchain analysis reports and transaction data
-  - Platform evidence documentation (Trustpilot, Reddit, Casino Guru)
-  - Investigation reports and summary documents
-
-### Technical Improvements
-- **Routing System**: Added comprehensive routing for all evidence pages
-  - `/evidence` - Evidence overview and navigation hub
-  - `/evidence/trustpilot` - Trustpilot-specific evidence and analysis
-  - `/evidence/reddit` - Reddit ban documentation and complaints
-  - `/evidence/casino-guru` - Formal complaint analysis
-  - `/platform-manipulation` - Cross-platform manipulation analysis
-
-- **Component Architecture**: Enhanced component structure for evidence presentation
-  - Reusable evidence card components
-  - Download button components with file metadata
-  - Platform-specific icon and color systems
-  - Responsive grid layouts for evidence presentation
-
-- **File Management**: Improved file organization and access
-  - Categorized downloads by evidence type
-  - Added file size and type metadata
-  - Implemented direct download functionality
-  - Created comprehensive file index system
-
-### Documentation
-- **Evidence Archive Index**: Complete index of all evidence files and sources
-- **Platform Analysis Reports**: Detailed analysis for each evidence platform
-- **Investigation Timeline**: Structured timeline data with blockchain references
-- **Legal Documentation**: Organized legal filings and whistleblower reports
-
-### Security & Compliance
-- **Evidence Verification**: All evidence sources independently verifiable
-- **Legal Compliance**: Proper attribution and source documentation
-- **Privacy Protection**: Anonymized user data where appropriate
-- **Platform Guidelines**: Compliance with platform terms for evidence presentation
-
-### Performance
-- **Optimized Loading**: Efficient loading of evidence components and files
-- **Responsive Design**: Mobile-optimized evidence presentation
-- **Search Functionality**: Enhanced search across evidence categories
-- **Download Optimization**: Efficient file serving and download management
-
-## [1.0.0] - 2025-06-17
+## [1.0.0] - 2024-11-01
 
 ### Added
-- Initial release of FUSED GAMING React TypeScript Boilerplate
+- Initial release of Noah Dummett Investigation website
 - Complete React 18 + TypeScript + Vite setup
+- Investigation-focused design and content structure
+- Basic evidence presentation and navigation
 - 5-theme system (Dark, Violet, Emerald, Amber, Aurora)
 - Comprehensive UI component library
 - Theme switching with persistence

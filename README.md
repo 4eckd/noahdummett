@@ -15,8 +15,15 @@ A comprehensive investigation platform exposing concerning allegations surroundi
 - **Unethical treatment** of vulnerable gambling users
 - **Operational pattern concerns** linking to FTX practices
 
-## 📚 **Evidence Repository**
-Complete evidence documentation available in the `/service` directory including IRS Form 211, blockchain analysis, and legal pleadings.
+## 📚 **Complete Documentation Hub**
+Comprehensive documentation organized in professional structure:
+- **Investigation Documentation** (`/docs/investigation/`) - Complete methodology and findings
+- **Evidence Analysis** (`/docs/evidence/`) - Platform-specific evidence documentation
+- **Legal Documentation** (`/docs/legal/`) - Whistleblower reports and legal analysis
+- **Technical Documentation** (`/docs/technical/`) - Architecture and implementation
+- **Project Documentation** (`/docs/project/`) - Development history and management
+
+**Evidence Repository**: Complete evidence files available in the `/service` directory including IRS Form 211, blockchain analysis, and legal pleadings.
 
 ## ✨ Features
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, FileText, Book, Scale, Wrench } from 'lucide-react';
 import { Card, CardHeader, CardContent } from '@/components/ui/Card';
@@ -14,7 +14,7 @@ const documentationSections = [
     url: '/docs/investigation/',
     items: [
       'Investigation Overview',
-      'Investigation Summary', 
+      'Investigation Summary',
       'Blockchain Integration',
       'LinkedIn Integration'
     ]
@@ -58,18 +58,30 @@ const documentationSections = [
       'SEO Optimization',
       'Deployment Guide'
     ]
+  },
+  {
+    id: 'project',
+    title: 'Project Documentation',
+    description: 'Project management, development history, and release notes',
+    icon: <FileText className="h-8 w-8 text-indigo-500" />,
+    url: '/docs/project/',
+    items: [
+      'Project Overview',
+      'Environment Setup',
+      'Release Management',
+      'Development History'
+    ]
   }
 ];
 
 export const DocsRedirectPage: React.FC = () => {
-  useEffect(() => {
-    // Auto-redirect to main docs page after 5 seconds
-    const timer = setTimeout(() => {
-      window.location.href = '/docs/';
-    }, 5000);
-
-    return () => clearTimeout(timer);
-  }, []);
+  // Remove auto-redirect - this is now the main docs page
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     window.location.href = '/docs/';
+  //   }, 5000);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   return (
     <PageLayout
@@ -78,8 +90,8 @@ export const DocsRedirectPage: React.FC = () => {
     >
       {/* Hero Section */}
       <SectionLayout
-        title="📚 Investigation Documentation"
-        description="Comprehensive documentation organized by category"
+        title="📚 Complete Documentation Hub"
+        description="Your single source for all investigation evidence, legal documentation, and technical implementation"
       >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -87,20 +99,29 @@ export const DocsRedirectPage: React.FC = () => {
           transition={{ duration: 0.6 }}
         >
           <Card className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 border-blue-500/30 mb-8">
-            <CardContent className="p-6 text-center">
-              <h3 className="text-xl font-semibold text-foreground mb-2">
-                Redirecting to Documentation
-              </h3>
-              <p className="text-muted-foreground mb-4">
-                You will be automatically redirected to the main documentation in 5 seconds, or choose a specific section below.
-              </p>
-              <Button
-                variant="outline"
-                onClick={() => window.location.href = '/docs/'}
-                rightIcon={<ExternalLink className="h-4 w-4" />}
-              >
-                Go to Documentation Now
-              </Button>
+            <CardContent className="p-6">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+                <div>
+                  <div className="text-2xl font-bold text-blue-400 mb-2">150+</div>
+                  <div className="text-sm font-medium text-foreground mb-1">Evidence Sources</div>
+                  <div className="text-xs text-muted-foreground">Independently verifiable</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-green-400 mb-2">5</div>
+                  <div className="text-sm font-medium text-foreground mb-1">Documentation Categories</div>
+                  <div className="text-xs text-muted-foreground">Organized by type</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-yellow-400 mb-2">$25M+</div>
+                  <div className="text-sm font-medium text-foreground mb-1">Documented Theft</div>
+                  <div className="text-xs text-muted-foreground">Blockchain verified</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-red-400 mb-2">0%</div>
+                  <div className="text-sm font-medium text-foreground mb-1">Resolution Rate</div>
+                  <div className="text-xs text-muted-foreground">Across all platforms</div>
+                </div>
+              </div>
             </CardContent>
           </Card>
         </motion.div>
