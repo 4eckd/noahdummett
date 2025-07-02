@@ -20,7 +20,7 @@ const redditEvidence = [
     id: 'scam-reports',
     title: 'Multiple Scam Reports Across Reddit',
     description: 'Various Reddit posts and comments documenting withdrawal issues and scam allegations',
-    url: 'https://www.reddit.com/search/?q=shuffle.com%20scam',
+    url: 'https://www.reddit.com/search/?q=shuffle.com',
     status: 'Active',
     severity: 'High',
     date: 'Ongoing',

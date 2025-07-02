@@ -20,10 +20,4 @@ export type { ThemeToggleProps } from './ThemeToggle';
 export { TechStackLogos } from './TechStackLogos';
 export type { TechStackLogosProps } from './TechStackLogos';
 
-export {
-  TrustpilotWidget,
-  TrustpilotHeaderWidget,
-  TrustpilotCTA,
-  TrustpilotMini,
-  TrustpilotStars
-} from './TrustpilotWidget';
+export { default as CookieConsent } from './CookieConsent';

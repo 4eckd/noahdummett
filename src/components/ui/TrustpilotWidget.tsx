@@ -235,14 +235,28 @@ export const TrustpilotHeaderWidget: React.FC<Omit<TrustpilotWidgetProps, 'varia
   return (
     <div
       className={`rounded-md px-3 py-2 border backdrop-blur-sm transition-all duration-200 hover:shadow-lg ${props.className || ''}`}
-      style={getHeaderStyles()}
+      style={{
+        ...getHeaderStyles(),
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        minHeight: '32px',
+      }}
     >
-      <TrustpilotWidget
-        {...props}
-        variant="micro-review-count"
-        height="24px"
-        className="inline-block"
-      />
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <TrustpilotWidget
+          {...props}
+          variant="micro-review-count"
+          height="24px"
+          className="inline-block"
+        />
+      </div>
     </div>
   );
 };
@@ -374,14 +388,31 @@ export const TrustpilotCTA: React.FC<Omit<TrustpilotWidgetProps, 'variant'>> = (
       </div>
       <div
         className="rounded-lg p-3 border backdrop-blur-sm transition-all duration-200"
-        style={getGradientStyles()}
+        style={{
+          ...getGradientStyles(),
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          minHeight: '60px',
+          flexDirection: 'column',
+        }}
       >
-        <TrustpilotWidget
-          {...props}
-          variant="review-collector"
-          height="52px"
-          className="w-full"
-        />
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: '100%',
+            maxWidth: '400px',
+          }}
+        >
+          <TrustpilotWidget
+            {...props}
+            variant="review-collector"
+            height="52px"
+            className="w-full"
+          />
+        </div>
       </div>
     </div>
   );
@@ -435,15 +466,31 @@ export const TrustpilotMini: React.FC<Omit<TrustpilotWidgetProps, 'variant' | 'h
   return (
     <div
       className={`rounded-lg p-3 border backdrop-blur-sm transition-all duration-200 hover:shadow-lg ${props.className || ''}`}
-      style={getMiniStyles()}
+      style={{
+        ...getMiniStyles(),
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        minHeight: '140px',
+      }}
     >
-      <TrustpilotWidget
-        {...props}
-        variant="mini-review"
-        height="120px"
-        width="100%"
-        className="block"
-      />
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          width: '100%',
+          maxWidth: '300px',
+        }}
+      >
+        <TrustpilotWidget
+          {...props}
+          variant="mini-review"
+          height="120px"
+          width="100%"
+          className="block"
+        />
+      </div>
     </div>
   );
 };
@@ -496,14 +543,28 @@ export const TrustpilotStars: React.FC<Omit<TrustpilotWidgetProps, 'variant' | '
   return (
     <div
       className={`inline-block rounded px-2 py-1 border backdrop-blur-sm transition-all duration-200 ${props.className || ''}`}
-      style={getStarsStyles()}
+      style={{
+        ...getStarsStyles(),
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        minHeight: '36px',
+      }}
     >
-      <TrustpilotWidget
-        {...props}
-        variant="review-stars"
-        height="28px"
-        className="inline-block"
-      />
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <TrustpilotWidget
+          {...props}
+          variant="review-stars"
+          height="28px"
+          className="inline-block"
+        />
+      </div>
     </div>
   );
 };

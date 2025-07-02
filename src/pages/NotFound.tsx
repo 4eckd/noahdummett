@@ -94,22 +94,22 @@ export const NotFound: React.FC = () => {
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
                 <Link
-                  to="/noah-dummett#blockchain-evidence"
+                  to="/evidence"
                   className="text-blue-400 hover:text-blue-300 transition-colors"
                 >
-                  🔗 Blockchain Evidence
+                  🔗 Evidence Overview
                 </Link>
                 <Link
-                  to="/noah-dummett#trustpilot-evidence"
+                  to="/evidence/trustpilot"
                   className="text-green-400 hover:text-green-300 transition-colors"
                 >
                   ⭐ Trustpilot Analysis
                 </Link>
                 <Link
-                  to="/noah-dummett#community-testimonials"
+                  to="/evidence/reddit"
                   className="text-purple-400 hover:text-purple-300 transition-colors"
                 >
-                  💬 Community Reports
+                  💬 Reddit Evidence
                 </Link>
               </div>
             </div>
