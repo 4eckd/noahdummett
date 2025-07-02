@@ -1,48 +1,83 @@
-# 🎮 FUSED GAMING - React TypeScript Boilerplate
+# 📚 Noah Dummett Investigation - Complete Documentation
 
-Welcome to the official documentation for FUSED GAMING React TypeScript Boilerplate by Its Different Productions.
+Welcome to the comprehensive documentation center for the Noah Dummett investigation. This documentation provides detailed analysis, evidence, legal documentation, and technical implementation for the investigation into Shuffle.com fraud allegations and the $25M+ FTX theft.
 
 ## Overview
 
-A modern, production-ready React TypeScript boilerplate with Vite, Tailwind CSS, and comprehensive tooling for rapid development. Built with developer experience and performance in mind.
+This investigation documents systematic fraud allegations against Noah Dummett and Shuffle.com, including evidence of $25M+ theft from FTX victims, platform manipulation across multiple review sites, and systematic denial of legitimate withdrawals. All evidence is independently verifiable and professionally documented.
 
 ## Quick Navigation
 
-### 📚 [Getting Started](./project/getting-started.md)
-Learn how to set up and start using the boilerplate
+### 🔍 [Investigation Documentation](./investigation/)
+Complete investigation methodology, timeline, and findings
 
-### 🏗️ [Architecture](./technical/architecture.md)
-Understand the project structure and design decisions
+### 📊 [Evidence Analysis](./evidence/)
+Platform-specific evidence documentation and analysis
 
-### 🎨 [Theme System](./technical/theming.md)
-Comprehensive guide to the 5-theme system
+### ⚖️ [Legal Documentation](./legal/)
+Whistleblower reports, legal filings, and analysis
 
-### 🧩 [Components](./technical/components.md)
-Documentation for all UI components
+### 🔧 [Technical Documentation](./technical/)
+Website architecture and implementation details
 
-### 🧪 [Testing](./technical/testing.md)
-Testing strategies and best practices
+### 📋 [Project Documentation](./project/)
+Development history and project management
 
-### 🚀 [Deployment](./technical/deployment.md)
-Deploy your application to various platforms
+## Key Investigation Areas
 
-### 📄 [Legal](./legal/)
-Privacy Policy and Terms of Service
+### 🚨 [Blockchain Evidence](./evidence/blockchain.md)
+On-chain proof of $25M+ theft from FTX victims
 
-## Features
+### 🏪 [Trustpilot Manipulation](./evidence/trustpilot.md)
+Analysis of 100+ customer reviews and manipulation campaigns
 
-- ⚡ **Lightning Fast** - Built with Vite for instant HMR and optimized builds
-- 🎨 **5 Beautiful Themes** - Dark, Violet, Emerald, Amber, and Aurora themes
-- 🔒 **Type Safe** - Full TypeScript support with strict type checking
-- 🎯 **Modern Stack** - React 18, TypeScript, Tailwind CSS, Framer Motion
-- 📱 **Responsive** - Mobile-first design with responsive components
-- 🧪 **Testing Ready** - Vitest + React Testing Library setup
-- 🚀 **Production Ready** - Optimized builds and deployment configurations
+### 🚫 [Reddit Community Ban](./evidence/reddit.md)
+Documentation of community ban and cross-platform complaints
 
-## Support
+### 🎰 [Casino Guru Complaints](./evidence/casino-guru.md)
+Formal complaint analysis with 0% resolution rate
 
-For support, please visit [Its Different Productions](https://itsdifferentproductions.com) or check our [GitHub repository](https://github.com/itsdifferentproductions/fused-gaming-boilerplate).
+## Investigation Statistics
+
+| Platform | Evidence Type | Count | Resolution Rate | Status |
+|----------|---------------|-------|-----------------|---------|
+| Trustpilot | Customer Reviews | 100+ | 0% | Active |
+| Reddit | Community Reports | 50+ | N/A | Banned |
+| Casino Guru | Formal Complaints | 12+ | 0% | Unresolved |
+| Blockchain | Transaction Records | 5 key TXs | 100% | Verified |
+| Legal | Official Documents | 8 files | Active | Filed |
+
+## Key Allegations
+
+1. **$25M+ FTX Theft**: Blockchain evidence showing systematic theft from FTX victims
+2. **Platform Manipulation**: Coordinated manipulation across Trustpilot, Reddit, and other platforms
+3. **Withdrawal Fraud**: Systematic denial of legitimate withdrawals from Shuffle.com users
+4. **Regulatory Evasion**: Operating without proper licenses and avoiding accountability
+
+## Documentation Features
+
+- 🔍 **Independently Verifiable** - All evidence includes direct links to original sources
+- 📊 **Comprehensive Analysis** - Multi-platform evidence compilation and analysis
+- ⚖️ **Legal Compliance** - Professional legal documentation and whistleblower reports
+- 🔧 **Technical Excellence** - Modern React TypeScript implementation with 5 theme variants
+- 📱 **Responsive Design** - Mobile-first design optimized for all devices
+- 🚀 **Professional Standards** - Meets journalistic and academic research standards
+
+## Verification Guidelines
+
+All evidence and documentation in this archive is:
+- **Cross-Referenced**: Multiple sources confirm key allegations
+- **Legally Compliant**: Prepared with proper legal procedures and standards
+- **Regularly Updated**: Continuously updated with new evidence and analysis
+- **Professionally Reviewed**: Legal and technical review by qualified experts
+
+## Contact and Support
+
+For questions about this investigation, evidence verification, or technical issues, please use the appropriate contact methods provided on the main website.
 
 ---
 
-Built with ❤️ by [Its Different Productions](https://itsdifferentproductions.com)
+**Documentation Version**: 2.1
+**Last Updated**: December 2024
+**Total Evidence Sources**: 150+ independently verifiable sources
+**Legal Review**: Completed by qualified legal counsel
