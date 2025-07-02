@@ -104,6 +104,15 @@ const defaultLinks: FooterSection[] = [
     ],
   },
   {
+    title: 'Documentation',
+    links: [
+      { label: 'Investigation Docs', href: '/docs/investigation/' },
+      { label: 'Evidence Analysis', href: '/docs/evidence/' },
+      { label: 'Legal Documents', href: '/docs/legal/' },
+      { label: 'Technical Docs', href: '/docs/technical/' },
+    ],
+  },
+  {
     title: 'External Links',
     links: [
       { label: 'Trustpilot Main', href: 'https://ca.trustpilot.com/review/shuffle.com', external: true },
@@ -136,11 +145,11 @@ export const Footer: React.FC<FooterProps> = ({
 
   const renderLogo = () => {
     if (logo) return logo;
-
+    
     return (
       <Link to="/" className="flex items-center space-x-2">
         <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-          <span className="text-primary-foreground font-bold text-lg">N</span>
+          <span className="text-primary-foreground font-bold text-lg">F</span>
         </div>
         <span className="font-bold text-xl text-foreground">{companyName}</span>
       </Link>

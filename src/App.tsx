@@ -14,6 +14,7 @@ import TrustpilotEvidence from '@/pages/TrustpilotEvidence';
 import RedditEvidence from '@/pages/RedditEvidence';
 import CasinoGuruEvidence from '@/pages/CasinoGuruEvidence';
 import PlatformManipulation from '@/pages/PlatformManipulation';
+import DocsRedirect from '@/pages/DocsRedirect';
 
 function App() {
   return (
@@ -37,6 +38,9 @@ function App() {
             <Route path="evidence/reddit" element={<RedditEvidence />} />
             <Route path="evidence/casino-guru" element={<CasinoGuruEvidence />} />
             <Route path="platform-manipulation" element={<PlatformManipulation />} />
+
+            {/* Documentation Route */}
+            <Route path="docs" element={<DocsRedirect />} />
 
             <Route path="*" element={<NotFound />} />
           </Route>

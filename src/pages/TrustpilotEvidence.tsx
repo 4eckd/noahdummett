@@ -7,13 +7,23 @@ import { TrustpilotEvidence as TrustpilotEvidenceComponent } from '@/components/
 import { TrustpilotManipulation } from '@/components/ui/TrustpilotManipulation';
 import { Button } from '@/components/ui/Button';
 
-const downloadableFiles = [
+interface DownloadableFile {
+  name: string;
+  description: string;
+  filename: string;
+  size: string;
+  type: string;
+  isDoc?: boolean;
+}
+
+const downloadableFiles: DownloadableFile[] = [
   {
-    name: 'Trustpilot Reviews Analysis',
+    name: 'Trustpilot Evidence Analysis',
     description: 'Comprehensive analysis of 100+ Trustpilot reviews showing scam patterns',
-    filename: 'trustpilot-analysis.md',
+    filename: 'docs/evidence/trustpilot.md',
     size: '45 KB',
-    type: 'Markdown Report'
+    type: 'Documentation',
+    isDoc: true
   },
   {
     name: 'Customer Complaints Database',
@@ -137,11 +147,11 @@ export const TrustpilotEvidencePage: React.FC = () => {
                   <Button
                     variant="outline"
                     size="sm"
-                    onClick={() => window.open(`/downloads/${file.filename}`, '_blank')}
+                    onClick={() => window.open(file.isDoc ? `/${file.filename}` : `/downloads/${file.filename}`, '_blank')}
                     leftIcon={<Download className="h-4 w-4" />}
                     className="w-full"
                   >
-                    Download File
+                    {file.isDoc ? 'View Documentation' : 'Download File'}
                   </Button>
                 </CardContent>
               </Card>

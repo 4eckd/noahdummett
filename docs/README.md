@@ -1,29 +1,41 @@
-# 📚 FUSED GAMING Documentation
+# 📚 Noah Dummett Investigation Documentation
 
-Welcome to the comprehensive documentation for FUSED GAMING React TypeScript Boilerplate.
+Welcome to the comprehensive documentation for the Noah Dummett investigation. This documentation provides detailed analysis, evidence, legal documentation, and technical implementation details for the investigation into Shuffle.com fraud allegations and the $25M+ FTX theft.
 
 ## 🌐 Live Documentation
 
-**URL**: https://docs.react-boilerplate-taupe.vercel.app
+**URL**: https://noahdummett.com/docs
 
-This documentation is deployed as a static site on Vercel and provides comprehensive guides for using the FUSED GAMING React TypeScript Boilerplate.
+This documentation is deployed as part of the Noah Dummett investigation website and provides comprehensive evidence analysis, legal documentation, and technical implementation details.
 
 ## 📚 Documentation Structure
 
-### Project Documentation
-- **[Getting Started](./project/getting-started.md)** - Quick setup and installation guide
-- **[FAQ](./project/faq.md)** - Frequently asked questions and troubleshooting
+### Investigation Documentation
+- **[Investigation Overview](./investigation/README.md)** - Complete investigation methodology and timeline
+- **[Investigation Summary](./investigation/overview.md)** - Executive summary of investigation findings
+- **[Blockchain Integration](./investigation/blockchain-integration.md)** - Blockchain evidence integration analysis
 
-### Technical Documentation
-- **[Architecture](./technical/architecture.md)** - System design and architectural decisions
-- **[Theme System](./technical/theming.md)** - Complete guide to the 5-theme system
-- **[Components](./technical/components.md)** - UI component library documentation
-- **[Testing](./technical/testing.md)** - Testing strategies and best practices
-- **[Deployment](./technical/deployment.md)** - Deployment guides for various platforms
+### Evidence Documentation
+- **[Evidence Overview](./evidence/README.md)** - Comprehensive evidence analysis across all platforms
+- **[Trustpilot Evidence](./evidence/trustpilot.md)** - Analysis of 100+ customer reviews and manipulation campaigns
+- **[Reddit Evidence](./evidence/reddit.md)** - Community ban documentation and cross-platform complaints
+- **[Casino Guru Evidence](./evidence/casino-guru.md)** - Formal complaint analysis with 0% resolution rate
+- **[Blockchain Evidence](./evidence/blockchain.md)** - On-chain proof of $25M+ theft from FTX victims
+- **[Evidence Archive Index](./evidence/archive-index.md)** - Complete index of all evidence files and sources
 
 ### Legal Documentation
-- **[Privacy Policy](./legal/privacy_policy.md)** - Privacy policy for FUSED GAMING platform
-- **[Terms of Service](./legal/terms_of_service.md)** - Terms of service and user agreements
+- **[Legal Overview](./legal/README.md)** - Comprehensive legal documentation and analysis
+- **[Whistleblower Reports](./legal/whistleblower.md)** - IRS Form 211 and whistleblower protection analysis
+- **[Legal Documentation Index](./legal/documentation-index.md)** - Complete index of legal files and procedures
+- **[Privacy Policy](./legal/privacy_policy.md)** - Site privacy policy
+- **[Terms of Service](./legal/terms_of_service.md)** - Site terms of service
+
+### Technical Documentation
+- **[Technical Overview](./technical/README.md)** - Technical architecture and implementation
+- **[Component Documentation](./technical/components.md)** - Evidence component architecture
+- **[SEO Optimization](./technical/seo-optimization.md)** - Search engine optimization implementation
+- **[Deployment Guide](./technical/deployment.md)** - Deployment and hosting procedures
+- **[Testing](./technical/testing.md)** - Testing strategies and validation
 
 ## 🚀 Quick Links
 

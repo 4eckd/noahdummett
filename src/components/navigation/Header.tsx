@@ -26,6 +26,7 @@ const defaultNavigation: NavigationItem[] = [
   { label: 'Investigation', href: '/noah-dummett' },
   { label: 'Evidence', href: '/evidence' },
   { label: 'Manipulation', href: '/platform-manipulation' },
+  { label: 'Docs', href: '/docs' },
   { label: 'About', href: '/about' },
   { label: 'FAQ', href: '/faq' },
   { label: 'Legal', href: '/legal' },

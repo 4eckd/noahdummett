@@ -7,25 +7,31 @@ This directory contains comprehensive documentation for the Noah Dummett investi
 ## Directory Structure
 
 ```
-docs/investigation/
-├── README.md                 # This file - investigation overview
-├── evidence/                 # Evidence documentation
-│   ├── trustpilot.md        # Trustpilot evidence analysis
-│   ├── reddit.md            # Reddit evidence documentation
-│   ├── casino-guru.md       # Casino Guru complaints analysis
-│   └── blockchain.md        # Blockchain evidence documentation
-├── platform-manipulation/   # Platform manipulation analysis
-│   ├── overview.md          # General manipulation tactics
-│   ├── trustpilot.md        # Trustpilot-specific manipulation
-│   └── cross-platform.md   # Cross-platform coordination
-├── legal/                   # Legal documentation
+docs/
+├── investigation/           # Main investigation documentation
+│   ├── README.md           # Investigation overview (this file)
+│   ├── overview.md         # Investigation summary
+│   ├── timeline.md         # Investigation timeline
+│   └── findings.md         # Key findings and conclusions
+├── evidence/               # Platform-specific evidence analysis
+│   ├── README.md           # Evidence overview
+│   ├── trustpilot.md       # Trustpilot evidence analysis
+│   ├── reddit.md           # Reddit evidence documentation
+│   ├── casino-guru.md      # Casino Guru complaints analysis
+│   ├── blockchain.md       # Blockchain evidence documentation
+│   └── archive-index.md    # Complete evidence archive index
+├── legal/                  # Legal documents and analysis
+│   ├── README.md           # Legal documentation overview
 │   ├── whistleblower.md    # Whistleblower reports
-│   ├── pleadings.md         # Legal pleadings
-│   └── demands.md           # Legal demands
-└── technical/               # Technical implementation
-    ├── components.md        # Evidence component documentation
-    ├── routing.md           # Navigation and routing
-    └── downloads.md         # Download system implementation
+│   ├── pleadings.md        # Legal pleadings
+│   ├── demands.md          # Legal demands
+│   └── documentation-index.md # Legal documentation index
+└── technical/              # Technical implementation
+    ├── README.md           # Technical documentation overview
+    ├── components.md       # Evidence component documentation
+    ├── routing.md          # Navigation and routing
+    ├── downloads.md        # Download system implementation
+    └── deployment.md       # Deployment and hosting
 ```
 
 ## Investigation Summary

@@ -18,3 +18,6 @@ export { default as TrustpilotEvidence } from './TrustpilotEvidence';
 export { default as RedditEvidence } from './RedditEvidence';
 export { default as CasinoGuruEvidence } from './CasinoGuruEvidence';
 export { default as PlatformManipulation } from './PlatformManipulation';
+
+// Documentation
+export { default as DocsRedirect } from './DocsRedirect';
