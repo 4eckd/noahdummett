@@ -58,53 +58,52 @@ export const TrustpilotWidget: React.FC<TrustpilotWidgetProps> = ({
   const { themeConfig } = useTheme();
   const finalTemplateId = templateId || TRUSTPILOT_TEMPLATES[variant];
 
-  // Theme-aware styling
+  // Theme-aware styling with better contrast and readability
   const getThemeStyles = () => {
-    const baseStyles = {
-      backgroundColor: themeConfig.colors.card,
-      borderColor: themeConfig.colors.border,
-      color: themeConfig.colors.cardForeground,
-    };
-
-    // Enhanced contrast for different themes
+    // Enhanced contrast for different themes with proper text readability
     switch (themeConfig.variant) {
       case 'dark':
         return {
-          ...baseStyles,
-          backgroundColor: 'rgba(31, 41, 55, 0.95)', // gray-800/95
-          borderColor: 'rgba(75, 85, 99, 0.8)', // gray-600/80
-          boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.3)',
+          backgroundColor: 'rgba(17, 24, 39, 0.95)', // gray-900/95 - darker for better contrast
+          borderColor: 'rgba(55, 65, 81, 0.8)', // gray-700/80
+          boxShadow: '0 4px 12px -2px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(55, 65, 81, 0.3)',
+          color: 'rgba(243, 244, 246, 0.95)', // gray-100/95
         };
       case 'violet':
         return {
-          ...baseStyles,
-          backgroundColor: 'rgba(139, 92, 246, 0.1)', // violet-500/10
-          borderColor: 'rgba(139, 92, 246, 0.3)', // violet-500/30
-          boxShadow: '0 4px 6px -1px rgba(139, 92, 246, 0.2)',
+          backgroundColor: 'rgba(30, 27, 75, 0.9)', // Deep violet background
+          borderColor: 'rgba(139, 92, 246, 0.6)', // violet-500/60
+          boxShadow: '0 4px 12px -2px rgba(139, 92, 246, 0.3), 0 0 0 1px rgba(139, 92, 246, 0.4)',
+          color: 'rgba(245, 243, 255, 0.95)', // violet-50/95
         };
       case 'emerald':
         return {
-          ...baseStyles,
-          backgroundColor: 'rgba(16, 185, 129, 0.1)', // emerald-500/10
-          borderColor: 'rgba(16, 185, 129, 0.3)', // emerald-500/30
-          boxShadow: '0 4px 6px -1px rgba(16, 185, 129, 0.2)',
+          backgroundColor: 'rgba(6, 46, 37, 0.9)', // Deep emerald background
+          borderColor: 'rgba(16, 185, 129, 0.6)', // emerald-500/60
+          boxShadow: '0 4px 12px -2px rgba(16, 185, 129, 0.3), 0 0 0 1px rgba(16, 185, 129, 0.4)',
+          color: 'rgba(236, 253, 245, 0.95)', // emerald-50/95
         };
       case 'amber':
         return {
-          ...baseStyles,
-          backgroundColor: 'rgba(245, 158, 11, 0.1)', // amber-500/10
-          borderColor: 'rgba(245, 158, 11, 0.3)', // amber-500/30
-          boxShadow: '0 4px 6px -1px rgba(245, 158, 11, 0.2)',
+          backgroundColor: 'rgba(69, 39, 11, 0.9)', // Deep amber background
+          borderColor: 'rgba(245, 158, 11, 0.6)', // amber-500/60
+          boxShadow: '0 4px 12px -2px rgba(245, 158, 11, 0.3), 0 0 0 1px rgba(245, 158, 11, 0.4)',
+          color: 'rgba(255, 251, 235, 0.95)', // amber-50/95
         };
       case 'aurora':
         return {
-          ...baseStyles,
-          backgroundColor: 'rgba(168, 85, 247, 0.1)', // purple-500/10
-          borderColor: 'rgba(168, 85, 247, 0.3)', // purple-500/30
-          boxShadow: '0 4px 6px -1px rgba(168, 85, 247, 0.2)',
+          backgroundColor: 'rgba(46, 16, 101, 0.9)', // Deep purple background
+          borderColor: 'rgba(168, 85, 247, 0.6)', // purple-500/60
+          boxShadow: '0 4px 12px -2px rgba(168, 85, 247, 0.3), 0 0 0 1px rgba(168, 85, 247, 0.4)',
+          color: 'rgba(250, 245, 255, 0.95)', // purple-50/95
         };
       default:
-        return baseStyles;
+        return {
+          backgroundColor: 'rgba(17, 24, 39, 0.95)',
+          borderColor: 'rgba(55, 65, 81, 0.8)',
+          boxShadow: '0 4px 12px -2px rgba(0, 0, 0, 0.4)',
+          color: 'rgba(243, 244, 246, 0.95)',
+        };
     }
   };
 
@@ -167,16 +166,18 @@ export const TrustpilotWidget: React.FC<TrustpilotWidgetProps> = ({
           href="https://www.trustpilot.com/review/noahdummett.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="font-medium transition-colors duration-200"
+          className="font-semibold transition-colors duration-200 hover:underline"
           style={{
-            color: themeConfig.colors.primary,
-            textDecoration: 'underline',
+            color: themeStyles.color,
+            textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)',
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.color = themeConfig.colors.primaryForeground;
+            e.currentTarget.style.color = themeConfig.variant === 'dark'
+              ? 'rgba(255, 255, 255, 1)'
+              : 'rgba(255, 255, 255, 0.9)';
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.color = themeConfig.colors.primary;
+            e.currentTarget.style.color = themeStyles.color;
           }}
         >
           Trustpilot
@@ -186,20 +187,55 @@ export const TrustpilotWidget: React.FC<TrustpilotWidgetProps> = ({
   );
 };
 
-// Header variant - smaller and more compact with theme-aware styling
+// Header variant - smaller and more compact with enhanced readability
 export const TrustpilotHeaderWidget: React.FC<Omit<TrustpilotWidgetProps, 'variant' | 'height'>> = (props) => {
   const { themeConfig } = useTheme();
 
-  const headerStyles = {
-    backgroundColor: `${themeConfig.colors.card}CC`, // Add transparency
-    borderColor: `${themeConfig.colors.border}80`, // Add transparency
-    backdropFilter: 'blur(8px)',
+  const getHeaderStyles = () => {
+    switch (themeConfig.variant) {
+      case 'dark':
+        return {
+          backgroundColor: 'rgba(17, 24, 39, 0.9)', // gray-900/90
+          borderColor: 'rgba(55, 65, 81, 0.7)', // gray-700/70
+          boxShadow: '0 2px 8px -1px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(55, 65, 81, 0.4)',
+        };
+      case 'violet':
+        return {
+          backgroundColor: 'rgba(30, 27, 75, 0.85)', // Deep violet
+          borderColor: 'rgba(139, 92, 246, 0.5)',
+          boxShadow: '0 2px 8px -1px rgba(139, 92, 246, 0.2), 0 0 0 1px rgba(139, 92, 246, 0.3)',
+        };
+      case 'emerald':
+        return {
+          backgroundColor: 'rgba(6, 46, 37, 0.85)', // Deep emerald
+          borderColor: 'rgba(16, 185, 129, 0.5)',
+          boxShadow: '0 2px 8px -1px rgba(16, 185, 129, 0.2), 0 0 0 1px rgba(16, 185, 129, 0.3)',
+        };
+      case 'amber':
+        return {
+          backgroundColor: 'rgba(69, 39, 11, 0.85)', // Deep amber
+          borderColor: 'rgba(245, 158, 11, 0.5)',
+          boxShadow: '0 2px 8px -1px rgba(245, 158, 11, 0.2), 0 0 0 1px rgba(245, 158, 11, 0.3)',
+        };
+      case 'aurora':
+        return {
+          backgroundColor: 'rgba(46, 16, 101, 0.85)', // Deep purple
+          borderColor: 'rgba(168, 85, 247, 0.5)',
+          boxShadow: '0 2px 8px -1px rgba(168, 85, 247, 0.2), 0 0 0 1px rgba(168, 85, 247, 0.3)',
+        };
+      default:
+        return {
+          backgroundColor: 'rgba(17, 24, 39, 0.9)',
+          borderColor: 'rgba(55, 65, 81, 0.7)',
+          boxShadow: '0 2px 8px -1px rgba(0, 0, 0, 0.3)',
+        };
+    }
   };
 
   return (
     <div
-      className={`rounded-md px-3 py-2 border shadow-sm transition-all duration-200 hover:shadow-md ${props.className || ''}`}
-      style={headerStyles}
+      className={`rounded-md px-3 py-2 border backdrop-blur-sm transition-all duration-200 hover:shadow-lg ${props.className || ''}`}
+      style={getHeaderStyles()}
     >
       <TrustpilotWidget
         {...props}
@@ -211,32 +247,116 @@ export const TrustpilotHeaderWidget: React.FC<Omit<TrustpilotWidgetProps, 'varia
   );
 };
 
-// CTA variant - larger and more prominent with theme-aware styling
+// CTA variant - larger and more prominent with enhanced readability
 export const TrustpilotCTA: React.FC<Omit<TrustpilotWidgetProps, 'variant'>> = (props) => {
   const { themeConfig } = useTheme();
 
-  const ctaStyles = {
-    backgroundColor: `${themeConfig.colors.card}F0`, // High opacity
-    borderColor: themeConfig.colors.border,
-    backdropFilter: 'blur(12px)',
+  const getCTAStyles = () => {
+    switch (themeConfig.variant) {
+      case 'dark':
+        return {
+          backgroundColor: 'rgba(17, 24, 39, 0.95)', // gray-900/95
+          borderColor: 'rgba(55, 65, 81, 0.8)',
+          boxShadow: '0 8px 25px -5px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(55, 65, 81, 0.3)',
+          textColor: 'rgba(243, 244, 246, 0.95)', // gray-100/95
+          mutedColor: 'rgba(156, 163, 175, 0.9)', // gray-400/90
+        };
+      case 'violet':
+        return {
+          backgroundColor: 'rgba(30, 27, 75, 0.95)', // Deep violet
+          borderColor: 'rgba(139, 92, 246, 0.6)',
+          boxShadow: '0 8px 25px -5px rgba(139, 92, 246, 0.3), 0 0 0 1px rgba(139, 92, 246, 0.4)',
+          textColor: 'rgba(245, 243, 255, 0.95)', // violet-50/95
+          mutedColor: 'rgba(196, 181, 253, 0.8)', // violet-300/80
+        };
+      case 'emerald':
+        return {
+          backgroundColor: 'rgba(6, 46, 37, 0.95)', // Deep emerald
+          borderColor: 'rgba(16, 185, 129, 0.6)',
+          boxShadow: '0 8px 25px -5px rgba(16, 185, 129, 0.3), 0 0 0 1px rgba(16, 185, 129, 0.4)',
+          textColor: 'rgba(236, 253, 245, 0.95)', // emerald-50/95
+          mutedColor: 'rgba(110, 231, 183, 0.8)', // emerald-300/80
+        };
+      case 'amber':
+        return {
+          backgroundColor: 'rgba(69, 39, 11, 0.95)', // Deep amber
+          borderColor: 'rgba(245, 158, 11, 0.6)',
+          boxShadow: '0 8px 25px -5px rgba(245, 158, 11, 0.3), 0 0 0 1px rgba(245, 158, 11, 0.4)',
+          textColor: 'rgba(255, 251, 235, 0.95)', // amber-50/95
+          mutedColor: 'rgba(252, 211, 77, 0.8)', // amber-300/80
+        };
+      case 'aurora':
+        return {
+          backgroundColor: 'rgba(46, 16, 101, 0.95)', // Deep purple
+          borderColor: 'rgba(168, 85, 247, 0.6)',
+          boxShadow: '0 8px 25px -5px rgba(168, 85, 247, 0.3), 0 0 0 1px rgba(168, 85, 247, 0.4)',
+          textColor: 'rgba(250, 245, 255, 0.95)', // purple-50/95
+          mutedColor: 'rgba(196, 181, 253, 0.8)', // purple-300/80
+        };
+      default:
+        return {
+          backgroundColor: 'rgba(17, 24, 39, 0.95)',
+          borderColor: 'rgba(55, 65, 81, 0.8)',
+          boxShadow: '0 8px 25px -5px rgba(0, 0, 0, 0.4)',
+          textColor: 'rgba(243, 244, 246, 0.95)',
+          mutedColor: 'rgba(156, 163, 175, 0.9)',
+        };
+    }
   };
 
-  const gradientStyles = {
-    background: themeConfig.variant === 'dark'
-      ? `linear-gradient(135deg, ${themeConfig.colors.primary}20, ${themeConfig.colors.accent}20)`
-      : `linear-gradient(135deg, ${themeConfig.colors.primary}10, ${themeConfig.colors.accent}10)`,
-    borderColor: `${themeConfig.colors.primary}40`,
+  const ctaStyles = getCTAStyles();
+
+  const getGradientStyles = () => {
+    switch (themeConfig.variant) {
+      case 'dark':
+        return {
+          background: 'linear-gradient(135deg, rgba(55, 65, 81, 0.4), rgba(75, 85, 99, 0.3))',
+          borderColor: 'rgba(55, 65, 81, 0.6)',
+        };
+      case 'violet':
+        return {
+          background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(124, 58, 237, 0.15))',
+          borderColor: 'rgba(139, 92, 246, 0.4)',
+        };
+      case 'emerald':
+        return {
+          background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(5, 150, 105, 0.15))',
+          borderColor: 'rgba(16, 185, 129, 0.4)',
+        };
+      case 'amber':
+        return {
+          background: 'linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(217, 119, 6, 0.15))',
+          borderColor: 'rgba(245, 158, 11, 0.4)',
+        };
+      case 'aurora':
+        return {
+          background: 'linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(147, 51, 234, 0.15))',
+          borderColor: 'rgba(168, 85, 247, 0.4)',
+        };
+      default:
+        return {
+          background: 'linear-gradient(135deg, rgba(55, 65, 81, 0.4), rgba(75, 85, 99, 0.3))',
+          borderColor: 'rgba(55, 65, 81, 0.6)',
+        };
+    }
   };
 
   return (
     <div
-      className={`rounded-xl p-6 border shadow-lg hover:shadow-xl transition-all duration-300 ${props.className || ''}`}
-      style={ctaStyles}
+      className={`rounded-xl p-6 border backdrop-blur-sm hover:shadow-2xl transition-all duration-300 ${props.className || ''}`}
+      style={{
+        backgroundColor: ctaStyles.backgroundColor,
+        borderColor: ctaStyles.borderColor,
+        boxShadow: ctaStyles.boxShadow,
+      }}
     >
       <div className="text-center mb-4">
         <h3
           className="text-xl font-bold mb-3 flex items-center justify-center gap-2"
-          style={{ color: themeConfig.colors.foreground }}
+          style={{
+            color: ctaStyles.textColor,
+            textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
+          }}
         >
           <span className="text-2xl">⭐</span>
           Share Your Experience
@@ -244,14 +364,17 @@ export const TrustpilotCTA: React.FC<Omit<TrustpilotWidgetProps, 'variant'>> = (
         </h3>
         <p
           className="text-sm max-w-md mx-auto leading-relaxed"
-          style={{ color: themeConfig.colors.mutedForeground }}
+          style={{
+            color: ctaStyles.mutedColor,
+            textShadow: '0 1px 2px rgba(0, 0, 0, 0.2)',
+          }}
         >
           Help others by sharing your experience with our investigation. Your feedback helps build transparency and accountability.
         </p>
       </div>
       <div
-        className="rounded-lg p-3 border transition-all duration-200"
-        style={gradientStyles}
+        className="rounded-lg p-3 border backdrop-blur-sm transition-all duration-200"
+        style={getGradientStyles()}
       >
         <TrustpilotWidget
           {...props}
@@ -264,20 +387,55 @@ export const TrustpilotCTA: React.FC<Omit<TrustpilotWidgetProps, 'variant'>> = (
   );
 };
 
-// Mini review display - for sidebars or small spaces with theme-aware styling
+// Mini review display - for sidebars or small spaces with enhanced readability
 export const TrustpilotMini: React.FC<Omit<TrustpilotWidgetProps, 'variant' | 'height' | 'width'>> = (props) => {
   const { themeConfig } = useTheme();
 
-  const miniStyles = {
-    backgroundColor: `${themeConfig.colors.card}E6`, // Semi-transparent
-    borderColor: `${themeConfig.colors.border}B3`, // Semi-transparent
-    backdropFilter: 'blur(6px)',
+  const getMiniStyles = () => {
+    switch (themeConfig.variant) {
+      case 'dark':
+        return {
+          backgroundColor: 'rgba(17, 24, 39, 0.9)', // gray-900/90
+          borderColor: 'rgba(55, 65, 81, 0.7)',
+          boxShadow: '0 4px 12px -2px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(55, 65, 81, 0.4)',
+        };
+      case 'violet':
+        return {
+          backgroundColor: 'rgba(30, 27, 75, 0.85)', // Deep violet
+          borderColor: 'rgba(139, 92, 246, 0.5)',
+          boxShadow: '0 4px 12px -2px rgba(139, 92, 246, 0.2), 0 0 0 1px rgba(139, 92, 246, 0.3)',
+        };
+      case 'emerald':
+        return {
+          backgroundColor: 'rgba(6, 46, 37, 0.85)', // Deep emerald
+          borderColor: 'rgba(16, 185, 129, 0.5)',
+          boxShadow: '0 4px 12px -2px rgba(16, 185, 129, 0.2), 0 0 0 1px rgba(16, 185, 129, 0.3)',
+        };
+      case 'amber':
+        return {
+          backgroundColor: 'rgba(69, 39, 11, 0.85)', // Deep amber
+          borderColor: 'rgba(245, 158, 11, 0.5)',
+          boxShadow: '0 4px 12px -2px rgba(245, 158, 11, 0.2), 0 0 0 1px rgba(245, 158, 11, 0.3)',
+        };
+      case 'aurora':
+        return {
+          backgroundColor: 'rgba(46, 16, 101, 0.85)', // Deep purple
+          borderColor: 'rgba(168, 85, 247, 0.5)',
+          boxShadow: '0 4px 12px -2px rgba(168, 85, 247, 0.2), 0 0 0 1px rgba(168, 85, 247, 0.3)',
+        };
+      default:
+        return {
+          backgroundColor: 'rgba(17, 24, 39, 0.9)',
+          borderColor: 'rgba(55, 65, 81, 0.7)',
+          boxShadow: '0 4px 12px -2px rgba(0, 0, 0, 0.3)',
+        };
+    }
   };
 
   return (
     <div
-      className={`rounded-lg p-3 border shadow-sm transition-all duration-200 hover:shadow-md ${props.className || ''}`}
-      style={miniStyles}
+      className={`rounded-lg p-3 border backdrop-blur-sm transition-all duration-200 hover:shadow-lg ${props.className || ''}`}
+      style={getMiniStyles()}
     >
       <TrustpilotWidget
         {...props}
@@ -290,20 +448,55 @@ export const TrustpilotMini: React.FC<Omit<TrustpilotWidgetProps, 'variant' | 'h
   );
 };
 
-// Stars only - for compact display with theme-aware styling
+// Stars only - for compact display with enhanced readability
 export const TrustpilotStars: React.FC<Omit<TrustpilotWidgetProps, 'variant' | 'height'>> = (props) => {
   const { themeConfig } = useTheme();
 
-  const starsStyles = {
-    backgroundColor: `${themeConfig.colors.card}CC`, // Semi-transparent
-    borderColor: `${themeConfig.colors.border}80`, // Semi-transparent
-    backdropFilter: 'blur(4px)',
+  const getStarsStyles = () => {
+    switch (themeConfig.variant) {
+      case 'dark':
+        return {
+          backgroundColor: 'rgba(17, 24, 39, 0.85)', // gray-900/85
+          borderColor: 'rgba(55, 65, 81, 0.6)',
+          boxShadow: '0 2px 6px -1px rgba(0, 0, 0, 0.2)',
+        };
+      case 'violet':
+        return {
+          backgroundColor: 'rgba(30, 27, 75, 0.8)', // Deep violet
+          borderColor: 'rgba(139, 92, 246, 0.4)',
+          boxShadow: '0 2px 6px -1px rgba(139, 92, 246, 0.15)',
+        };
+      case 'emerald':
+        return {
+          backgroundColor: 'rgba(6, 46, 37, 0.8)', // Deep emerald
+          borderColor: 'rgba(16, 185, 129, 0.4)',
+          boxShadow: '0 2px 6px -1px rgba(16, 185, 129, 0.15)',
+        };
+      case 'amber':
+        return {
+          backgroundColor: 'rgba(69, 39, 11, 0.8)', // Deep amber
+          borderColor: 'rgba(245, 158, 11, 0.4)',
+          boxShadow: '0 2px 6px -1px rgba(245, 158, 11, 0.15)',
+        };
+      case 'aurora':
+        return {
+          backgroundColor: 'rgba(46, 16, 101, 0.8)', // Deep purple
+          borderColor: 'rgba(168, 85, 247, 0.4)',
+          boxShadow: '0 2px 6px -1px rgba(168, 85, 247, 0.15)',
+        };
+      default:
+        return {
+          backgroundColor: 'rgba(17, 24, 39, 0.85)',
+          borderColor: 'rgba(55, 65, 81, 0.6)',
+          boxShadow: '0 2px 6px -1px rgba(0, 0, 0, 0.2)',
+        };
+    }
   };
 
   return (
     <div
-      className={`inline-block rounded px-2 py-1 border transition-all duration-200 ${props.className || ''}`}
-      style={starsStyles}
+      className={`inline-block rounded px-2 py-1 border backdrop-blur-sm transition-all duration-200 ${props.className || ''}`}
+      style={getStarsStyles()}
     >
       <TrustpilotWidget
         {...props}
