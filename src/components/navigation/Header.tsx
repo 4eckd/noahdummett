@@ -5,6 +5,7 @@ import { Menu, X, BookOpen, ExternalLink, Search } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { SearchModal } from '@/components/ui/SearchModal';
+import { TrustpilotHeaderWidget } from '@/components/ui/TrustpilotWidget';
 import { clsx } from 'clsx';
 
 export interface HeaderProps {
@@ -24,9 +25,6 @@ export interface NavigationItem {
 const defaultNavigation: NavigationItem[] = [
   { label: 'Home', href: '/' },
   { label: 'Investigation', href: '/noah-dummett' },
-  { label: 'Evidence', href: '/evidence' },
-  { label: 'Manipulation', href: '/platform-manipulation' },
-  { label: 'Docs', href: '/docs' },
   { label: 'About', href: '/about' },
   { label: 'FAQ', href: '/faq' },
   { label: 'Legal', href: '/legal' },
@@ -107,6 +105,11 @@ export const Header: React.FC<HeaderProps> = ({
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-3">
+            {/* Trustpilot Widget */}
+            <div className="hidden lg:block">
+              <TrustpilotHeaderWidget className="max-w-[200px]" />
+            </div>
+
             <Button
               variant="ghost"
               size="sm"

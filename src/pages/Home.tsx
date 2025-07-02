@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/Button';
 import { Card, CardHeader, CardContent } from '@/components/ui/Card';
 import { PageLayout, SectionLayout } from '@/components/layout/Layout';
 import { NoahDummettHeroImage } from '@/components/ui/HeroImage';
+import { TrustpilotCTA } from '@/components/ui/TrustpilotWidget';
 import { Link } from 'react-router-dom';
 
 const investigationHighlights = [
@@ -318,6 +319,16 @@ export const Home: React.FC = () => {
             </Card>
           </div>
         </motion.div>
+      </SectionLayout>
+
+      {/* Trustpilot CTA */}
+      <SectionLayout
+        title="Share Your Experience"
+        description="Help others by sharing your experience with our investigation"
+      >
+        <div className="max-w-2xl mx-auto">
+          <TrustpilotCTA className="mx-auto" />
+        </div>
       </SectionLayout>
 
       {/* CTA Section */}

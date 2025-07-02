@@ -16,6 +16,7 @@ import {
 import { Card, CardHeader, CardContent } from '@/components/ui/Card';
 import { PageLayout, SectionLayout } from '@/components/layout/Layout';
 import { NoahDummettHeroImage } from '@/components/ui/HeroImage';
+import { TrustpilotCTA } from '@/components/ui/TrustpilotWidget';
 
 const keyAllegations = [
   {
@@ -430,6 +431,16 @@ export const NoahDummett: React.FC = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </SectionLayout>
+
+      {/* Trustpilot CTA */}
+      <SectionLayout
+        title="Share Your Experience"
+        description="Help others by sharing your experience with our investigation"
+      >
+        <div className="max-w-2xl mx-auto">
+          <TrustpilotCTA className="mx-auto" />
         </div>
       </SectionLayout>
 

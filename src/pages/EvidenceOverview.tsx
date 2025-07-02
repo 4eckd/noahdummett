@@ -13,6 +13,7 @@ import { Card, CardHeader, CardContent } from '@/components/ui/Card';
 import { PageLayout, SectionLayout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/Button';
 import { ComprehensiveEvidence } from '@/components/ui/ComprehensiveEvidence';
+import { TrustpilotCTA } from '@/components/ui/TrustpilotWidget';
 
 const evidenceCategories = [
   {
@@ -301,6 +302,16 @@ export const EvidenceOverviewPage: React.FC = () => {
               </Card>
             </motion.div>
           ))}
+        </div>
+      </SectionLayout>
+
+      {/* Trustpilot CTA */}
+      <SectionLayout
+        title="Share Your Experience"
+        description="Help others by sharing your experience with our investigation"
+      >
+        <div className="max-w-2xl mx-auto">
+          <TrustpilotCTA className="mx-auto" />
         </div>
       </SectionLayout>
 

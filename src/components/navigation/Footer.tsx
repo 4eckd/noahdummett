@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Github, Twitter, Linkedin, Mail, Heart, Youtube, MessageCircle } from 'lucide-react';
+import { TrustpilotMini } from '@/components/ui/TrustpilotWidget';
 import { clsx } from 'clsx';
 
 export interface FooterProps {
@@ -86,56 +87,38 @@ const getSocialLinks = (): SocialLink[] => {
 
 const defaultLinks: FooterSection[] = [
   {
-    title: 'Investigation',
+    title: 'Product',
     links: [
-      { label: 'Noah Dummett Files', href: '/noah-dummett' },
-      { label: 'Evidence Overview', href: '/evidence' },
-      { label: 'Platform Manipulation', href: '/platform-manipulation' },
-      { label: 'FAQ', href: '/faq' },
+      { label: 'Features', href: '/features' },
+      { label: 'Pricing', href: '/pricing' },
+      { label: 'Documentation', href: '/docs' },
+      { label: 'API', href: '/api' },
     ],
   },
   {
-    title: 'Evidence Sources',
+    title: 'Company',
     links: [
-      { label: 'Trustpilot Reviews', href: '/evidence/trustpilot' },
-      { label: 'Reddit Documentation', href: '/evidence/reddit' },
-      { label: 'Casino Guru Complaints', href: '/evidence/casino-guru' },
-      { label: 'Download Archive', href: '/service', external: true },
-    ],
-  },
-  {
-    title: 'Documentation',
-    links: [
-      { label: 'Investigation Docs', href: '/docs/investigation/' },
-      { label: 'Evidence Analysis', href: '/docs/evidence/' },
-      { label: 'Legal Documents', href: '/docs/legal/' },
-      { label: 'Technical Docs', href: '/docs/technical/' },
-    ],
-  },
-  {
-    title: 'External Links',
-    links: [
-      { label: 'Trustpilot Main', href: 'https://ca.trustpilot.com/review/shuffle.com', external: true },
-      { label: 'Scam Reports Filter', href: 'https://ca.trustpilot.com/review/shuffle.com?search=scam+withdraw&stars=1', external: true },
-      { label: 'Casino Guru Complaints', href: 'https://casino.guru/complaints/all?casino=shuffle-casino', external: true },
-      { label: 'Reddit r/ShufflecomCasino', href: 'https://www.reddit.com/r/ShufflecomCasino/', external: true },
+      { label: 'About', href: '/about' },
+      { label: 'Blog', href: '/blog' },
+      { label: 'Careers', href: '/careers' },
+      { label: 'Contact', href: '/contact' },
     ],
   },
   {
     title: 'Legal',
     links: [
-      { label: 'Legal Notice', href: '/legal' },
       { label: 'Privacy Policy', href: '/privacy' },
-      { label: 'Cookie Policy', href: '/cookie-policy' },
-      { label: 'Contact', href: '/contact' },
+      { label: 'Terms of Service', href: '/terms' },
+      { label: 'Cookie Policy', href: '/cookies' },
+      { label: 'GDPR', href: '/gdpr' },
     ],
   },
 ];
 
 export const Footer: React.FC<FooterProps> = ({
   logo,
-  companyName = import.meta.env.VITE_COMPANY_NAME || 'Noah Dummett Investigation',
-  description = 'Comprehensive investigation into Shuffle.com fraud allegations and Noah Dummett\'s role in the $25M+ FTX theft. Evidence-based documentation across multiple platforms.',
+  companyName = import.meta.env.VITE_COMPANY_NAME || 'FUSED GAMING',
+  description = 'Building the future of gaming with cutting-edge technology and innovative solutions.',
   links = defaultLinks,
   socialLinks = getSocialLinks(),
   showCopyright = true,
@@ -169,7 +152,7 @@ export const Footer: React.FC<FooterProps> = ({
               </p>
               
               {/* Social Links */}
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 mb-6">
                 {socialLinks.map((social) => (
                   <a
                     key={social.platform}
@@ -182,6 +165,11 @@ export const Footer: React.FC<FooterProps> = ({
                     {social.icon}
                   </a>
                 ))}
+              </div>
+
+              {/* Trustpilot Widget */}
+              <div className="max-w-sm">
+                <TrustpilotMini className="w-full" />
               </div>
             </div>
           </div>
