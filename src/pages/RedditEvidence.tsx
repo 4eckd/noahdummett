@@ -42,23 +42,23 @@ const downloadableFiles = [
   {
     name: 'Reddit Community Ban Documentation',
     description: 'Complete documentation of the r/ShufflecomCasino ban and reasons',
-    filename: 'reddit-ban-documentation.pdf',
-    size: '1.2 MB',
-    type: 'PDF Report'
+    filename: 'reddit-ban-documentation.md',
+    size: '38 KB',
+    type: 'Markdown Report'
   },
   {
-    name: 'Reddit Scam Reports Archive',
-    description: 'Collection of Reddit posts and comments documenting scam allegations',
-    filename: 'reddit-scam-reports.pdf',
-    size: '3.1 MB',
-    type: 'PDF Archive'
+    name: 'Investigation Summary',
+    description: 'Complete investigation summary with all findings and evidence',
+    filename: 'investigation-summary.md',
+    size: '28 KB',
+    type: 'Markdown Report'
   },
   {
-    name: 'Community Discussions Analysis',
-    description: 'Analysis of community discussions and user experiences',
-    filename: 'reddit-discussions-analysis.json',
-    size: '892 KB',
-    type: 'JSON Data'
+    name: 'Evidence Archive Index',
+    description: 'Complete index of all evidence files and sources with navigation guide',
+    filename: 'evidence-archive-index.md',
+    size: '52 KB',
+    type: 'Markdown Index'
   }
 ];
 

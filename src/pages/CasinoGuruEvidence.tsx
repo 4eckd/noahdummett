@@ -54,25 +54,25 @@ const casinoGuruComplaints = [
 
 const downloadableFiles = [
   {
-    name: 'Casino Guru Complaints Archive',
-    description: 'Complete collection of all Casino Guru complaints against Shuffle.com',
-    filename: 'casino-guru-complaints.pdf',
-    size: '4.2 MB',
-    type: 'PDF Archive'
+    name: 'Casino Guru Complaints Analysis',
+    description: 'Complete analysis of all Casino Guru complaints against Shuffle.com',
+    filename: 'casino-guru-complaints.md',
+    size: '42 KB',
+    type: 'Markdown Report'
   },
   {
-    name: 'Complaint Analysis Report',
-    description: 'Detailed analysis of complaint patterns and resolution rates',
-    filename: 'complaint-analysis-report.pdf',
-    size: '2.8 MB',
-    type: 'PDF Report'
+    name: 'Investigation Summary',
+    description: 'Complete investigation summary with all findings and evidence',
+    filename: 'investigation-summary.md',
+    size: '28 KB',
+    type: 'Markdown Report'
   },
   {
-    name: 'Player Testimonies Database',
-    description: 'Structured data of player testimonies and complaint details',
-    filename: 'player-testimonies.json',
-    size: '1.1 MB',
-    type: 'JSON Data'
+    name: 'Evidence Archive Index',
+    description: 'Complete index of all evidence files and sources with navigation guide',
+    filename: 'evidence-archive-index.md',
+    size: '52 KB',
+    type: 'Markdown Index'
   }
 ];
 

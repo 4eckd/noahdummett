@@ -11,23 +11,23 @@ const downloadableFiles = [
   {
     name: 'Trustpilot Reviews Analysis',
     description: 'Comprehensive analysis of 100+ Trustpilot reviews showing scam patterns',
-    filename: 'trustpilot-analysis.pdf',
-    size: '2.3 MB',
-    type: 'PDF Report'
-  },
-  {
-    name: 'Review Manipulation Evidence',
-    description: 'Documentation of fake review campaigns and manipulation tactics',
-    filename: 'review-manipulation-evidence.pdf',
-    size: '1.8 MB',
-    type: 'PDF Report'
+    filename: 'trustpilot-analysis.md',
+    size: '45 KB',
+    type: 'Markdown Report'
   },
   {
     name: 'Customer Complaints Database',
     description: 'Structured data of all customer complaints and withdrawal issues',
     filename: 'customer-complaints.json',
-    size: '456 KB',
+    size: '15 KB',
     type: 'JSON Data'
+  },
+  {
+    name: 'Investigation Synopsis',
+    description: 'Complete investigation synopsis with multi-platform evidence compilation',
+    filename: 'Shuffle Synapsis (2).pdf',
+    size: '4.2 MB',
+    type: 'PDF Report'
   }
 ];
 

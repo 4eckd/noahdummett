@@ -83,28 +83,28 @@ const evidenceCategories = [
 
 const downloadableArchives = [
   {
-    name: 'Complete Evidence Archive',
-    description: 'Comprehensive collection of all evidence sources and documentation',
-    filename: 'complete-evidence-archive.zip',
-    size: '25.4 MB',
-    type: 'ZIP Archive',
-    includes: ['All Trustpilot reviews', 'Reddit documentation', 'Casino Guru complaints', 'Blockchain analysis']
-  },
-  {
-    name: 'Investigation Summary Report',
-    description: 'Executive summary of all findings and evidence analysis',
-    filename: 'investigation-summary.pdf',
-    size: '3.2 MB',
-    type: 'PDF Report',
-    includes: ['Key findings', 'Evidence analysis', 'Timeline of events', 'Recommendations']
-  },
-  {
     name: 'Legal Documentation Package',
-    description: 'All formal legal documents and whistleblower reports',
-    filename: 'legal-documentation.zip',
-    size: '8.7 MB',
-    type: 'ZIP Archive',
+    description: 'Complete legal documentation including IRS whistleblower reports and pleadings',
+    filename: 'legal-documentation-index.md',
+    size: '28 KB',
+    type: 'Legal Index',
     includes: ['IRS Form 211', 'Legal pleadings', 'Demand letters', 'Chain analysis']
+  },
+  {
+    name: 'Investigation Synopsis',
+    description: 'Comprehensive investigation report with multi-platform evidence compilation',
+    filename: 'Shuffle Synapsis (2).pdf',
+    size: '4.2 MB',
+    type: 'PDF Report',
+    includes: ['Evidence compilation', 'Expert analysis', 'Timeline of events', 'Supporting documentation']
+  },
+  {
+    name: 'Blockchain Chain Data',
+    description: 'Comprehensive blockchain analysis documenting transaction flows and wallet connections',
+    filename: 'Shuffle-Chain-Data.pdf',
+    size: '3.4 MB',
+    type: 'PDF Report',
+    includes: ['Transaction analysis', 'Wallet connections', 'Fund flow mapping', '$25M+ theft documentation']
   }
 ];
 

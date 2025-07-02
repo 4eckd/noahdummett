@@ -113,25 +113,25 @@ const keyStatistics = [
 
 const downloadableFiles = [
   {
-    name: 'Platform Manipulation Analysis',
-    description: 'Comprehensive analysis of manipulation tactics across all platforms',
-    filename: 'platform-manipulation-analysis.pdf',
-    size: '3.8 MB',
-    type: 'PDF Report'
+    name: 'Trustpilot Manipulation Analysis',
+    description: 'Comprehensive analysis of Trustpilot review manipulation tactics',
+    filename: 'trustpilot-analysis.md',
+    size: '45 KB',
+    type: 'Markdown Report'
   },
   {
-    name: 'Review Manipulation Evidence',
-    description: 'Detailed documentation of fake review campaigns and suppression tactics',
-    filename: 'review-manipulation-evidence.pdf',
-    size: '2.4 MB',
-    type: 'PDF Report'
+    name: 'Reddit Ban Documentation',
+    description: 'Detailed documentation of Reddit community ban and policy violations',
+    filename: 'reddit-ban-documentation.md',
+    size: '38 KB',
+    type: 'Markdown Report'
   },
   {
-    name: 'Cross-Platform Coordination Data',
-    description: 'Data analysis showing coordination between platform manipulation efforts',
-    filename: 'cross-platform-coordination.json',
-    size: '567 KB',
-    type: 'JSON Data'
+    name: 'Evidence Archive Index',
+    description: 'Complete index of all evidence files and cross-platform coordination analysis',
+    filename: 'evidence-archive-index.md',
+    size: '52 KB',
+    type: 'Markdown Index'
   }
 ];
 
