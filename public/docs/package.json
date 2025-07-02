@@ -1,0 +1,28 @@
+{
+  "name": "noahdummett-docs",
+  "version": "1.0.0",
+  "description": "Documentation for Noah Dummett Investigation Projects",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 3000",
+    "build": "echo 'Static site - no build needed'",
+    "start": "python -m http.server 8080"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "vite",
+    "documentation",
+    "noah-dummett",
+    "investigation",
+    "projects"
+  ],
+  "author": "Its Different Productions",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/4eckd/noahdummett.git",
+    "directory": "docs"
+  },
+  "homepage": "https://docs.noahdummett.com"
+}

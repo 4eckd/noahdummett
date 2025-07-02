@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation - Noah Dummett Investigation</title>
+    <meta name="description" content="Website architecture and implementation details for the Noah Dummett investigation">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+        .header {
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0 0 0.5rem 0;
+            font-size: 2.2rem;
+        }
+        .header p {
+            margin: 0;
+            opacity: 0.9;
+        }
+        .content {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        .doc-list {
+            list-style: none;
+            padding: 0;
+        }
+        .doc-list li {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: #f0f9ff;
+            border-radius: 8px;
+            border-left: 4px solid #0ea5e9;
+        }
+        .doc-list a {
+            color: #0ea5e9;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .doc-list a:hover {
+            text-decoration: underline;
+        }
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .tech-item {
+            background: #f8fafc;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .back-link {
+            display: inline-block;
+            background: #6b7280;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            background: #4b5563;
+        }
+    </style>
+</head>
+<body>
+    <a href="../" class="back-link">← Back to Documentation Hub</a>
+    
+    <div class="header">
+        <h1>🔧 Technical Documentation</h1>
+        <p>Website architecture and implementation details</p>
+    </div>
+
+    <div class="content">
+        <h2>Technical Documents</h2>
+        <ul class="doc-list">
+            <li>
+                <a href="./README.md">Technical Overview</a>
+                <p>System architecture and implementation</p>
+            </li>
+            <li>
+                <a href="./architecture.md">Architecture Guide</a>
+                <p>Complete system architecture documentation</p>
+            </li>
+            <li>
+                <a href="./components.md">Component Documentation</a>
+                <p>Evidence component architecture</p>
+            </li>
+            <li>
+                <a href="./theming.md">Theme System</a>
+                <p>5-theme system implementation</p>
+            </li>
+            <li>
+                <a href="./testing.md">Testing Guide</a>
+                <p>Testing strategies and implementation</p>
+            </li>
+            <li>
+                <a href="./deployment.md">Deployment Guide</a>
+                <p>Deployment and hosting procedures</p>
+            </li>
+            <li>
+                <a href="./seo-optimization.md">SEO Optimization</a>
+                <p>SEO implementation and verification</p>
+            </li>
+        </ul>
+
+        <h3>Technology Stack</h3>
+        <div class="tech-stack">
+            <div class="tech-item">
+                <h4>Frontend</h4>
+                <p>React 18 + TypeScript</p>
+            </div>
+            <div class="tech-item">
+                <h4>Build Tool</h4>
+                <p>Vite</p>
+            </div>
+            <div class="tech-item">
+                <h4>Styling</h4>
+                <p>Tailwind CSS</p>
+            </div>
+            <div class="tech-item">
+                <h4>Animation</h4>
+                <p>Framer Motion</p>
+            </div>
+            <div class="tech-item">
+                <h4>Routing</h4>
+                <p>React Router</p>
+            </div>
+            <div class="tech-item">
+                <h4>Deployment</h4>
+                <p>Vercel</p>
+            </div>
+        </div>
+
+        <h3>Key Features</h3>
+        <ul>
+            <li><strong>5-Theme System</strong>: Dark, Violet, Emerald, Amber, and Aurora themes</li>
+            <li><strong>Responsive Design</strong>: Mobile-first design optimized for all devices</li>
+            <li><strong>Performance Optimized</strong>: Fast loading and optimized builds</li>
+            <li><strong>SEO Optimized</strong>: Complete SEO implementation and verification</li>
+            <li><strong>Accessibility</strong>: WCAG compliance and accessibility features</li>
+            <li><strong>Type Safety</strong>: Full TypeScript implementation</li>
+        </ul>
+
+        <h3>Architecture Highlights</h3>
+        <ul>
+            <li><strong>Component-Based</strong>: Modular component architecture</li>
+            <li><strong>Context Management</strong>: React Context for theme and state management</li>
+            <li><strong>Evidence Integration</strong>: Specialized components for evidence display</li>
+            <li><strong>Documentation System</strong>: Comprehensive documentation structure</li>
+            <li><strong>Legal Compliance</strong>: Built-in legal and compliance features</li>
+        </ul>
+    </div>
+</body>
+</html>
