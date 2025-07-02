@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useTheme } from '@/context/ThemeContext';
 
 interface TrustpilotWidgetProps {
   /**
@@ -54,7 +55,60 @@ export const TrustpilotWidget: React.FC<TrustpilotWidgetProps> = ({
   className = '',
   variant = 'review-collector'
 }) => {
+  const { themeConfig } = useTheme();
   const finalTemplateId = templateId || TRUSTPILOT_TEMPLATES[variant];
+
+  // Theme-aware styling
+  const getThemeStyles = () => {
+    const baseStyles = {
+      backgroundColor: themeConfig.colors.card,
+      borderColor: themeConfig.colors.border,
+      color: themeConfig.colors.cardForeground,
+    };
+
+    // Enhanced contrast for different themes
+    switch (themeConfig.variant) {
+      case 'dark':
+        return {
+          ...baseStyles,
+          backgroundColor: 'rgba(31, 41, 55, 0.95)', // gray-800/95
+          borderColor: 'rgba(75, 85, 99, 0.8)', // gray-600/80
+          boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.3)',
+        };
+      case 'violet':
+        return {
+          ...baseStyles,
+          backgroundColor: 'rgba(139, 92, 246, 0.1)', // violet-500/10
+          borderColor: 'rgba(139, 92, 246, 0.3)', // violet-500/30
+          boxShadow: '0 4px 6px -1px rgba(139, 92, 246, 0.2)',
+        };
+      case 'emerald':
+        return {
+          ...baseStyles,
+          backgroundColor: 'rgba(16, 185, 129, 0.1)', // emerald-500/10
+          borderColor: 'rgba(16, 185, 129, 0.3)', // emerald-500/30
+          boxShadow: '0 4px 6px -1px rgba(16, 185, 129, 0.2)',
+        };
+      case 'amber':
+        return {
+          ...baseStyles,
+          backgroundColor: 'rgba(245, 158, 11, 0.1)', // amber-500/10
+          borderColor: 'rgba(245, 158, 11, 0.3)', // amber-500/30
+          boxShadow: '0 4px 6px -1px rgba(245, 158, 11, 0.2)',
+        };
+      case 'aurora':
+        return {
+          ...baseStyles,
+          backgroundColor: 'rgba(168, 85, 247, 0.1)', // purple-500/10
+          borderColor: 'rgba(168, 85, 247, 0.3)', // purple-500/30
+          boxShadow: '0 4px 6px -1px rgba(168, 85, 247, 0.2)',
+        };
+      default:
+        return baseStyles;
+    }
+  };
+
+  const themeStyles = getThemeStyles();
 
   useEffect(() => {
     // Load Trustpilot script if not already loaded
@@ -93,20 +147,37 @@ export const TrustpilotWidget: React.FC<TrustpilotWidgetProps> = ({
 
   return (
     <div className={`trustpilot-widget-container ${className}`}>
-      {/* TrustBox widget */}
-      <div 
-        className="trustpilot-widget" 
+      {/* TrustBox widget with theme-aware styling */}
+      <div
+        className="trustpilot-widget rounded-lg p-3 backdrop-blur-sm transition-all duration-300 hover:shadow-lg"
         data-locale={locale}
         data-template-id={finalTemplateId}
         data-businessunit-id={businessUnitId}
         data-style-height={height}
         data-style-width={width}
+        style={{
+          ...themeStyles,
+          borderRadius: '8px',
+          padding: '12px',
+          border: `1px solid ${themeStyles.borderColor}`,
+          backdropFilter: 'blur(8px)',
+        }}
       >
-        <a 
-          href="https://www.trustpilot.com/review/noahdummett.com" 
-          target="_blank" 
+        <a
+          href="https://www.trustpilot.com/review/noahdummett.com"
+          target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:text-blue-800 underline"
+          className="font-medium transition-colors duration-200"
+          style={{
+            color: themeConfig.colors.primary,
+            textDecoration: 'underline',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.color = themeConfig.colors.primaryForeground;
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.color = themeConfig.colors.primary;
+          }}
         >
           Trustpilot
         </a>
@@ -115,62 +186,132 @@ export const TrustpilotWidget: React.FC<TrustpilotWidgetProps> = ({
   );
 };
 
-// Header variant - smaller and more compact
+// Header variant - smaller and more compact with theme-aware styling
 export const TrustpilotHeaderWidget: React.FC<Omit<TrustpilotWidgetProps, 'variant' | 'height'>> = (props) => {
-  return (
-    <TrustpilotWidget
-      {...props}
-      variant="micro-review-count"
-      height="24px"
-      className={`inline-block ${props.className || ''}`}
-    />
-  );
-};
+  const { themeConfig } = useTheme();
 
-// CTA variant - larger and more prominent
-export const TrustpilotCTA: React.FC<Omit<TrustpilotWidgetProps, 'variant'>> = (props) => {
+  const headerStyles = {
+    backgroundColor: `${themeConfig.colors.card}CC`, // Add transparency
+    borderColor: `${themeConfig.colors.border}80`, // Add transparency
+    backdropFilter: 'blur(8px)',
+  };
+
   return (
-    <div className={`bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 shadow-sm ${props.className || ''}`}>
-      <div className="text-center mb-3">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-          Share Your Experience
-        </h3>
-        <p className="text-sm text-gray-600 dark:text-gray-400">
-          Help others by sharing your experience with our investigation
-        </p>
-      </div>
+    <div
+      className={`rounded-md px-3 py-2 border shadow-sm transition-all duration-200 hover:shadow-md ${props.className || ''}`}
+      style={headerStyles}
+    >
       <TrustpilotWidget
         {...props}
-        variant="review-collector"
-        height="52px"
-        className="w-full"
+        variant="micro-review-count"
+        height="24px"
+        className="inline-block"
       />
     </div>
   );
 };
 
-// Mini review display - for sidebars or small spaces
-export const TrustpilotMini: React.FC<Omit<TrustpilotWidgetProps, 'variant' | 'height' | 'width'>> = (props) => {
+// CTA variant - larger and more prominent with theme-aware styling
+export const TrustpilotCTA: React.FC<Omit<TrustpilotWidgetProps, 'variant'>> = (props) => {
+  const { themeConfig } = useTheme();
+
+  const ctaStyles = {
+    backgroundColor: `${themeConfig.colors.card}F0`, // High opacity
+    borderColor: themeConfig.colors.border,
+    backdropFilter: 'blur(12px)',
+  };
+
+  const gradientStyles = {
+    background: themeConfig.variant === 'dark'
+      ? `linear-gradient(135deg, ${themeConfig.colors.primary}20, ${themeConfig.colors.accent}20)`
+      : `linear-gradient(135deg, ${themeConfig.colors.primary}10, ${themeConfig.colors.accent}10)`,
+    borderColor: `${themeConfig.colors.primary}40`,
+  };
+
   return (
-    <TrustpilotWidget
-      {...props}
-      variant="mini-review"
-      height="120px"
-      width="100%"
-      className={`block ${props.className || ''}`}
-    />
+    <div
+      className={`rounded-xl p-6 border shadow-lg hover:shadow-xl transition-all duration-300 ${props.className || ''}`}
+      style={ctaStyles}
+    >
+      <div className="text-center mb-4">
+        <h3
+          className="text-xl font-bold mb-3 flex items-center justify-center gap-2"
+          style={{ color: themeConfig.colors.foreground }}
+        >
+          <span className="text-2xl">⭐</span>
+          Share Your Experience
+          <span className="text-2xl">⭐</span>
+        </h3>
+        <p
+          className="text-sm max-w-md mx-auto leading-relaxed"
+          style={{ color: themeConfig.colors.mutedForeground }}
+        >
+          Help others by sharing your experience with our investigation. Your feedback helps build transparency and accountability.
+        </p>
+      </div>
+      <div
+        className="rounded-lg p-3 border transition-all duration-200"
+        style={gradientStyles}
+      >
+        <TrustpilotWidget
+          {...props}
+          variant="review-collector"
+          height="52px"
+          className="w-full"
+        />
+      </div>
+    </div>
   );
 };
 
-// Stars only - for compact display
-export const TrustpilotStars: React.FC<Omit<TrustpilotWidgetProps, 'variant' | 'height'>> = (props) => {
+// Mini review display - for sidebars or small spaces with theme-aware styling
+export const TrustpilotMini: React.FC<Omit<TrustpilotWidgetProps, 'variant' | 'height' | 'width'>> = (props) => {
+  const { themeConfig } = useTheme();
+
+  const miniStyles = {
+    backgroundColor: `${themeConfig.colors.card}E6`, // Semi-transparent
+    borderColor: `${themeConfig.colors.border}B3`, // Semi-transparent
+    backdropFilter: 'blur(6px)',
+  };
+
   return (
-    <TrustpilotWidget
-      {...props}
-      variant="review-stars"
-      height="28px"
-      className={`inline-block ${props.className || ''}`}
-    />
+    <div
+      className={`rounded-lg p-3 border shadow-sm transition-all duration-200 hover:shadow-md ${props.className || ''}`}
+      style={miniStyles}
+    >
+      <TrustpilotWidget
+        {...props}
+        variant="mini-review"
+        height="120px"
+        width="100%"
+        className="block"
+      />
+    </div>
+  );
+};
+
+// Stars only - for compact display with theme-aware styling
+export const TrustpilotStars: React.FC<Omit<TrustpilotWidgetProps, 'variant' | 'height'>> = (props) => {
+  const { themeConfig } = useTheme();
+
+  const starsStyles = {
+    backgroundColor: `${themeConfig.colors.card}CC`, // Semi-transparent
+    borderColor: `${themeConfig.colors.border}80`, // Semi-transparent
+    backdropFilter: 'blur(4px)',
+  };
+
+  return (
+    <div
+      className={`inline-block rounded px-2 py-1 border transition-all duration-200 ${props.className || ''}`}
+      style={starsStyles}
+    >
+      <TrustpilotWidget
+        {...props}
+        variant="review-stars"
+        height="28px"
+        className="inline-block"
+      />
+    </div>
   );
 };
 

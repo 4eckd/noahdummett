@@ -93,3 +93,43 @@
     }
   }
 }
+
+/* Trustpilot Widget Enhancements */
+.trustpilot-widget-container {
+  /* Ensure proper z-index for overlays */
+  position: relative;
+  z-index: 10;
+}
+
+.trustpilot-widget {
+  /* Override Trustpilot default styles for better theme integration */
+  font-family: inherit !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.trustpilot-widget iframe {
+  /* Ensure iframe respects our styling */
+  border-radius: inherit;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Theme-specific Trustpilot overrides */
+[data-theme="dark"] .trustpilot-widget {
+  filter: brightness(0.9) contrast(1.1);
+}
+
+[data-theme="violet"] .trustpilot-widget {
+  filter: hue-rotate(10deg) saturate(1.1);
+}
+
+[data-theme="emerald"] .trustpilot-widget {
+  filter: hue-rotate(-10deg) saturate(1.1);
+}
+
+[data-theme="amber"] .trustpilot-widget {
+  filter: hue-rotate(20deg) saturate(1.1);
+}
+
+[data-theme="aurora"] .trustpilot-widget {
+  filter: hue-rotate(-20deg) saturate(1.2);
+}
