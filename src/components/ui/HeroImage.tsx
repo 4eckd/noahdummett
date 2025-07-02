@@ -116,7 +116,7 @@ export const NoahDummettHeroImage: React.FC<{
 }> = ({ size = 'lg', className, showWarningIcon = true }) => {
   return (
     <HeroImage
-      src="/hero-noahdummett.png"
+      src="/assets/images/hero-noahdummett.png"
       alt="Noah Dummett - Founder of Shuffle.com"
       size={size}
       className={className}

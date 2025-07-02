@@ -36,7 +36,7 @@ export const defaultSEO: SEOConfig = {
     'law enforcement',
     'justice for victims'
   ],
-  ogImage: '/hero-noahdummett.png',
+  ogImage: '/assets/images/social-preview.png',
   twitterCard: 'summary_large_image',
   author: 'Its Different Productions',
   type: 'website'

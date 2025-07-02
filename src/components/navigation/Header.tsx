@@ -5,7 +5,6 @@ import { Menu, X, BookOpen, ExternalLink, Search } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { SearchModal } from '@/components/ui/SearchModal';
-import { TrustpilotHeaderWidget } from '@/components/ui/TrustpilotWidget';
 import { clsx } from 'clsx';
 
 export interface HeaderProps {
@@ -105,11 +104,6 @@ export const Header: React.FC<HeaderProps> = ({
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-3">
-            {/* Trustpilot Widget */}
-            <div className="hidden lg:block">
-              <TrustpilotHeaderWidget className="max-w-[200px]" />
-            </div>
-
             <Button
               variant="ghost"
               size="sm"
@@ -121,7 +115,7 @@ export const Header: React.FC<HeaderProps> = ({
             <Button
               variant="outline"
               size="sm"
-              onClick={() => window.open('/service', '_blank')}
+              onClick={() => window.open('/evidence', '_blank')}
               leftIcon={<BookOpen className="h-4 w-4" />}
               rightIcon={<ExternalLink className="h-3 w-3" />}
               className="hover:shadow-primary border-primary/20 hover:border-primary/40"
