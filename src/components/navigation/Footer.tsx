@@ -86,38 +86,47 @@ const getSocialLinks = (): SocialLink[] => {
 
 const defaultLinks: FooterSection[] = [
   {
-    title: 'Product',
+    title: 'Investigation',
     links: [
-      { label: 'Features', href: '/features' },
-      { label: 'Pricing', href: '/pricing' },
-      { label: 'Documentation', href: '/docs' },
-      { label: 'API', href: '/api' },
+      { label: 'Noah Dummett Files', href: '/noah-dummett' },
+      { label: 'Evidence Overview', href: '/evidence' },
+      { label: 'Platform Manipulation', href: '/platform-manipulation' },
+      { label: 'FAQ', href: '/faq' },
     ],
   },
   {
-    title: 'Company',
+    title: 'Evidence Sources',
     links: [
-      { label: 'About', href: '/about' },
-      { label: 'Blog', href: '/blog' },
-      { label: 'Careers', href: '/careers' },
-      { label: 'Contact', href: '/contact' },
+      { label: 'Trustpilot Reviews', href: '/evidence/trustpilot' },
+      { label: 'Reddit Documentation', href: '/evidence/reddit' },
+      { label: 'Casino Guru Complaints', href: '/evidence/casino-guru' },
+      { label: 'Download Archive', href: '/service', external: true },
+    ],
+  },
+  {
+    title: 'External Links',
+    links: [
+      { label: 'Trustpilot Main', href: 'https://ca.trustpilot.com/review/shuffle.com', external: true },
+      { label: 'Scam Reports Filter', href: 'https://ca.trustpilot.com/review/shuffle.com?search=scam+withdraw&stars=1', external: true },
+      { label: 'Casino Guru Complaints', href: 'https://casino.guru/complaints/all?casino=shuffle-casino', external: true },
+      { label: 'Reddit r/ShufflecomCasino', href: 'https://www.reddit.com/r/ShufflecomCasino/', external: true },
     ],
   },
   {
     title: 'Legal',
     links: [
+      { label: 'Legal Notice', href: '/legal' },
       { label: 'Privacy Policy', href: '/privacy' },
-      { label: 'Terms of Service', href: '/terms' },
-      { label: 'Cookie Policy', href: '/cookies' },
-      { label: 'GDPR', href: '/gdpr' },
+      { label: 'Cookie Policy', href: '/cookie-policy' },
+      { label: 'Contact', href: '/contact' },
     ],
   },
 ];
 
 export const Footer: React.FC<FooterProps> = ({
   logo,
-  companyName = import.meta.env.VITE_COMPANY_NAME || 'FUSED GAMING',
-  description = 'Building the future of gaming with cutting-edge technology and innovative solutions.',
+  companyName = import.meta.env.VITE_COMPANY_NAME || 'Noah Dummett Investigation',
+  description = 'Comprehensive investigation into Shuffle.com fraud allegations and Noah Dummett\'s role in the $25M+ FTX theft. Evidence-based documentation across multiple platforms.',
   links = defaultLinks,
   socialLinks = getSocialLinks(),
   showCopyright = true,
@@ -127,11 +136,11 @@ export const Footer: React.FC<FooterProps> = ({
 
   const renderLogo = () => {
     if (logo) return logo;
-    
+
     return (
       <Link to="/" className="flex items-center space-x-2">
         <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-          <span className="text-primary-foreground font-bold text-lg">F</span>
+          <span className="text-primary-foreground font-bold text-lg">N</span>
         </div>
         <span className="font-bold text-xl text-foreground">{companyName}</span>
       </Link>
