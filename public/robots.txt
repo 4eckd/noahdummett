@@ -1,6 +1,5 @@
 # Noah Dummett Investigation - Robots.txt
 # Optimized for investigative journalism and accountability reporting
-# Keywords: Noah Dummett, Noah Shuffle, Noah Dummet Shuffle.com, Who owns shuffle.com
 
 User-agent: *
 Allow: /
@@ -12,10 +11,32 @@ Sitemap: https://docs.noahdummett.com/sitemap.xml
 # Priority crawling for Noah Dummett investigation content
 # High-priority evidence and documentation pages
 Allow: /noah-dummett
+Allow: /about
+Allow: /contact
+Allow: /faq
+Allow: /legal
+Allow: /cookie-policy
 Allow: /evidence/*
 Allow: /docs/*
-Allow: /legal/*
 Allow: /investigation/*
+Allow: /downloads/*
+
+# Explicitly allow all static assets for complete indexing
+Allow: /assets/*
+Allow: /images/*
+Allow: /css/*
+Allow: /js/*
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.ico
+Allow: /*.pdf
+Allow: /*.md
+Allow: /*.html
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
@@ -54,33 +75,90 @@ Allow: /
 User-agent: LinkedInBot
 Allow: /
 
-# Block SEO tools and scrapers that waste resources
+# Additional search engines and news crawlers
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: AppleBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: CCBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: ChatGPT-User
+Allow: /
+Crawl-delay: 2
+
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: ClaudeBot
+Allow: /
+Crawl-delay: 2
+
+# Allow SEO tools for better indexing and ranking
 User-agent: AhrefsBot
-Disallow: /
+Allow: /
+Crawl-delay: 2
 
 User-agent: MJ12bot
-Disallow: /
-
-User-agent: DotBot
-Disallow: /
+Allow: /
+Crawl-delay: 2
 
 User-agent: SemrushBot
-Disallow: /
+Allow: /
+Crawl-delay: 2
 
 User-agent: MajesticSEO
-Disallow: /
+Allow: /
+Crawl-delay: 2
 
 User-agent: BLEXBot
-Disallow: /
+Allow: /
+Crawl-delay: 2
 
-# Block malicious bots
-User-agent: SiteBot
-Disallow: /
+User-agent: DotBot
+Allow: /
+Crawl-delay: 2
 
+# Allow additional SEO and analysis tools
+User-agent: MozBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: ScreamingFrogSEOSpider
+Allow: /
+Crawl-delay: 2
+
+User-agent: SiteAuditBot
+Allow: /
+Crawl-delay: 2
+
+# Block only truly malicious scrapers and content thieves
 User-agent: WebReaper
 Disallow: /
 
 User-agent: WebCopier
+Disallow: /
+
+User-agent: HTTrack
+Disallow: /
+
+User-agent: EmailCollector
+Disallow: /
+
+User-agent: EmailSiphon
+Disallow: /
+
+User-agent: WebBandit
 Disallow: /
 
 # Allow archive crawlers for historical record
