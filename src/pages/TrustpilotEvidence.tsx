@@ -20,7 +20,7 @@ const downloadableFiles: DownloadableFile[] = [
   {
     name: 'Trustpilot Evidence Analysis',
     description: 'Comprehensive analysis of 247 verified complaints documenting systematic fraud',
-    filename: 'docs/evidence/trustpilot-analysis.html',
+    filename: 'trustpilot-analysis.md',
     size: '125 KB',
     type: 'Documentation',
     isDoc: true
@@ -155,7 +155,7 @@ export const TrustpilotEvidencePage: React.FC = () => {
                   <Button
                     variant="outline"
                     size="sm"
-                    onClick={() => window.open(file.isDoc ? `/${file.filename}` : `/downloads/${file.filename}`, '_blank')}
+                    onClick={() => window.open(file.isDoc ? `/${file.filename}` : `public\downloads\${file.filename}`, '_blank')}
                     leftIcon={<Download className="h-4 w-4" />}
                     className="w-full"
                   >

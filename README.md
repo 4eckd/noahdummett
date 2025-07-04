@@ -15,15 +15,8 @@ A comprehensive investigation platform exposing concerning allegations surroundi
 - **Unethical treatment** of vulnerable gambling users
 - **Operational pattern concerns** linking to FTX practices
 
-## 📚 **Complete Documentation Hub**
-Comprehensive documentation organized in professional structure:
-- **Investigation Documentation** (`/docs/investigation/`) - Complete methodology and findings
-- **Evidence Analysis** (`/docs/evidence/`) - Platform-specific evidence documentation
-- **Legal Documentation** (`/docs/legal/`) - Whistleblower reports and legal analysis
-- **Technical Documentation** (`/docs/technical/`) - Architecture and implementation
-- **Project Documentation** (`/docs/project/`) - Development history and management
-
-**Evidence Repository**: Complete evidence files available in the `/service` directory including IRS Form 211, blockchain analysis, and legal pleadings.
+## 📚 **Evidence Repository**
+Complete evidence documentation available in the `/service` directory including IRS Form 211, blockchain analysis, and legal pleadings.
 
 ## ✨ Features
 
@@ -306,5 +299,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Animations by [Framer Motion](https://framer.com/motion)
 
 ---
+
+**Project Information:**
+- **Version**: 3.0
+- **Last Updated**: July 4, 2025
+- **Status**: Active Investigation with Documentation Portal
+- **Documentation**: https://docs.noahdummett.com
 
 **Ready to build something amazing? 🚀**

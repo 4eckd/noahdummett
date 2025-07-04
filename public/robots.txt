@@ -1,11 +1,21 @@
 # Noah Dummett Investigation - Robots.txt
 # Optimized for investigative journalism and accountability reporting
+# Keywords: Noah Dummett, Noah Shuffle, Noah Dummet Shuffle.com, Who owns shuffle.com
 
 User-agent: *
 Allow: /
 
-# Sitemap location
+# Sitemap locations - Main site and Documentation subdomain
 Sitemap: https://noahdummett.com/sitemap.xml
+Sitemap: https://docs.noahdummett.com/sitemap.xml
+
+# Priority crawling for Noah Dummett investigation content
+# High-priority evidence and documentation pages
+Allow: /noah-dummett
+Allow: /evidence/*
+Allow: /docs/*
+Allow: /legal/*
+Allow: /investigation/*
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
