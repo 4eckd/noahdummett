@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Github, Twitter, Linkedin, Mail, Heart, Youtube, MessageCircle } from 'lucide-react';
-import { TrustpilotMini } from '@/components/ui/TrustpilotWidget';
 import { clsx } from 'clsx';
 
 export interface FooterProps {
@@ -152,7 +151,7 @@ export const Footer: React.FC<FooterProps> = ({
               </p>
               
               {/* Social Links */}
-              <div className="flex space-x-4 mb-6">
+              <div className="flex space-x-4">
                 {socialLinks.map((social) => (
                   <a
                     key={social.platform}
@@ -169,7 +168,25 @@ export const Footer: React.FC<FooterProps> = ({
 
               {/* Trustpilot Widget */}
               <div className="max-w-sm">
-                <TrustpilotMini className="w-full" />
+                <div className="rounded-lg p-4 border backdrop-blur-sm hover:shadow-xl transition-all duration-300" style={{backgroundColor: 'rgba(46, 16, 101, 0.95)', borderColor: 'rgba(168, 85, 247, 0.6)', boxShadow: 'rgba(168, 85, 247, 0.3) 0px 6px 20px -3px, rgba(168, 85, 247, 0.4) 0px 0px 0px 1px'}}>
+                  <div className="text-center mb-3">
+                    <h3 className="text-lg font-bold mb-2 flex items-center justify-center gap-2" style={{color: 'rgba(250, 245, 255, 0.95)', textShadow: 'rgba(0, 0, 0, 0.3) 0px 2px 4px'}}>
+                      <span className="text-xl">⭐</span>Share Your Experience<span className="text-xl">⭐</span>
+                    </h3>
+                    <p className="text-xs max-w-xs mx-auto leading-relaxed" style={{color: 'rgba(196, 181, 253, 0.8)', textShadow: 'rgba(0, 0, 0, 0.2) 0px 1px 2px'}}>
+                      Help others by sharing your experience with our investigation. Your feedback helps build transparency and accountability.
+                    </p>
+                  </div>
+                  <div className="rounded-md p-2 border backdrop-blur-sm transition-all duration-200" style={{background: 'linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(147, 51, 234, 0.15))', borderColor: 'rgba(168, 85, 247, 0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '50px'}}>
+                    <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', maxWidth: '280px'}}>
+                      <div className="trustpilot-widget-container w-full">
+                        <div className="trustpilot-widget rounded-md p-2 backdrop-blur-sm transition-all duration-300 hover:shadow-lg" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="68649b41257a8efcad0082bf" data-style-height="44px" data-style-width="100%" style={{backgroundColor: 'rgba(46, 16, 101, 0.9)', border: '1px solid rgba(168, 85, 247, 0.6)', boxShadow: 'rgba(168, 85, 247, 0.3) 0px 3px 10px -2px, rgba(168, 85, 247, 0.4) 0px 0px 0px 1px', color: 'rgba(250, 245, 255, 0.95)', borderRadius: '6px', padding: '8px', backdropFilter: 'blur(8px)', position: 'relative'}}>
+                          <iframe title="Customer reviews powered by Trustpilot" loading="lazy" src="https://widget.trustpilot.com/trustboxes/56278e9abfbbba0bdcd568bc/index.html?templateId=56278e9abfbbba0bdcd568bc&businessunitId=68649b41257a8efcad0082bf#locale=en-US&styleHeight=44px&styleWidth=100%25" style={{position: 'relative', height: '44px', width: '100%', borderStyle: 'none', display: 'block', overflow: 'hidden'}}></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
