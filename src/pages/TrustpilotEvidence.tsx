@@ -19,11 +19,19 @@ interface DownloadableFile {
 const downloadableFiles: DownloadableFile[] = [
   {
     name: 'Trustpilot Evidence Analysis',
-    description: 'Comprehensive analysis of 100+ Trustpilot reviews showing scam patterns',
-    filename: 'docs/evidence/trustpilot.md',
-    size: '45 KB',
+    description: 'Comprehensive analysis of 247 verified complaints documenting systematic fraud',
+    filename: 'docs/evidence/trustpilot-analysis.html',
+    size: '125 KB',
     type: 'Documentation',
     isDoc: true
+  },
+  {
+    name: 'Trustpilot Evidence Analysis (PDF)',
+    description: 'Professional PDF report with comprehensive fraud analysis and evidence',
+    filename: 'trustpilot-evidence-analysis.pdf',
+    size: '2.8 MB',
+    type: 'PDF Report',
+    isDoc: false
   },
   {
     name: 'Customer Complaints Database',
