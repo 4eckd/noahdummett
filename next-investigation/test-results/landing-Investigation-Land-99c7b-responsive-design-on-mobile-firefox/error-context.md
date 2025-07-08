@@ -1,0 +1,128 @@
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Noah Dummett Investigation":
+    - /url: /
+  - combobox:
+    - option "Dark" [selected]
+    - option "Violet"
+    - option "Emerald"
+    - option "Amber"
+    - option "Aurora"
+  - button "Open main menu":
+    - text: Open main menu
+    - img
+- main:
+  - text: 🚨 BREAKING INVESTIGATION
+  - heading "The Noah Dummett Investigation" [level=1]
+  - paragraph: Uncovering the truth behind Shuffle.com's controversial founder and the mounting allegations that threaten to expose a Web3 scandal of unprecedented proportions.
+  - link "Read Full Investigation":
+    - /url: /noah-dummett
+  - link "Trustpilot Analysis":
+    - /url: /evidence/trustpilot
+  - heading "Key Allegations" [level=2]
+  - paragraph: The most serious concerns that demand immediate investigation
+  - heading "$25M+ Alleged Theft" [level=3]
+  - paragraph: Claims of substantial funds taken from FTX bankruptcy estate to fund Shuffle.com operations.
+  - heading "Anonymous Leadership" [level=3]
+  - paragraph: Concerning lack of transparency around company leadership and beneficial ownership.
+  - heading "Community Investigations" [level=3]
+  - paragraph: Growing body of evidence from independent researchers and concerned community members.
+  - text: 🔗 BLOCKCHAIN EVIDENCE EXPOSED
+  - heading "$25 MILLION+ Stolen From FTX Victims" [level=2]
+  - paragraph: "IRREFUTABLE ON-CHAIN PROOF: LinkedIn investigation reveals direct blockchain connections between Noah Dummett and stolen FTX funds. 5 smoking gun transactions that could send him to prison for decades."
+  - heading "$25M+ STOLEN" [level=3]
+  - paragraph: Tracked from FTX hack to Shuffle operations
+  - heading "5 KEY TRANSACTIONS" [level=3]
+  - paragraph: Irrefutable blockchain evidence
+  - heading "100% VERIFIED" [level=3]
+  - paragraph: Professional blockchain analyst validation
+  - link "🔍 SEE THE BLOCKCHAIN EVIDENCE":
+    - /url: /noah-dummett
+  - heading "Download Investigation Evidence" [level=2]
+  - paragraph: Access comprehensive investigation documents and blockchain evidence
+  - link "Blockchain Evidence Complete blockchain analysis with transaction evidence View Evidence":
+    - /url: /evidence/blockchain
+    - heading "Blockchain Evidence" [level=3]
+    - paragraph: Complete blockchain analysis with transaction evidence
+    - text: View Evidence
+  - link "Investigation Timeline Complete timeline from FTX to Shuffle allegations View Evidence":
+    - /url: /evidence/timeline
+    - heading "Investigation Timeline" [level=3]
+    - paragraph: Complete timeline from FTX to Shuffle allegations
+    - text: View Evidence
+  - link "Investigation Summary Executive summary of all findings and evidence View Evidence":
+    - /url: /evidence/summary
+    - heading "Investigation Summary" [level=3]
+    - paragraph: Executive summary of all findings and evidence
+    - text: View Evidence
+  - heading "The Web3 Industry Deserves Better" [level=2]
+  - paragraph: This investigation represents a critical moment for Web3 accountability. The evidence is mounting, the concerns are real, and the time for action is now.
+  - link "Full Investigation":
+    - /url: /noah-dummett
+  - link "Share Evidence":
+    - /url: /evidence
+- contentinfo:
+  - heading "Investigation" [level=3]
+  - list:
+    - listitem:
+      - link "Main Investigation":
+        - /url: /
+    - listitem:
+      - link "Noah Dummett Files":
+        - /url: /noah-dummett
+    - listitem:
+      - link "Blockchain Evidence":
+        - /url: /evidence/blockchain
+    - listitem:
+      - link "Legal Documentation":
+        - /url: /legal
+  - heading "Evidence Sources" [level=3]
+  - list:
+    - listitem:
+      - link "Trustpilot Analysis":
+        - /url: /evidence/trustpilot
+    - listitem:
+      - link "Reddit Documentation":
+        - /url: /evidence/reddit
+    - listitem:
+      - link "Casino Guru Complaints":
+        - /url: /evidence/casino-guru
+    - listitem:
+      - link "Platform Manipulation":
+        - /url: /evidence/platform-manipulation
+  - heading "External Links" [level=3]
+  - list:
+    - listitem:
+      - link "GitHub Repository":
+        - /url: https://github.com/4eckd/noahdummett
+    - listitem:
+      - link "Investigation Twitter":
+        - /url: https://twitter.com/noahdummett_inv
+    - listitem:
+      - link "Contact Investigation":
+        - /url: mailto:hello@noahdummett.com
+    - listitem:
+      - link "Documentation Hub":
+        - /url: https://docs.noahdummett.com
+  - heading "Legal" [level=3]
+  - list:
+    - listitem:
+      - link "Investigation Terms":
+        - /url: /legal/terms
+    - listitem:
+      - link "Privacy Policy":
+        - /url: /legal/privacy
+    - listitem:
+      - link "Whistleblower Protection":
+        - /url: /legal/whistleblower
+    - listitem:
+      - link "Evidence Disclaimer":
+        - /url: /legal/disclaimer
+  - text: Noah Dummett Investigation Projects © 2024 Its Different Productions • Investigation v3.0.0 •
+  - link "Evidence Disclaimer":
+    - /url: /legal/disclaimer
+  - paragraph: This investigation is conducted for accountability and transparency purposes. All blockchain evidence is independently verifiable on the Ethereum blockchain.
+- alert
+```

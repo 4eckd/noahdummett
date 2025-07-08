@@ -1,0 +1,397 @@
+
+> noahdummett-investigation-nextjs@3.0.0 test:e2e
+> playwright test
+
+
+Running 15 tests using 8 workers
+
+[1A[2K[1/15] [chromium] ΓÇ║ tests\playwright\landing.test.ts:11:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Main site (noahdummett.com) renders investigation landing
+[1A[2K[2/15] [chromium] ΓÇ║ tests\playwright\landing.test.ts:33:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Docs site (docs.noahdummett.com) renders docs landing with sidebar
+[1A[2K[3/15] [chromium] ΓÇ║ tests\playwright\landing.test.ts:79:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Main site responsive design on mobile
+[1A[2K[4/15] [chromium] ΓÇ║ tests\playwright\landing.test.ts:93:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Docs site responsive design on mobile
+[1A[2K[5/15] [firefox] ΓÇ║ tests\playwright\landing.test.ts:11:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Main site (noahdummett.com) renders investigation landing
+[1A[2K[6/15] [firefox] ΓÇ║ tests\playwright\landing.test.ts:63:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Docs sidebar navigation is functional
+[1A[2K[7/15] [firefox] ΓÇ║ tests\playwright\landing.test.ts:33:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Docs site (docs.noahdummett.com) renders docs landing with sidebar
+[1A[2K[8/15] [chromium] ΓÇ║ tests\playwright\landing.test.ts:63:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Docs sidebar navigation is functional
+[1A[2K  1) [chromium] ΓÇ║ tests\playwright\landing.test.ts:33:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Docs site (docs.noahdummett.com) renders docs landing with sidebar 
+
+    Error: [31mTimed out 5000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoContainText[2m([22m[32mexpected[39m[2m)[22m
+
+    Locator: locator('h1')
+    Expected string: [32m"Noah Dummett[7m [27mInvestigation"[39m
+    Received string: [31m"[7mThe [27mNoah DummettInvestigation"[39m
+    Call log:
+    [2m  - Expect "toContainText" with timeout 5000ms[22m
+    [2m  - waiting for locator('h1')[22m
+    [2m    8 ├ù locator resolved to <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-foreground mb-6">ΓÇª</h1>[22m
+    [2m      - unexpected value "The Noah DummettInvestigation"[22m
+
+
+      36 |     
+      37 |     // Verify main heading
+    > 38 |     await expect(page.locator('h1')).toContainText('Noah Dummett Investigation');
+         |                                      ^
+      39 |     await expect(page.locator('h2')).toContainText('Documentation Portal');
+      40 |     
+      41 |     // Verify docs content structure
+        at K:\git\noahdummett\next-investigation\tests\playwright\landing.test.ts:38:38
+
+    Error Context: test-results\landing-Investigation-Land-f9214-s-docs-landing-with-sidebar-chromium\error-context.md
+
+
+[1A[2K  2) [chromium] ΓÇ║ tests\playwright\landing.test.ts:93:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Docs site responsive design on mobile 
+
+    Error: [31mTimed out 5000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+    Locator: locator('.prose')
+    Expected: visible
+    Received: <element(s) not found>
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('.prose')[22m
+
+
+       98 |     // Verify mobile layout
+       99 |     await expect(page.locator('h1')).toBeVisible();
+    > 100 |     await expect(page.locator('.prose')).toBeVisible();
+          |                                          ^
+      101 |     
+      102 |     // On mobile, sidebar should be hidden by default
+      103 |     await expect(page.locator('aside')).toHaveClass(/hidden/);
+        at K:\git\noahdummett\next-investigation\tests\playwright\landing.test.ts:100:42
+
+    Error Context: test-results\landing-Investigation-Land-99c7b-responsive-design-on-mobile-chromium\error-context.md
+
+
+[1A[2K  3) [chromium] ΓÇ║ tests\playwright\landing.test.ts:79:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Main site responsive design on mobile 
+
+    Error: [31mTimed out 5000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+    Locator: locator('h1')
+    Expected: visible
+    Received: <element(s) not found>
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('h1')[22m
+
+
+      83 |     
+      84 |     // Verify mobile layout
+    > 85 |     await expect(page.locator('h1')).toBeVisible();
+         |                                      ^
+      86 |     await expect(page.locator('text=BREAKING INVESTIGATION')).toBeVisible();
+      87 |     
+      88 |     // Verify mobile navigation works
+        at K:\git\noahdummett\next-investigation\tests\playwright\landing.test.ts:85:38
+
+    Error Context: test-results\landing-Investigation-Land-f2189-responsive-design-on-mobile-chromium\error-context.md
+
+
+[1A[2K  4) [chromium] ΓÇ║ tests\playwright\landing.test.ts:11:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Main site (noahdummett.com) renders investigation landing 
+
+    Error: [31mTimed out 5000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoContainText[2m([22m[32mexpected[39m[2m)[22m
+
+    Locator: locator('h1')
+    Expected string: [32m"The Noah Dummett"[39m
+    Received: <element(s) not found>
+    Call log:
+    [2m  - Expect "toContainText" with timeout 5000ms[22m
+    [2m  - waiting for locator('h1')[22m
+
+
+      14 |     
+      15 |     // Verify main heading
+    > 16 |     await expect(page.locator('h1')).toContainText('The Noah Dummett');
+         |                                      ^
+      17 |     await expect(page.locator('h1')).toContainText('Investigation');
+      18 |     
+      19 |     // Verify critical investigation elements
+        at K:\git\noahdummett\next-investigation\tests\playwright\landing.test.ts:16:38
+
+    Error Context: test-results\landing-Investigation-Land-9d4db-nders-investigation-landing-chromium\error-context.md
+
+
+[1A[2K[9/15] [firefox] ΓÇ║ tests\playwright\landing.test.ts:79:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Main site responsive design on mobile
+[1A[2K[10/15] [webkit] ΓÇ║ tests\playwright\landing.test.ts:11:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Main site (noahdummett.com) renders investigation landing
+[1A[2K  5) [firefox] ΓÇ║ tests\playwright\landing.test.ts:11:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Main site (noahdummett.com) renders investigation landing 
+
+    Error: [31mTimed out 5000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoContainText[2m([22m[32mexpected[39m[2m)[22m
+
+    Locator: locator('h1')
+    Expected string: [32m"The Noah Dummett"[39m
+    Received: <element(s) not found>
+    Call log:
+    [2m  - Expect "toContainText" with timeout 5000ms[22m
+    [2m  - waiting for locator('h1')[22m
+
+
+      14 |     
+      15 |     // Verify main heading
+    > 16 |     await expect(page.locator('h1')).toContainText('The Noah Dummett');
+         |                                      ^
+      17 |     await expect(page.locator('h1')).toContainText('Investigation');
+      18 |     
+      19 |     // Verify critical investigation elements
+        at K:\git\noahdummett\next-investigation\tests\playwright\landing.test.ts:16:38
+
+    Error Context: test-results\landing-Investigation-Land-9d4db-nders-investigation-landing-firefox\error-context.md
+
+
+[1A[2K[11/15] [firefox] ΓÇ║ tests\playwright\landing.test.ts:93:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Docs site responsive design on mobile
+[1A[2K[12/15] [webkit] ΓÇ║ tests\playwright\landing.test.ts:33:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Docs site (docs.noahdummett.com) renders docs landing with sidebar
+[1A[2K[13/15] [webkit] ΓÇ║ tests\playwright\landing.test.ts:63:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Docs sidebar navigation is functional
+[1A[2K  6) [webkit] ΓÇ║ tests\playwright\landing.test.ts:11:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Main site (noahdummett.com) renders investigation landing 
+
+    Error: [31mTimed out 5000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoContainText[2m([22m[32mexpected[39m[2m)[22m
+
+    Locator: locator('h1')
+    Expected string: [32m"The Noah Dummett"[39m
+    Received: <element(s) not found>
+    Call log:
+    [2m  - Expect "toContainText" with timeout 5000ms[22m
+    [2m  - waiting for locator('h1')[22m
+
+
+      14 |     
+      15 |     // Verify main heading
+    > 16 |     await expect(page.locator('h1')).toContainText('The Noah Dummett');
+         |                                      ^
+      17 |     await expect(page.locator('h1')).toContainText('Investigation');
+      18 |     
+      19 |     // Verify critical investigation elements
+        at K:\git\noahdummett\next-investigation\tests\playwright\landing.test.ts:16:38
+
+    Error Context: test-results\landing-Investigation-Land-9d4db-nders-investigation-landing-webkit\error-context.md
+
+
+[1A[2K  7) [webkit] ΓÇ║ tests\playwright\landing.test.ts:33:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Docs site (docs.noahdummett.com) renders docs landing with sidebar 
+
+    Error: [31mTimed out 5000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoContainText[2m([22m[32mexpected[39m[2m)[22m
+
+    Locator: locator('h1')
+    Expected string: [32m"Noah Dummett[7m [27mInvestigation"[39m
+    Received string: [31m"[7mThe [27mNoah DummettInvestigation"[39m
+    Call log:
+    [2m  - Expect "toContainText" with timeout 5000ms[22m
+    [2m  - waiting for locator('h1')[22m
+    [2m    7 ├ù locator resolved to <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-foreground mb-6">ΓÇª</h1>[22m
+    [2m      - unexpected value "The Noah DummettInvestigation"[22m
+
+
+      36 |     
+      37 |     // Verify main heading
+    > 38 |     await expect(page.locator('h1')).toContainText('Noah Dummett Investigation');
+         |                                      ^
+      39 |     await expect(page.locator('h2')).toContainText('Documentation Portal');
+      40 |     
+      41 |     // Verify docs content structure
+        at K:\git\noahdummett\next-investigation\tests\playwright\landing.test.ts:38:38
+
+    Error Context: test-results\landing-Investigation-Land-f9214-s-docs-landing-with-sidebar-webkit\error-context.md
+
+
+[1A[2K[14/15] [webkit] ΓÇ║ tests\playwright\landing.test.ts:79:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Main site responsive design on mobile
+[1A[2K[15/15] [webkit] ΓÇ║ tests\playwright\landing.test.ts:93:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Docs site responsive design on mobile
+[1A[2K  8) [firefox] ΓÇ║ tests\playwright\landing.test.ts:33:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Docs site (docs.noahdummett.com) renders docs landing with sidebar 
+
+    Error: [31mTimed out 5000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoContainText[2m([22m[32mexpected[39m[2m)[22m
+
+    Locator: locator('h1')
+    Expected string: [32m"Noah Dummett[7m [27mInvestigation"[39m
+    Received string: [31m"[7mThe [27mNoah DummettInvestigation"[39m
+    Call log:
+    [2m  - Expect "toContainText" with timeout 5000ms[22m
+    [2m  - waiting for locator('h1')[22m
+    [2m    8 ├ù locator resolved to <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-foreground mb-6">ΓÇª</h1>[22m
+    [2m      - unexpected value "The Noah DummettInvestigation"[22m
+
+
+      36 |     
+      37 |     // Verify main heading
+    > 38 |     await expect(page.locator('h1')).toContainText('Noah Dummett Investigation');
+         |                                      ^
+      39 |     await expect(page.locator('h2')).toContainText('Documentation Portal');
+      40 |     
+      41 |     // Verify docs content structure
+        at K:\git\noahdummett\next-investigation\tests\playwright\landing.test.ts:38:38
+
+    Error Context: test-results\landing-Investigation-Land-f9214-s-docs-landing-with-sidebar-firefox\error-context.md
+
+
+[1A[2K  9) [firefox] ΓÇ║ tests\playwright\landing.test.ts:79:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Main site responsive design on mobile 
+
+    Error: [31mTimed out 5000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+    Locator: locator('h1')
+    Expected: visible
+    Received: <element(s) not found>
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('h1')[22m
+
+
+      83 |     
+      84 |     // Verify mobile layout
+    > 85 |     await expect(page.locator('h1')).toBeVisible();
+         |                                      ^
+      86 |     await expect(page.locator('text=BREAKING INVESTIGATION')).toBeVisible();
+      87 |     
+      88 |     // Verify mobile navigation works
+        at K:\git\noahdummett\next-investigation\tests\playwright\landing.test.ts:85:38
+
+    Error Context: test-results\landing-Investigation-Land-f2189-responsive-design-on-mobile-firefox\error-context.md
+
+
+[1A[2K  10) [firefox] ΓÇ║ tests\playwright\landing.test.ts:93:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Docs site responsive design on mobile 
+
+    Error: [31mTimed out 5000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+    Locator: locator('.prose')
+    Expected: visible
+    Received: <element(s) not found>
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('.prose')[22m
+
+
+       98 |     // Verify mobile layout
+       99 |     await expect(page.locator('h1')).toBeVisible();
+    > 100 |     await expect(page.locator('.prose')).toBeVisible();
+          |                                          ^
+      101 |     
+      102 |     // On mobile, sidebar should be hidden by default
+      103 |     await expect(page.locator('aside')).toHaveClass(/hidden/);
+        at K:\git\noahdummett\next-investigation\tests\playwright\landing.test.ts:100:42
+
+    Error Context: test-results\landing-Investigation-Land-99c7b-responsive-design-on-mobile-firefox\error-context.md
+
+
+[1A[2K  11) [chromium] ΓÇ║ tests\playwright\landing.test.ts:63:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Docs sidebar navigation is functional 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('text=Evidence Analysis')[22m
+
+
+      66 |     // Test sidebar section expansion
+      67 |     const evidenceSection = page.locator('text=Evidence Analysis');
+    > 68 |     await evidenceSection.click();
+         |                           ^
+      69 |     
+      70 |     // Verify subsection items appear
+      71 |     await expect(page.locator('text=Blockchain Evidence')).toBeVisible();
+        at K:\git\noahdummett\next-investigation\tests\playwright\landing.test.ts:68:27
+
+    Error Context: test-results\landing-Investigation-Land-f28a6-ar-navigation-is-functional-chromium\error-context.md
+
+
+[1A[2K  12) [webkit] ΓÇ║ tests\playwright\landing.test.ts:79:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Main site responsive design on mobile 
+
+    Error: [31mTimed out 5000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+    Locator: locator('h1')
+    Expected: visible
+    Received: <element(s) not found>
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('h1')[22m
+
+
+      83 |     
+      84 |     // Verify mobile layout
+    > 85 |     await expect(page.locator('h1')).toBeVisible();
+         |                                      ^
+      86 |     await expect(page.locator('text=BREAKING INVESTIGATION')).toBeVisible();
+      87 |     
+      88 |     // Verify mobile navigation works
+        at K:\git\noahdummett\next-investigation\tests\playwright\landing.test.ts:85:38
+
+    Error Context: test-results\landing-Investigation-Land-f2189-responsive-design-on-mobile-webkit\error-context.md
+
+
+[1A[2K  13) [webkit] ΓÇ║ tests\playwright\landing.test.ts:93:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Docs site responsive design on mobile 
+
+    Error: [31mTimed out 5000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+    Locator: locator('.prose')
+    Expected: visible
+    Received: <element(s) not found>
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('.prose')[22m
+
+
+       98 |     // Verify mobile layout
+       99 |     await expect(page.locator('h1')).toBeVisible();
+    > 100 |     await expect(page.locator('.prose')).toBeVisible();
+          |                                          ^
+      101 |     
+      102 |     // On mobile, sidebar should be hidden by default
+      103 |     await expect(page.locator('aside')).toHaveClass(/hidden/);
+        at K:\git\noahdummett\next-investigation\tests\playwright\landing.test.ts:100:42
+
+    Error Context: test-results\landing-Investigation-Land-99c7b-responsive-design-on-mobile-webkit\error-context.md
+
+
+[1A[2K  14) [firefox] ΓÇ║ tests\playwright\landing.test.ts:63:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Docs sidebar navigation is functional 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('text=Evidence Analysis')[22m
+
+
+      66 |     // Test sidebar section expansion
+      67 |     const evidenceSection = page.locator('text=Evidence Analysis');
+    > 68 |     await evidenceSection.click();
+         |                           ^
+      69 |     
+      70 |     // Verify subsection items appear
+      71 |     await expect(page.locator('text=Blockchain Evidence')).toBeVisible();
+        at K:\git\noahdummett\next-investigation\tests\playwright\landing.test.ts:68:27
+
+    Error Context: test-results\landing-Investigation-Land-f28a6-ar-navigation-is-functional-firefox\error-context.md
+
+
+[1A[2K  15) [webkit] ΓÇ║ tests\playwright\landing.test.ts:63:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Docs sidebar navigation is functional 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('text=Evidence Analysis')[22m
+
+
+      66 |     // Test sidebar section expansion
+      67 |     const evidenceSection = page.locator('text=Evidence Analysis');
+    > 68 |     await evidenceSection.click();
+         |                           ^
+      69 |     
+      70 |     // Verify subsection items appear
+      71 |     await expect(page.locator('text=Blockchain Evidence')).toBeVisible();
+        at K:\git\noahdummett\next-investigation\tests\playwright\landing.test.ts:68:27
+
+    Error Context: test-results\landing-Investigation-Land-f28a6-ar-navigation-is-functional-webkit\error-context.md
+
+
+[1A[2K  15 failed
+    [chromium] ΓÇ║ tests\playwright\landing.test.ts:11:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Main site (noahdummett.com) renders investigation landing 
+    [chromium] ΓÇ║ tests\playwright\landing.test.ts:33:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Docs site (docs.noahdummett.com) renders docs landing with sidebar 
+    [chromium] ΓÇ║ tests\playwright\landing.test.ts:63:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Docs sidebar navigation is functional 
+    [chromium] ΓÇ║ tests\playwright\landing.test.ts:79:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Main site responsive design on mobile 
+    [chromium] ΓÇ║ tests\playwright\landing.test.ts:93:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Docs site responsive design on mobile 
+    [firefox] ΓÇ║ tests\playwright\landing.test.ts:11:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Main site (noahdummett.com) renders investigation landing 
+    [firefox] ΓÇ║ tests\playwright\landing.test.ts:33:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Docs site (docs.noahdummett.com) renders docs landing with sidebar 
+    [firefox] ΓÇ║ tests\playwright\landing.test.ts:63:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Docs sidebar navigation is functional 
+    [firefox] ΓÇ║ tests\playwright\landing.test.ts:79:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Main site responsive design on mobile 
+    [firefox] ΓÇ║ tests\playwright\landing.test.ts:93:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Docs site responsive design on mobile 
+    [webkit] ΓÇ║ tests\playwright\landing.test.ts:11:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Main site (noahdummett.com) renders investigation landing 
+    [webkit] ΓÇ║ tests\playwright\landing.test.ts:33:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Docs site (docs.noahdummett.com) renders docs landing with sidebar 
+    [webkit] ΓÇ║ tests\playwright\landing.test.ts:63:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Docs sidebar navigation is functional 
+    [webkit] ΓÇ║ tests\playwright\landing.test.ts:79:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Main site responsive design on mobile 
+    [webkit] ΓÇ║ tests\playwright\landing.test.ts:93:7 ΓÇ║ Investigation Landing Pages ΓÇ║ Docs site responsive design on mobile 
+
+[36m  Serving HTML report at http://localhost:9323. Press Ctrl+C to quit.[39m
