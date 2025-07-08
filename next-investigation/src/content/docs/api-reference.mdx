@@ -1,0 +1,541 @@
+---
+title: "API Reference"
+description: "Complete API documentation for the Noah Dummett Investigation platform - endpoints, authentication, and usage examples"
+date: "2025-01-07"
+category: "Technical"
+tags: ["api", "reference", "endpoints", "authentication", "technical"]
+---
+
+# API Reference
+
+The Noah Dummett Investigation platform provides a comprehensive REST API for accessing evidence data, legal documents, and investigation resources. This reference guide covers all available endpoints, authentication methods, and usage examples.
+
+## Base URL
+
+```
+https://api.noahdummett.com/v1
+```
+
+## Authentication
+
+### API Key Authentication
+
+All API requests require authentication using an API key. Include your API key in the request header:
+
+```http
+Authorization: Bearer YOUR_API_KEY
+```
+
+### Rate Limiting
+
+API requests are rate-limited to ensure fair usage:
+
+- **Standard tier**: 100 requests per minute
+- **Premium tier**: 1000 requests per minute
+- **Enterprise tier**: 10,000 requests per minute
+
+Rate limit headers are included in all responses:
+
+```http
+X-RateLimit-Limit: 100
+X-RateLimit-Remaining: 95
+X-RateLimit-Reset: 1641024000
+```
+
+## Endpoints
+
+### Evidence Endpoints
+
+#### Get Evidence List
+
+Retrieve a list of all evidence documents.
+
+```http
+GET /evidence
+```
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `category` | string | No | Filter by evidence category |
+| `status` | string | No | Filter by verification status |
+| `limit` | integer | No | Number of results per page (default: 20) |
+| `offset` | integer | No | Number of results to skip (default: 0) |
+
+**Response:**
+
+```json
+{
+  "data": [
+    {
+      "id": "evidence_001",
+      "title": "Blockchain Evidence Analysis",
+      "category": "Evidence",
+      "description": "Comprehensive analysis of on-chain evidence",
+      "status": "verified",
+      "created_at": "2025-01-07T10:00:00Z",
+      "updated_at": "2025-01-07T12:00:00Z",
+      "tags": ["blockchain", "ethereum", "transactions"],
+      "verification": {
+        "verified": true,
+        "verified_by": "independent_analyst",
+        "verified_at": "2025-01-07T11:00:00Z"
+      }
+    }
+  ],
+  "pagination": {
+    "total": 15,
+    "limit": 20,
+    "offset": 0,
+    "has_more": false
+  }
+}
+```
+
+#### Get Evidence by ID
+
+Retrieve a specific evidence document by its ID.
+
+```http
+GET /evidence/{id}
+```
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `id` | string | Yes | Evidence document ID |
+
+**Response:**
+
+```json
+{
+  "data": {
+    "id": "evidence_001",
+    "title": "Blockchain Evidence Analysis",
+    "category": "Evidence",
+    "description": "Comprehensive analysis of on-chain evidence",
+    "content": "Full markdown content of the evidence document",
+    "status": "verified",
+    "created_at": "2025-01-07T10:00:00Z",
+    "updated_at": "2025-01-07T12:00:00Z",
+    "tags": ["blockchain", "ethereum", "transactions"],
+    "verification": {
+      "verified": true,
+      "verified_by": "independent_analyst",
+      "verified_at": "2025-01-07T11:00:00Z"
+    },
+    "attachments": [
+      {
+        "id": "att_001",
+        "name": "transaction_records.json",
+        "type": "application/json",
+        "size": 102400,
+        "url": "https://cdn.noahdummett.com/evidence/att_001.json"
+      }
+    ]
+  }
+}
+```
+
+### Legal Document Endpoints
+
+#### Get Legal Documents
+
+Retrieve a list of legal documents.
+
+```http
+GET /legal
+```
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `type` | string | No | Filter by document type (filing, decision, etc.) |
+| `status` | string | No | Filter by status (active, archived, etc.) |
+| `limit` | integer | No | Number of results per page (default: 20) |
+| `offset` | integer | No | Number of results to skip (default: 0) |
+
+**Response:**
+
+```json
+{
+  "data": [
+    {
+      "id": "legal_001",
+      "title": "Initial Legal Filing",
+      "type": "filing",
+      "status": "active",
+      "filed_date": "2025-01-01T00:00:00Z",
+      "court": "Superior Court of California",
+      "case_number": "CV-2025-001",
+      "description": "Initial complaint and evidence submission",
+      "created_at": "2025-01-07T10:00:00Z",
+      "updated_at": "2025-01-07T12:00:00Z"
+    }
+  ],
+  "pagination": {
+    "total": 8,
+    "limit": 20,
+    "offset": 0,
+    "has_more": false
+  }
+}
+```
+
+#### Get Legal Document by ID
+
+Retrieve a specific legal document by its ID.
+
+```http
+GET /legal/{id}
+```
+
+### Search Endpoints
+
+#### Search All Content
+
+Search across all content types (evidence, legal, technical).
+
+```http
+GET /search
+```
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `q` | string | Yes | Search query |
+| `type` | string | No | Filter by content type |
+| `limit` | integer | No | Number of results per page (default: 10) |
+| `offset` | integer | No | Number of results to skip (default: 0) |
+
+**Response:**
+
+```json
+{
+  "data": [
+    {
+      "id": "evidence_001",
+      "type": "evidence",
+      "title": "Blockchain Evidence Analysis",
+      "description": "Comprehensive analysis of on-chain evidence",
+      "score": 0.95,
+      "highlight": "...blockchain <mark>evidence</mark> shows suspicious activity..."
+    }
+  ],
+  "pagination": {
+    "total": 5,
+    "limit": 10,
+    "offset": 0,
+    "has_more": false
+  }
+}
+```
+
+### Verification Endpoints
+
+#### Verify Evidence
+
+Submit evidence for verification.
+
+```http
+POST /verification
+```
+
+**Request Body:**
+
+```json
+{
+  "evidence_id": "evidence_001",
+  "verification_type": "blockchain_analysis",
+  "verifier_info": {
+    "name": "John Doe",
+    "credentials": "Certified Blockchain Analyst",
+    "organization": "Independent Verification Services"
+  },
+  "verification_data": {
+    "transaction_hash": "0xabc123...",
+    "block_number": 16234567,
+    "verification_tools": ["Etherscan", "Chainalysis"]
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "verification_id": "ver_001",
+    "status": "pending",
+    "submitted_at": "2025-01-07T14:00:00Z",
+    "estimated_completion": "2025-01-08T14:00:00Z"
+  }
+}
+```
+
+#### Get Verification Status
+
+Check the status of a verification request.
+
+```http
+GET /verification/{id}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "verification_id": "ver_001",
+    "status": "completed",
+    "result": "verified",
+    "submitted_at": "2025-01-07T14:00:00Z",
+    "completed_at": "2025-01-07T16:00:00Z",
+    "verifier": {
+      "name": "John Doe",
+      "credentials": "Certified Blockchain Analyst"
+    },
+    "verification_report": {
+      "summary": "Transaction verified on Ethereum mainnet",
+      "details": "https://cdn.noahdummett.com/verification/ver_001_report.pdf"
+    }
+  }
+}
+```
+
+## Error Handling
+
+The API uses standard HTTP status codes and returns detailed error messages:
+
+### Error Response Format
+
+```json
+{
+  "error": {
+    "code": "INVALID_API_KEY",
+    "message": "The provided API key is invalid or expired",
+    "details": "Please check your API key and try again",
+    "timestamp": "2025-01-07T14:30:00Z",
+    "request_id": "req_abc123"
+  }
+}
+```
+
+### Common Error Codes
+
+| Status Code | Error Code | Description |
+|-------------|------------|-------------|
+| 400 | `BAD_REQUEST` | Invalid request parameters |
+| 401 | `UNAUTHORIZED` | Missing or invalid API key |
+| 403 | `FORBIDDEN` | Insufficient permissions |
+| 404 | `NOT_FOUND` | Resource not found |
+| 429 | `RATE_LIMIT_EXCEEDED` | Too many requests |
+| 500 | `INTERNAL_ERROR` | Server error |
+
+## SDK Examples
+
+### JavaScript/Node.js
+
+```javascript
+const NoahDummettAPI = require('@noahdummett/api');
+
+const client = new NoahDummettAPI({
+  apiKey: 'your-api-key-here',
+  baseUrl: 'https://api.noahdummett.com/v1'
+});
+
+// Get evidence list
+async function getEvidence() {
+  try {
+    const response = await client.evidence.list({
+      category: 'Evidence',
+      limit: 10
+    });
+    console.log(response.data);
+  } catch (error) {
+    console.error('Error:', error.message);
+  }
+}
+
+// Get specific evidence
+async function getEvidenceById(id) {
+  try {
+    const response = await client.evidence.get(id);
+    console.log(response.data);
+  } catch (error) {
+    console.error('Error:', error.message);
+  }
+}
+```
+
+### Python
+
+```python
+import requests
+from typing import Dict, Any
+
+class NoahDummettAPI:
+    def __init__(self, api_key: str):
+        self.api_key = api_key
+        self.base_url = "https://api.noahdummett.com/v1"
+        self.headers = {
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json"
+        }
+    
+    def get_evidence(self, category: str = None, limit: int = 20) -> Dict[str, Any]:
+        """Get evidence list"""
+        params = {"limit": limit}
+        if category:
+            params["category"] = category
+        
+        response = requests.get(
+            f"{self.base_url}/evidence",
+            headers=self.headers,
+            params=params
+        )
+        response.raise_for_status()
+        return response.json()
+    
+    def get_evidence_by_id(self, evidence_id: str) -> Dict[str, Any]:
+        """Get specific evidence by ID"""
+        response = requests.get(
+            f"{self.base_url}/evidence/{evidence_id}",
+            headers=self.headers
+        )
+        response.raise_for_status()
+        return response.json()
+
+# Usage
+api = NoahDummettAPI("your-api-key-here")
+evidence = api.get_evidence(category="Evidence", limit=10)
+print(evidence)
+```
+
+### cURL
+
+```bash
+# Get evidence list
+curl -X GET \
+  'https://api.noahdummett.com/v1/evidence?category=Evidence&limit=10' \
+  -H 'Authorization: Bearer YOUR_API_KEY' \
+  -H 'Content-Type: application/json'
+
+# Get specific evidence
+curl -X GET \
+  'https://api.noahdummett.com/v1/evidence/evidence_001' \
+  -H 'Authorization: Bearer YOUR_API_KEY' \
+  -H 'Content-Type: application/json'
+
+# Search content
+curl -X GET \
+  'https://api.noahdummett.com/v1/search?q=blockchain&type=evidence' \
+  -H 'Authorization: Bearer YOUR_API_KEY' \
+  -H 'Content-Type: application/json'
+```
+
+## Best Practices
+
+### Security
+
+1. **API Key Security**
+   - Never expose API keys in client-side code
+   - Use environment variables for API keys
+   - Rotate API keys regularly
+
+2. **HTTPS Only**
+   - Always use HTTPS for API requests
+   - Verify SSL certificates
+
+3. **Input Validation**
+   - Validate all input parameters
+   - Sanitize user-provided data
+
+### Performance
+
+1. **Caching**
+   - Cache frequently accessed data
+   - Respect cache headers
+
+2. **Pagination**
+   - Use pagination for large result sets
+   - Implement proper offset/limit handling
+
+3. **Rate Limiting**
+   - Implement exponential backoff for rate-limited requests
+   - Monitor rate limit headers
+
+### Error Handling
+
+1. **Retry Logic**
+   - Implement retry logic for transient errors
+   - Use exponential backoff
+
+2. **Logging**
+   - Log all API requests and responses
+   - Include request IDs for debugging
+
+## Webhooks
+
+### Subscription
+
+Subscribe to receive real-time updates about evidence changes:
+
+```http
+POST /webhooks
+```
+
+**Request Body:**
+
+```json
+{
+  "url": "https://your-domain.com/webhook",
+  "events": ["evidence.created", "evidence.updated", "evidence.verified"],
+  "secret": "your-webhook-secret"
+}
+```
+
+### Webhook Payload
+
+```json
+{
+  "id": "evt_001",
+  "type": "evidence.verified",
+  "data": {
+    "evidence_id": "evidence_001",
+    "verification_status": "verified"
+  },
+  "timestamp": "2025-01-07T15:00:00Z"
+}
+```
+
+## Support
+
+For API support and questions:
+
+- **Documentation**: [API Reference](/docs/api-reference)
+- **Email**: api@noahdummett.com
+- **GitHub Issues**: [Report API Issues](https://github.com/noahdummett/api/issues)
+
+## Changelog
+
+### Version 1.0.0 (2025-01-07)
+
+- Initial API release
+- Evidence endpoints
+- Legal document endpoints
+- Search functionality
+- Verification system
+- Webhook support
+
+---
+
+<Callout type="info">
+**API Updates**: This API is actively developed. Subscribe to our updates to receive notifications about new features and changes.
+</Callout>
+
+*Last updated: January 7, 2025*

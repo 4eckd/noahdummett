@@ -1,0 +1,203 @@
+---
+title: "Platform Architecture"
+description: "Technical architecture of the Noah Dummett investigation platform"
+date: "2025-01-07"
+category: "Technical"
+tags: ["architecture", "nextjs", "deployment", "security"]
+---
+
+# Platform Architecture
+
+## Overview
+
+The Noah Dummett investigation platform is built using modern web technologies with a focus on security, performance, and transparency.
+
+## Technology Stack
+
+### Frontend
+- **Framework**: Next.js 14 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: Custom component library
+- **State Management**: React Context + Hooks
+
+### Backend
+- **Runtime**: Node.js
+- **Framework**: Next.js API Routes
+- **Database**: PostgreSQL with Prisma ORM
+- **Authentication**: NextAuth.js
+- **File Storage**: AWS S3
+
+### Infrastructure
+- **Hosting**: Vercel (primary), AWS (backup)
+- **CDN**: Cloudflare
+- **Monitoring**: Vercel Analytics, Sentry
+- **CI/CD**: GitHub Actions
+
+## Application Structure
+
+```
+src/
+├── app/                    # Next.js App Router
+│   ├── (main)/            # Main investigation site
+│   ├── (docs)/            # Documentation subdomain
+│   └── layout.tsx         # Root layout
+├── components/            # Reusable UI components
+├── lib/                   # Utility functions
+├── providers/             # Context providers
+└── content/              # MDX content
+    └── docs/             # Documentation files
+```
+
+## Route Groups
+
+### (main) - Investigation Site
+- `/` - Homepage with key allegations
+- `/noah-dummett` - Personal investigation
+- `/evidence` - Evidence portal
+- `/legal` - Legal documentation
+
+### (docs) - Documentation Site
+- `/docs` - Documentation homepage
+- `/docs/evidence-analysis` - Evidence docs
+- `/docs/legal` - Legal docs
+- `/docs/technical` - Technical docs
+
+## Security Features
+
+### Content Security
+- **Input Validation**: Zod schemas for all user inputs
+- **CSRF Protection**: Built-in Next.js protections
+- **XSS Prevention**: Sanitized content rendering
+- **Rate Limiting**: API route protection
+
+### Infrastructure Security
+- **HTTPS Only**: Force SSL/TLS encryption
+- **Headers Security**: Security headers via middleware
+- **Environment Variables**: Secure secret management
+- **Access Control**: Role-based permissions
+
+## Performance Optimizations
+
+### Frontend Performance
+- **Code Splitting**: Automatic route-based splitting
+- **Image Optimization**: Next.js Image component
+- **Font Optimization**: Google Fonts optimization
+- **Caching**: Browser and CDN caching strategies
+
+### Backend Performance
+- **Database Optimization**: Indexed queries, connection pooling
+- **API Caching**: Redis for frequently accessed data
+- **Static Generation**: Pre-rendered pages where possible
+- **Edge Computing**: Vercel Edge Functions
+
+## Deployment Strategy
+
+### Production Environment
+```yaml
+Primary: Vercel
+├── Domain: noahdummett.com
+├── Subdomain: docs.noahdummett.com
+├── SSL: Automatic (Let's Encrypt)
+└── CDN: Global edge network
+
+Backup: AWS
+├── EC2: Auto-scaling instances
+├── RDS: Multi-AZ PostgreSQL
+├── S3: Static asset storage
+└── CloudFront: CDN distribution
+```
+
+### Development Workflow
+1. **Local Development**: Next.js dev server
+2. **Testing**: Jest + React Testing Library
+3. **Preview Deployments**: Vercel preview URLs
+4. **Production**: Automatic deployment from main branch
+
+## Monitoring & Analytics
+
+### Application Monitoring
+- **Error Tracking**: Sentry for error monitoring
+- **Performance**: Web Vitals tracking
+- **Uptime**: External uptime monitoring
+- **Logs**: Structured logging with correlation IDs
+
+### User Analytics
+- **Privacy-First**: No personal data collection
+- **Page Views**: Aggregate traffic statistics
+- **Performance**: Core Web Vitals monitoring
+- **Security Events**: Failed authentication attempts
+
+## Data Management
+
+### Content Management
+- **MDX Files**: Git-based content management
+- **Static Assets**: CDN-optimized delivery
+- **Version Control**: Full audit trail in Git
+- **Backup Strategy**: Multi-region backups
+
+### Evidence Storage
+- **Immutable Records**: Blockchain-verified evidence
+- **Encrypted Storage**: AES-256 encryption at rest
+- **Access Logs**: Complete audit trail
+- **Retention Policy**: Legal compliance requirements
+
+## API Architecture
+
+### RESTful Endpoints
+```
+GET  /api/evidence        # List evidence documents
+GET  /api/evidence/:id    # Get specific evidence
+POST /api/contact         # Contact form submission
+GET  /api/health          # Health check endpoint
+```
+
+### GraphQL Schema
+```graphql
+type Evidence {
+  id: ID!
+  title: String!
+  category: String!
+  content: String!
+  verificationStatus: String!
+  createdAt: DateTime!
+}
+
+type Query {
+  evidence(category: String): [Evidence!]!
+  evidenceById(id: ID!): Evidence
+}
+```
+
+## Contributing Guidelines
+
+### Development Setup
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Set up environment variables
+4. Run development server: `npm run dev`
+
+### Code Standards
+- **TypeScript**: Strict mode enabled
+- **ESLint**: Custom configuration
+- **Prettier**: Code formatting
+- **Husky**: Pre-commit hooks
+
+## Future Roadmap
+
+### Planned Features
+- [ ] Multi-language support (i18n)
+- [ ] Advanced search functionality
+- [ ] Real-time evidence updates
+- [ ] Mobile application
+- [ ] API for third-party integrations
+
+### Technical Improvements
+- [ ] Serverless database migration
+- [ ] Edge-first architecture
+- [ ] Progressive Web App (PWA)
+- [ ] Advanced caching strategies
+
+---
+
+*This architecture documentation is maintained by the Its Different Productions development team. Last updated: January 7, 2025*
