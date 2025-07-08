@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { FileText, ExternalLink, Download } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
+import rehypeHighlight from 'rehype-highlight';
+import 'highlight.js/styles/github-dark.css';
 
 interface MarkdownViewerProps {
   basePath: string;
@@ -143,9 +148,34 @@ export const MarkdownViewer: React.FC<MarkdownViewerProps> = ({ basePath }) => {
       </div>
       
       <div className="prose prose-slate dark:prose-invert max-w-none">
-        <pre className="whitespace-pre-wrap bg-card border border-border rounded-lg p-6 text-sm">
+        <ReactMarkdown
+          remarkPlugins={[remarkGfm]}
+          rehypePlugins={[rehypeRaw, rehypeHighlight]}
+          className="markdown-content"
+          components={{
+            // Custom components for evidence
+            h1: ({children}) => <h1 className="text-3xl font-bold text-red-400 mb-6">{children}</h1>,
+            h2: ({children}) => <h2 className="text-2xl font-semibold text-orange-400 mb-4">{children}</h2>,
+            h3: ({children}) => <h3 className="text-xl font-medium text-yellow-400 mb-3">{children}</h3>,
+            blockquote: ({children}) => (
+              <blockquote className="border-l-4 border-red-500 pl-4 my-4 bg-red-500/10 p-4 rounded">
+                {children}
+              </blockquote>
+            ),
+            table: ({children}) => (
+              <div className="overflow-x-auto my-6">
+                <table className="min-w-full border border-border rounded-lg">{children}</table>
+              </div>
+            ),
+            a: ({href, children}) => (
+              <a href={href} className="text-blue-400 hover:text-blue-300 underline" target="_blank" rel="noopener noreferrer">
+                {children}
+              </a>
+            )
+          }}
+        >
           {content}
-        </pre>
+        </ReactMarkdown>
       </div>
     </div>
   );
