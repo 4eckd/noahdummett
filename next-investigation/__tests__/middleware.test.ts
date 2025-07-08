@@ -249,4 +249,231 @@ describe('middleware', () => {
     expect(mockRewrite).not.toHaveBeenCalled();
     expect(mockNext).toHaveBeenCalled();
   });
+
+  // Additional Edge Cases for Path Mapping
+  describe('Edge Cases: Path Mapping', () => {
+    it('should handle URLs with trailing slashes', () => {
+      const mockRewrite = jest.fn();
+      const mockNext = jest.fn();
+      
+      (NextResponse.rewrite as jest.Mock) = mockRewrite;
+      (NextResponse.next as jest.Mock) = mockNext;
+
+      const mockUrl = {
+        pathname: '/getting-started/',
+      };
+
+      const mockRequest = {
+        nextUrl: mockUrl,
+        headers: {
+          get: jest.fn().mockReturnValue('docs.noahdummett.com'),
+        },
+      } as unknown as NextRequest;
+
+      middleware(mockRequest);
+
+      expect(mockUrl.pathname).toBe('/docs/getting-started/');
+      expect(mockRewrite).toHaveBeenCalledWith(mockUrl);
+    });
+
+    it('should handle docs path with multiple segments', () => {
+      const mockRewrite = jest.fn();
+      const mockNext = jest.fn();
+      
+      (NextResponse.rewrite as jest.Mock) = mockRewrite;
+      (NextResponse.next as jest.Mock) = mockNext;
+
+      const mockUrl = {
+        pathname: '/evidence-analysis/blockchain/transactions',
+      };
+
+      const mockRequest = {
+        nextUrl: mockUrl,
+        headers: {
+          get: jest.fn().mockReturnValue('docs.noahdummett.com'),
+        },
+      } as unknown as NextRequest;
+
+      middleware(mockRequest);
+
+      expect(mockUrl.pathname).toBe('/docs/evidence-analysis/blockchain/transactions');
+      expect(mockRewrite).toHaveBeenCalledWith(mockUrl);
+    });
+
+    it('should handle special characters in path', () => {
+      const mockRewrite = jest.fn();
+      const mockNext = jest.fn();
+      
+      (NextResponse.rewrite as jest.Mock) = mockRewrite;
+      (NextResponse.next as jest.Mock) = mockNext;
+
+      const mockUrl = {
+        pathname: '/legal/court-filings%20&%20evidence',
+      };
+
+      const mockRequest = {
+        nextUrl: mockUrl,
+        headers: {
+          get: jest.fn().mockReturnValue('docs.noahdummett.com'),
+        },
+      } as unknown as NextRequest;
+
+      middleware(mockRequest);
+
+      expect(mockUrl.pathname).toBe('/docs/legal/court-filings%20&%20evidence');
+      expect(mockRewrite).toHaveBeenCalledWith(mockUrl);
+    });
+
+    it('should handle docs subdomain with port number', () => {
+      const mockRewrite = jest.fn();
+      const mockNext = jest.fn();
+      
+      (NextResponse.rewrite as jest.Mock) = mockRewrite;
+      (NextResponse.next as jest.Mock) = mockNext;
+
+      const mockUrl = {
+        pathname: '/api-reference',
+      };
+
+      const mockRequest = {
+        nextUrl: mockUrl,
+        headers: {
+          get: jest.fn().mockReturnValue('docs.noahdummett.com:3000'),
+        },
+      } as unknown as NextRequest;
+
+      middleware(mockRequest);
+
+      // Should not rewrite because hostname includes port
+      expect(mockUrl.pathname).toBe('/api-reference');
+      expect(mockRewrite).not.toHaveBeenCalled();
+      expect(mockNext).toHaveBeenCalled();
+    });
+
+    it('should handle already prefixed docs paths with trailing slash', () => {
+      const mockRewrite = jest.fn();
+      const mockNext = jest.fn();
+      
+      (NextResponse.rewrite as jest.Mock) = mockRewrite;
+      (NextResponse.next as jest.Mock) = mockNext;
+
+      const mockUrl = {
+        pathname: '/docs/',
+      };
+
+      const mockRequest = {
+        nextUrl: mockUrl,
+        headers: {
+          get: jest.fn().mockReturnValue('docs.noahdummett.com'),
+        },
+      } as unknown as NextRequest;
+
+      middleware(mockRequest);
+
+      expect(mockUrl.pathname).toBe('/docs/');
+      expect(mockRewrite).not.toHaveBeenCalled();
+      expect(mockNext).toHaveBeenCalled();
+    });
+
+    it('should handle www subdomain correctly', () => {
+      const mockRewrite = jest.fn();
+      const mockNext = jest.fn();
+      
+      (NextResponse.rewrite as jest.Mock) = mockRewrite;
+      (NextResponse.next as jest.Mock) = mockNext;
+
+      const mockUrl = {
+        pathname: '/investigation',
+      };
+
+      const mockRequest = {
+        nextUrl: mockUrl,
+        headers: {
+          get: jest.fn().mockReturnValue('www.noahdummett.com'),
+        },
+      } as unknown as NextRequest;
+
+      middleware(mockRequest);
+
+      // Should not rewrite for www subdomain
+      expect(mockUrl.pathname).toBe('/investigation');
+      expect(mockRewrite).not.toHaveBeenCalled();
+      expect(mockNext).toHaveBeenCalled();
+    });
+
+    it('should handle docs path with fragment/hash', () => {
+      const mockRewrite = jest.fn();
+      const mockNext = jest.fn();
+      
+      (NextResponse.rewrite as jest.Mock) = mockRewrite;
+      (NextResponse.next as jest.Mock) = mockNext;
+
+      const mockUrl = {
+        pathname: '/timeline/comprehensive-timeline',
+        hash: '#january-2022',
+      };
+
+      const mockRequest = {
+        nextUrl: mockUrl,
+        headers: {
+          get: jest.fn().mockReturnValue('docs.noahdummett.com'),
+        },
+      } as unknown as NextRequest;
+
+      middleware(mockRequest);
+
+      expect(mockUrl.pathname).toBe('/docs/timeline/comprehensive-timeline');
+      expect(mockRewrite).toHaveBeenCalledWith(mockUrl);
+    });
+
+    it('should handle malformed hostname headers', () => {
+      const mockRewrite = jest.fn();
+      const mockNext = jest.fn();
+      
+      (NextResponse.rewrite as jest.Mock) = mockRewrite;
+      (NextResponse.next as jest.Mock) = mockNext;
+
+      const mockUrl = {
+        pathname: '/test',
+      };
+
+      const mockRequest = {
+        nextUrl: mockUrl,
+        headers: {
+          get: jest.fn().mockReturnValue(''),
+        },
+      } as unknown as NextRequest;
+
+      middleware(mockRequest);
+
+      expect(mockUrl.pathname).toBe('/test');
+      expect(mockRewrite).not.toHaveBeenCalled();
+      expect(mockNext).toHaveBeenCalled();
+    });
+
+    it('should handle very long pathnames', () => {
+      const mockRewrite = jest.fn();
+      const mockNext = jest.fn();
+      
+      (NextResponse.rewrite as jest.Mock) = mockRewrite;
+      (NextResponse.next as jest.Mock) = mockNext;
+
+      const longPath = '/evidence-analysis/blockchain/transactions/detailed-analysis/january-2022/ftx-collapse/funds-transfer/shuffle-connections/noah-dummett-investigation';
+      const mockUrl = {
+        pathname: longPath,
+      };
+
+      const mockRequest = {
+        nextUrl: mockUrl,
+        headers: {
+          get: jest.fn().mockReturnValue('docs.noahdummett.com'),
+        },
+      } as unknown as NextRequest;
+
+      middleware(mockRequest);
+
+      expect(mockUrl.pathname).toBe(`/docs${longPath}`);
+      expect(mockRewrite).toHaveBeenCalledWith(mockUrl);
+    });
+  });
 });
