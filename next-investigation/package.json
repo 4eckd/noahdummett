@@ -1,6 +1,6 @@
 {
   "name": "noahdummett-investigation-nextjs",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "private": true,
   "description": "Noah Dummett Investigation Projects - Next.js 15 Investigation Platform with Subdomain Routing",
   "author": "Its Different Productions",
@@ -13,14 +13,17 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "vercel-build": "next build",
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
-    "test:lighthouse": "node scripts/lighthouse-audit.js",
+    "test:preview": "node scripts/test-preview-deployment.js",
+    "test:lighthouse": "node scripts/lighthouse-audit.mjs",
     "test:all": "npm run test && npm run test:e2e && npm run test:lighthouse",
+    "test:preview:ci": "npm run test:preview",
     "audit:performance": "npm run test:lighthouse"
   },
   "dependencies": {
@@ -28,6 +31,7 @@
     "@mdx-js/react": "^3.1.0",
     "@next/mdx": "^15.3.5",
     "@tailwindcss/typography": "^0.5.16",
+    "@vercel/analytics": "^1.5.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.0",
@@ -56,6 +60,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/react-syntax-highlighter": "^15.5.13",
+    "chrome-launcher": "^1.1.2",
     "eslint": "^9",
     "eslint-config-next": "15.3.5",
     "jest": "^29.7.0",

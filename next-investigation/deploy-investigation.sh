@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Noah Dummett Investigation Projects - Next.js Deployment Script
-# This script deploys the Next.js 14 investigation platform to Vercel
+# This script deploys the Next.js 15 investigation platform to Vercel
 
 echo "🚀 Deploying Noah Dummett Investigation Projects - Next.js Platform"
 echo "=================================================================="
@@ -41,7 +41,7 @@ if [ $? -eq 0 ]; then
     echo "🎉 Noah Dummett Investigation Platform is now live!"
     echo "=================================================================="
     echo "📊 Platform Features:"
-    echo "   • Modern Next.js 14 architecture"
+    echo "   • Modern Next.js 15 architecture"
     echo "   • Multi-theme investigation platform"
     echo "   • Professional evidence presentation"
     echo "   • Blockchain transaction analysis"

@@ -1,0 +1,78 @@
+name: Lighthouse CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # Run daily at 2 AM UTC
+    - cron: '0 2 * * *'
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Wait for deployment
+        run: |
+          echo "Waiting for deployment to be ready..."
+          sleep 30
+
+      - name: Run Lighthouse CI
+        run: |
+          npm run test:lighthouse
+        env:
+          LIGHTHOUSE_BASE_URL: https://noahdummett.com
+          LIGHTHOUSE_DOCS_URL: https://docs.noahdummett.com
+
+      - name: Upload Lighthouse reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lighthouse-reports
+          path: reports/lighthouse/
+          retention-days: 30
+
+      - name: Comment PR with Lighthouse results
+        uses: actions/github-script@v7
+        if: github.event_name == 'pull_request'
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            
+            try {
+              const summaryPath = path.join('reports', 'lighthouse', 'summary.md');
+              if (fs.existsSync(summaryPath)) {
+                const summary = fs.readFileSync(summaryPath, 'utf8');
+                
+                github.rest.issues.createComment({
+                  issue_number: context.issue.number,
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  body: `## 🔍 Lighthouse Performance Report\n\n${summary}`
+                });
+              }
+            } catch (error) {
+              console.error('Error posting Lighthouse results:', error);
+            }
+
+      - name: Fail if performance thresholds not met
+        run: |
+          if [ $? -ne 0 ]; then
+            echo "❌ Lighthouse performance thresholds not met"
+            exit 1
+          fi
+          echo "✅ All Lighthouse performance thresholds met"

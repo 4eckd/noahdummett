@@ -5,6 +5,24 @@ All notable changes to the Noah Dummett Investigation Platform will be documente
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.1] - 2025-01-09
+
+### Added
+- 📋 **Deployment Guide**: Comprehensive deployment documentation in `docs/DEPLOYMENT_GUIDE.md`
+- 🔒 **Security Enhancement**: Improved security headers and configuration guidelines
+- 📊 **Performance Optimization**: Additional performance improvements and monitoring
+- 🛠️ **Documentation**: Enhanced technical documentation and troubleshooting guides
+- ✅ **Verification Checklist**: Complete verification checklist implementation
+
+### Changed
+- 📝 **README**: Updated version badges and documentation links
+- 🔍 **Version Management**: Comprehensive version bump procedures
+- 📊 **Domain Links**: Verified and updated all domain references
+
+### Fixed
+- 🔗 **Documentation Links**: Fixed broken internal documentation links
+- 📝 **Version Consistency**: Ensured consistent version numbering across all files
+
 ## [3.0.0] - 2025-01-08
 
 ### Added

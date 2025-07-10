@@ -78,7 +78,7 @@ export default function Home() {
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground mb-6">
-            The Noah Dummett
+            Noah Dummett
             <span className="block text-red-500">Investigation</span>
           </h1>
 

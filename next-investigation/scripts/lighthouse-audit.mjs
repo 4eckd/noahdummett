@@ -1,9 +1,13 @@
 #!/usr/bin/env node
 
-const lighthouse = require('lighthouse');
-const chromeLauncher = require('chrome-launcher');
-const fs = require('fs');
-const path = require('path');
+import lighthouse from 'lighthouse';
+import * as chromeLauncher from 'chrome-launcher';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 /**
  * Lighthouse Performance Audit Script
@@ -26,16 +30,16 @@ const AUDIT_CONFIG = {
     pwa: 80
   },
   
-  // Sites to audit
+  // Sites to audit - use environment variable for base URL or default to production
   sites: [
     {
       name: 'Main Investigation Site',
-      url: 'https://noahdummett.com',
+      url: process.env.LIGHTHOUSE_BASE_URL || 'https://noahdummett.com',
       outputFile: 'lighthouse-main-site.json'
     },
     {
-      name: 'Documentation Portal',
-      url: 'https://docs.noahdummett.com',
+      name: 'Documentation Portal', 
+      url: process.env.LIGHTHOUSE_DOCS_URL || 'https://docs.noahdummett.com',
       outputFile: 'lighthouse-docs-site.json'
     }
   ],
@@ -225,8 +229,10 @@ async function main() {
   }
 }
 
-if (require.main === module) {
+// Check if this script is being run directly
+if (import.meta.url === `file://${process.argv[1]}` || 
+    import.meta.url.endsWith(process.argv[1]?.replace(/\\/g, '/'))) {
   main().catch(console.error);
 }
 
-module.exports = { runLighthouseAudit, generateSummaryReport, AUDIT_CONFIG };
+export { runLighthouseAudit, generateSummaryReport, AUDIT_CONFIG, main };

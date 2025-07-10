@@ -8,7 +8,7 @@ A comprehensive investigation platform exposing concerning allegations surroundi
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
-[![Version](https://img.shields.io/badge/Version-3.0.0-blue?style=for-the-badge)](https://github.com/4eckd/noahdummett)
+[![Version](https://img.shields.io/badge/Version-3.0.1-blue?style=for-the-badge)](https://github.com/4eckd/noahdummett)
 
 ## 🎯 **Critical Allegations**
 
@@ -168,6 +168,12 @@ Professional blockchain analysis with:
 - **Coverage**: Cross-browser compatibility (Chromium, Firefox, WebKit)
 - **Features**: Responsive design, navigation, accessibility
 
+### Preview Deployment Testing
+- **Framework**: Playwright with VERCEL_URL integration
+- **Coverage**: Homepage (200 status), docs subdomain rewrite, cross-domain navigation
+- **Visual Regression**: Mobile viewport snapshots across 5 themes
+- **CI/CD**: Automated testing on every PR with build failure on issues
+
 ### Performance Testing
 - **Tool**: Lighthouse auditing
 - **Metrics**: Performance, accessibility, SEO, best practices
@@ -177,6 +183,7 @@ Professional blockchain analysis with:
 ```bash
 npm run test         # Unit tests
 npm run test:e2e     # End-to-end tests
+npm run test:preview # Preview deployment tests
 npm run test:lighthouse # Performance audits
 npm run test:all     # Complete test suite
 ```
@@ -226,10 +233,19 @@ Optimized for investigation platform needs:
 - **Legal Documentation**: [noahdummett.com/legal](https://noahdummett.com/legal)
 - **Technical Documentation**: [docs.noahdummett.com/technical](https://docs.noahdummett.com/technical)
 - **Subdomain Routing Guide**: [docs/SUBDOMAIN_ROUTING.md](docs/SUBDOMAIN_ROUTING.md)
+- **Deployment Guide**: [docs/DEPLOYMENT_GUIDE.md](docs/DEPLOYMENT_GUIDE.md)
+- **Verification Checklist**: [docs/VERIFICATION_CHECKLIST.md](docs/VERIFICATION_CHECKLIST.md)
 
 ## 📝 **Version History**
 
-### v3.0.0 (Current)
+### v3.0.1 (Current)
+- 📋 **Deployment Guide**: Comprehensive deployment documentation
+- 🔒 **Security Enhancement**: Improved security headers and configuration
+- 📊 **Performance**: Additional performance optimizations
+- 🛠️ **Documentation**: Enhanced technical documentation
+- ✅ **Verification**: Complete verification checklist implementation
+
+### v3.0.0
 - 🌐 **Subdomain Routing**: Complete docs.noahdummett.com implementation
 - 🚀 **Next.js 15**: Upgrade to latest framework version
 - 🧪 **Testing Suite**: Comprehensive unit, E2E, and performance tests
@@ -261,7 +277,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**🚨 Investigation Status**: Active - v3.0.0 Production Ready  
+**🚨 Investigation Status**: Active - v3.0.1 Production Ready
 **🌐 Subdomain Routing**: docs.noahdummett.com fully operational  
 **📊 Evidence Sources**: 150+ independently verifiable  
 **⚖️ Legal Compliance**: Professional standards maintained  

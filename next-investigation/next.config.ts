@@ -10,19 +10,12 @@ const nextConfig: NextConfig = {
   experimental: {
     mdxRs: true,
   },
+  poweredByHeader: false,
+  reactStrictMode: true,
+  compress: true,
   images: {
     domains: ['noahdummett.com', 'docs.noahdummett.com'],
-  },
-  async rewrites() {
-    return {
-      afterFiles: [
-        // Handle evidence downloads
-        {
-          source: '/downloads/:path*',
-          destination: '/downloads/:path*',
-        },
-      ],
-    };
+    formats: ['image/avif', 'image/webp'],
   },
   async headers() {
     return [
@@ -48,15 +41,6 @@ const nextConfig: NextConfig = {
           {
             key: 'Permissions-Policy',
             value: 'camera=(), microphone=(), geolocation=()',
-          },
-        ],
-      },
-      {
-        source: '/downloads/(.*)',
-        headers: [
-          {
-            key: 'Content-Disposition',
-            value: 'attachment',
           },
         ],
       },

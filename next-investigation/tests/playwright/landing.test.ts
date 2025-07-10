@@ -8,12 +8,12 @@ import { test, expect } from '@playwright/test';
  */
 
 test.describe('Investigation Landing Pages', () => {
-  test('Main site (noahdummett.com) renders investigation landing', async ({ page }) => {
+  test('Main site (localhost) renders investigation landing', async ({ page }) => {
     // Navigate to main investigation site
-    await page.goto('https://noahdummett.com');
+    await page.goto('/');
     
     // Verify main heading
-    await expect(page.locator('h1')).toContainText('The Noah Dummett');
+    await expect(page.locator('h1')).toContainText('Noah Dummett');
     await expect(page.locator('h1')).toContainText('Investigation');
     
     // Verify critical investigation elements
@@ -30,9 +30,9 @@ test.describe('Investigation Landing Pages', () => {
     await expect(page.locator('text=$25 MILLION+ Stolen From FTX Victims')).toBeVisible();
   });
 
-  test('Docs site (docs.noahdummett.com) renders docs landing with sidebar', async ({ page }) => {
-    // Navigate to docs portal
-    await page.goto('https://docs.noahdummett.com');
+  test('Docs site (/docs) renders docs landing with sidebar', async ({ page }) => {
+    // Navigate to docs portal (simulating subdomain middleware)
+    await page.goto('/docs');
     
     // Verify main heading
     await expect(page.locator('h1')).toContainText('Noah Dummett Investigation');
@@ -61,7 +61,7 @@ test.describe('Investigation Landing Pages', () => {
   });
 
   test('Docs sidebar navigation is functional', async ({ page }) => {
-    await page.goto('https://docs.noahdummett.com');
+    await page.goto('/docs');
     
     // Test sidebar section expansion
     const evidenceSection = page.locator('text=Evidence Analysis');
@@ -79,7 +79,7 @@ test.describe('Investigation Landing Pages', () => {
   test('Main site responsive design on mobile', async ({ page }) => {
     // Set mobile viewport
     await page.setViewportSize({ width: 375, height: 667 });
-    await page.goto('https://noahdummett.com');
+    await page.goto('/');
     
     // Verify mobile layout
     await expect(page.locator('h1')).toBeVisible();
@@ -93,7 +93,7 @@ test.describe('Investigation Landing Pages', () => {
   test('Docs site responsive design on mobile', async ({ page }) => {
     // Set mobile viewport
     await page.setViewportSize({ width: 375, height: 667 });
-    await page.goto('https://docs.noahdummett.com');
+    await page.goto('/docs');
     
     // Verify mobile layout
     await expect(page.locator('h1')).toBeVisible();
