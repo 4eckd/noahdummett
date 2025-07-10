@@ -1,174 +1,176 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to the Noah Dummett Investigation Platform will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.1.0] - 2024-12-02
+## [3.0.2] - 2025-07-09
 
 ### Added
-- **Complete Documentation Reorganization**: Professional documentation structure with 5 organized categories
-  - Investigation Documentation: Complete methodology, timeline, and findings
-  - Evidence Analysis: Platform-specific evidence documentation
-  - Legal Documentation: Whistleblower reports and legal analysis
-  - Technical Documentation: Architecture and implementation details
-  - Project Documentation: Development history and project management
+- 🏗️ **Project Structure**: Reorganized project structure - moved from nested `next-investigation` directory to root
+- 📋 **Deployment Guide**: Comprehensive deployment documentation in `docs/DEPLOYMENT_GUIDE.md`
+- 🔒 **Security Enhancement**: Improved security headers and configuration guidelines
+- 📊 **Performance Optimization**: Additional performance improvements and monitoring
+- 🛠️ **Documentation**: Enhanced technical documentation and troubleshooting guides
+- ✅ **Verification Checklist**: Complete verification checklist implementation
+- 🧪 **Playwright Testing**: Comprehensive E2E testing suite for preview deployments
+- 📱 **Mobile Testing**: Cross-theme mobile viewport testing automation
+- 🔍 **Accessibility Testing**: Automated accessibility validation in test suite
 
-- **Single Documentation Hub**: Unified documentation solution at `/docs`
-  - Professional documentation landing page with category overview
-  - Statistics dashboard showing investigation metrics
-  - Quick access to all documentation categories
-  - Removed auto-redirect for better user experience
+### Changed
+- 📝 **README**: Updated version badges and documentation links
+- 🔍 **Version Management**: Comprehensive version bump procedures
+- 📊 **Domain Links**: Verified and updated all domain references
+- 🏗️ **Codebase Organization**: Cleaned up project structure and archived old Vite-based files
+- 📅 **Changelog**: Corrected all release dates to reflect accurate timeline
 
-- **File Organization**: Moved all root directory files to proper documentation structure
-  - Project files moved to `/docs/project/` (environment setup, deployment, domain setup)
-  - SEO files moved to `/docs/technical/` (SEO optimization, fixes, verification)
-  - Development summaries organized in `/docs/project/` (commit summaries, feature updates)
-  - Social media and content files organized in `/docs/project/`
+### Fixed
+- 🔗 **Documentation Links**: Fixed broken internal documentation links
+- 📝 **Version Consistency**: Ensured consistent version numbering across all files
+- 🏗️ **Project Structure**: Resolved nested directory issues and simplified deployment
 
-### Enhanced
-- **Documentation Navigation**: Updated footer with dedicated Documentation section
-- **Professional Structure**: Comprehensive README files for each documentation category
-- **Cross-References**: Links between related documentation sections
-- **Verification Guidelines**: Clear instructions for independent evidence verification
-
-### Technical Improvements
-- **Clean Root Directory**: Organized all markdown files into proper documentation structure
-- **Enhanced Documentation Component**: Improved DocsRedirect component as main documentation hub
-- **Better File Organization**: Logical categorization of all project documentation
-
-## [2.0.0] - 2024-12-02
+## [3.0.1] - 2025-07-08
 
 ### Added
-- **Complete Evidence Archive System**: Comprehensive evidence organization across multiple platforms
-  - Trustpilot Evidence page with 100+ customer reviews and manipulation analysis
-  - Reddit Evidence page documenting community ban and cross-platform complaints
-  - Casino Guru Evidence page with formal complaint documentation
-  - Platform Manipulation page analyzing systematic deception tactics
-  - Evidence Overview page providing centralized access to all evidence categories
+- 📋 **Initial Deployment Guide**: Basic deployment documentation
+- ✅ **Verification Checklist**: Initial verification checklist implementation
 
-- **Enhanced Navigation Structure**:
-  - Added Evidence section to main navigation
-  - Added Platform Manipulation section to navigation
-  - Updated footer with comprehensive evidence links and external source access
-  - Organized footer into Investigation, Evidence Sources, External Links, and Legal sections
+### Fixed
+- 📝 **Version Consistency**: Basic version numbering fixes
 
-- **Download System Implementation**:
-  - Organized evidence files in `/downloads/` directory with proper categorization
-  - Created comprehensive evidence archive index for navigation
-  - Added downloadable reports for each evidence category
-  - Implemented direct download links for all evidence files
-
-- **Platform-Specific Evidence Documentation**:
-  - Trustpilot analysis with review manipulation evidence
-  - Reddit ban documentation and cross-platform complaint analysis
-  - Casino Guru formal complaint analysis with 0% resolution rate documentation
-  - Blockchain evidence integration with transaction-level proof
-
-- **Documentation Organization**:
-  - Moved investigation files to proper documentation structure
-  - Created evidence archive index for easy navigation
-  - Organized downloadable files by category and type
-  - Added comprehensive file descriptions and metadata
-
-## [1.0.0] - 2024-11-01
+## [3.0.0] - 2025-07-05
 
 ### Added
-- Initial release of Noah Dummett Investigation website
-- Complete React 18 + TypeScript + Vite setup
-- Investigation-focused design and content structure
-- Basic evidence presentation and navigation
-- 5-theme system (Dark, Violet, Emerald, Amber, Aurora)
-- Comprehensive UI component library
-- Theme switching with persistence
-- Responsive navigation components
-- Form components with validation (React Hook Form + Zod)
-- Custom hooks and utility functions
-- Testing setup with Vitest and React Testing Library
-- Production-ready build configuration
-- ESLint and Prettier configuration
-- Tailwind CSS with custom theme variables
-- Framer Motion animations
-- Mobile-first responsive design
-- Accessibility features
-- TypeScript strict mode
-- Path aliases for clean imports
+- 🌐 **Subdomain Routing**: Complete implementation of docs.noahdummett.com subdomain routing through Next.js middleware
+- 🧪 **Comprehensive Testing Suite**: 
+  - Unit tests with Jest for middleware and utilities
+  - E2E tests with Playwright for cross-browser compatibility
+  - Performance tests with Lighthouse auditing
+  - Automated test scripts for CI/CD integration
+- 🔒 **Enhanced Security**: Professional security headers implementation
+- 📊 **Performance Optimizations**: Build optimizations and static generation improvements
+- 📚 **Documentation**: Comprehensive technical documentation including subdomain routing guide
+- 🛠️ **Development Tools**: Enhanced development workflow with improved scripts
 
-### Components
-- Button (multiple variants, sizes, loading states)
-- Input (validation, password toggle, icons)
-- Card (header, content, footer, hover effects)
-- Modal (animated, accessible)
-- Loading (spinner, skeleton, pulse)
-- ThemeToggle (dropdown, button, compact variants)
-- Header (responsive, mobile menu)
-- Footer (links, social media)
-- Breadcrumb (auto-generated)
-- ContactForm (validation, error handling)
+### Changed
+- ⬆️ **Framework Upgrade**: Updated from Next.js 14 to Next.js 15
+- 📱 **Responsive Design**: Enhanced mobile-first approach with improved navigation
+- 🎨 **UI/UX Improvements**: Refined investigation themes and component consistency
+- 🔧 **Build System**: Optimized build configuration for production deployment
 
-### Pages
-- Home (landing page with features)
-- About (company information)
-- Contact (contact form and info)
-- ThemeDemo (interactive theme showcase)
-- NotFound (404 page)
+### Fixed
+- 🐛 **Routing Issues**: Resolved subdomain routing edge cases and hostname handling
+- 🔍 **SEO Optimizations**: Improved search engine optimization for documentation pages
+- 📈 **Performance**: Reduced bundle size and improved loading times
+- 🔗 **Link Management**: Fixed broken links and improved internal navigation
 
-### Developer Experience
-- Hot Module Replacement
-- TypeScript strict checking
-- Comprehensive testing setup
-- Code formatting and linting
-- Production build optimization
-- Development server with instant feedback
+### Security
+- 🛡️ **Security Headers**: Implementation of comprehensive security headers
+- 🔐 **Environment Variables**: Secure handling of sensitive configuration
+- 🚨 **Input Validation**: Enhanced validation for all user inputs
 
-### Documentation
-- Comprehensive documentation for docs.itsdifferentproductions.com subdomain
-- Getting Started guide with installation and setup
-- Architecture documentation with design decisions
-- Complete component library documentation
-- Theme system guide with customization instructions
-- Testing guide with best practices and examples
-- Deployment guide for multiple platforms (Vercel, Netlify, GitHub Pages, AWS, Docker)
-- FAQ with common questions and troubleshooting
-- Legal documentation (Privacy Policy, Terms of Service)
+## [2.0.0] - 2025-06-15
 
-### Quality Assurance
-- All tests passing with 100% success rate
-- TypeScript strict mode with zero errors
-- ESLint configuration with zero warnings
-- Production build optimization verified
-- Cross-browser compatibility tested
-- Mobile responsiveness verified across all themes
-- Accessibility compliance (WCAG AA standards)
+### Added
+- 🎨 **Theme System**: Multiple investigation themes (Dark, Violet, Emerald, Amber, Aurora)
+- 📱 **Mobile-First Design**: Responsive design optimized for all device sizes
+- 🔗 **Blockchain Integration**: Enhanced transaction analysis and verification
+- 📊 **Evidence System**: Specialized components for investigation data presentation
+- ⚖️ **Legal Compliance**: Professional legal documentation system
+- 🧪 **Testing Infrastructure**: Initial Jest and testing setup
+- 📚 **Documentation System**: MDX-based documentation framework
+- 🎯 **Navigation System**: Advanced navigation with breadcrumbs and search
 
-### Performance
-- Optimized bundle size with code splitting
-- Lazy loading for route components
-- Image optimization and compression
-- CSS custom properties for efficient theming
-- Framer Motion animations with hardware acceleration
-- Vite build optimization for production
+### Changed
+- 🏗️ **Architecture**: Migrated to Next.js 14 App Router
+- 🎯 **User Experience**: Improved navigation and content organization
+- 📈 **Performance**: Optimized loading and rendering performance
+- 🔧 **Build System**: Enhanced build configuration and optimization
+- 📱 **Responsive Design**: Complete mobile-first responsive redesign
 
-### Social & Community Features
-- Environment variable integration for social media links
-- Solana donation integration (h4shed.sol) with copy functionality
-- Dynamic social media links (GitHub, Twitter, LinkedIn, Discord, YouTube)
-- Professional tech stack logos with animations
-- Contact page redesign with multiple engagement options
-- Community CTA sections and GitHub integration
+### Fixed
+- 🐛 **Browser Compatibility**: Cross-browser compatibility improvements
+- 📱 **Mobile Issues**: Mobile-specific bugs and layout issues
+- 🔍 **Search Functionality**: Enhanced search and navigation features
+- 🎨 **Theme Consistency**: Unified theme application across all components
 
-### SEO & Marketing
-- Comprehensive meta tags with Open Graph support
-- Twitter Cards optimization for social sharing
-- Structured data (Schema.org) for better search indexing
-- Sitemap.xml and robots.txt for search engines
-- Social media preview optimization
-- Professional OG image placeholder
+### Security
+- 🛡️ **Enhanced Security**: Improved security headers and CSP policies
+- 🔐 **Environment Management**: Secure environment variable handling
+- 🚨 **Input Validation**: Comprehensive input validation and sanitization
 
-### Final Release Status
-- 🎉 **100% Complete** - All planned features implemented
-- ✅ **Production Ready** - Thoroughly tested and optimized
-- 📚 **Fully Documented** - Complete documentation ecosystem
-- 🚀 **Community Ready** - Social integration and support channels
-- 💎 **Professional Grade** - Enterprise-level code quality and architecture
+## [1.0.0] - 2025-05-20
+
+### Added
+- 🎆 **Initial Release**: Core investigation platform with React/Vite foundation
+- 📝 **Content Management**: Basic content structure and organization
+- 🔍 **Investigation Framework**: Foundation for evidence presentation
+- 📱 **Basic Responsive Design**: Initial mobile compatibility
+- 🎨 **Theme Foundation**: Basic theming system with CSS variables
+- 🔧 **Development Tools**: ESLint, Prettier, and TypeScript configuration
+- 📦 **Build System**: Vite-based build system with optimization
+- 🧪 **Testing Setup**: Vitest testing framework integration
+
+### Security
+- 🔒 **Basic Security**: Initial security measures and best practices
+- 📋 **Legal Framework**: Basic legal compliance and disclaimers
+- 🔐 **Environment Setup**: Secure environment variable handling
+
+### Infrastructure
+- 🌐 **Deployment**: Vercel deployment configuration
+- 📊 **Analytics**: Basic analytics integration
+- 🔍 **SEO**: Initial SEO optimization and meta tags
+
+## [Unreleased]
+
+### Planned
+- 🤖 **AI Integration**: Automated evidence analysis and categorization
+- 🌍 **Internationalization**: Multi-language support for global accessibility
+- 📊 **Advanced Analytics**: Enhanced performance and user behavior tracking
+- 🔍 **Search Enhancement**: Advanced search capabilities with filtering
+- 📱 **PWA Support**: Progressive Web App functionality
+- 🔄 **Real-time Updates**: Live evidence updates and notifications
+
+---
+## Version Support
+
+| Version | Status | Support Level | End of Life |
+|---------|--------|---------------|--------------|
+| 3.0.x   | ✅ Active | Full support | TBD |
+| 2.0.x   | ⚠️ Maintenance | Security only | 2025-12-01 |
+| 1.0.x   | ❌ Deprecated | None | 2025-08-01 |
+
+## Migration Guides
+
+### Upgrading from v3.0.1 to v3.0.2
+- No breaking changes - structure reorganization only
+- Update any deployment scripts referencing `next-investigation` subdirectory
+- Verify all paths in CI/CD configurations
+
+### Upgrading from v2.0.0 to v3.0.0
+- Update Next.js from version 14 to version 15
+- Configure subdomain routing in your deployment (docs.noahdummett.com)
+- Update test scripts to use new Playwright testing infrastructure
+- Review and update security headers configuration
+- Update middleware configuration for subdomain handling
+- Replace Jest with new testing setup if using custom tests
+
+### Upgrading from v1.0.0 to v2.0.0
+- **BREAKING**: Migrate from Vite to Next.js 14 App Router
+- **BREAKING**: Update theme system from CSS variables to Tailwind-based themes
+- **BREAKING**: Replace React Router with Next.js App Router navigation
+- Update all component imports and file structure
+- Implement responsive design improvements
+- Update legal compliance documentation
+- Replace Vitest with Jest for testing
+- Update build scripts from Vite to Next.js
+- Update legal compliance documentation
+
+## Contributing
+
+For information on contributing to this project, please see our [Contributing Guidelines](CONTRIBUTING.md).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

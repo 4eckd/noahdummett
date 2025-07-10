@@ -1,51 +1,57 @@
-# 🚨 Noah Dummett Investigation Platform
+# 🚨 Noah Dummett Investigation Platform - Next.js 15
 
-> **Web3 Accountability Investigation - Exposing Concerning Allegations in the Crypto Gambling Industry**
+> **Professional Web3 Accountability Investigation - Modern Architecture Implementation**
 
-A comprehensive investigation platform exposing concerning allegations surrounding Noah Dummett, founder and CEO of Shuffle.com. Built using professional React TypeScript architecture to present evidence-based analysis while maintaining legal compliance and credibility.
+A comprehensive investigation platform exposing concerning allegations surrounding Noah Dummett, founder and CEO of Shuffle.com. Built using Next.js 15 with professional architecture, subdomain routing, and comprehensive testing to present evidence-based analysis while maintaining legal compliance and credibility.
 
-[![GitHub Stars](https://img.shields.io/github/stars/4eckd/react-boilerplate?style=for-the-badge)](https://github.com/4eckd/react-boilerplate)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Next.js 15](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
+[![Version](https://img.shields.io/badge/Version-3.0.2-blue?style=for-the-badge)](https://github.com/4eckd/noahdummett)
 
 ## 🎯 **Critical Allegations**
-- **$20M+ alleged fund misappropriation** from FTX bankruptcy estate
+
+- **$25M+ alleged fund misappropriation** from FTX bankruptcy estate
 - **Anonymous leadership structure** with key personnel using aliases
 - **Unethical treatment** of vulnerable gambling users
 - **Operational pattern concerns** linking to FTX practices
 
-## 📚 **Evidence Repository**
-Complete evidence documentation available in the `/service` directory including IRS Form 211, blockchain analysis, and legal pleadings.
+## 🏗️ **Modern Architecture**
 
-## ✨ Features
+### **Tech Stack**
+- **Next.js 15** - App Router, Server Components, Turbopack
+- **TypeScript** - Full type safety with strict mode
+- **Tailwind CSS v4** - Modern utility-first styling
+- **MDX** - Markdown with React components for evidence
+- **Framer Motion** - Professional animations
+- **Lucide React** - Consistent icon system
+- **Middleware** - Custom subdomain routing for docs.noahdummett.com
 
-- ⚡ **Lightning Fast** - Built with Vite for instant HMR and optimized builds
-- 🎨 **5 Beautiful Themes** - Dark, Violet, Emerald, Amber, and Aurora themes
-- 🔒 **Type Safe** - Full TypeScript support with strict type checking
-- 🎯 **Modern Stack** - React 18, TypeScript, Tailwind CSS, Framer Motion
-- 📱 **Responsive** - Mobile-first design with responsive components
-- 🧪 **Testing Ready** - Vitest + React Testing Library setup
-- 🚀 **Production Ready** - Optimized builds and deployment configurations
-- 📦 **Component Library** - Pre-built UI components with consistent design
-- 🎭 **Animations** - Smooth animations with Framer Motion
-- 🔧 **Developer Experience** - ESLint, Prettier, and comprehensive tooling
-- 🌐 **Social Integration** - Environment variables for social media and donation support
-- 📊 **SEO Optimized** - Complete meta tags, Open Graph, and structured data
+### **Key Features**
+- ⚡ **Lightning Fast** - Next.js 15 with Turbopack
+- 🌐 **Subdomain Routing** - Dedicated docs.noahdummett.com subdomain
+- 🎨 **5 Investigation Themes** - Dark, Violet, Emerald, Amber, Aurora
+- 🔒 **Type Safe** - Comprehensive TypeScript implementation
+- 📱 **Mobile-First** - Responsive design optimized for all devices
+- 🚀 **Production Ready** - Professional deployment configuration
+- 📊 **Evidence-Focused** - Specialized components for investigation data
+- 🔗 **Blockchain Integration** - Transaction analysis and verification
+- ⚖️ **Legal Compliance** - Professional legal documentation system
+- 🧪 **Comprehensive Testing** - Unit, E2E, and performance tests
 
-## 🚀 Quick Start
+## 🚀 **Quick Start**
 
 ### Prerequisites
-
-- Node.js 18+ 
+- Node.js 18+
 - npm 9+
 
 ### Installation
 
 ```bash
 # Clone the repository
-git clone <repository-url>
-cd fused-gaming-boilerplate
+git clone https://github.com/4eckd/noahdummett.git
+cd noahdummett
 
 # Install dependencies
 npm install
@@ -53,257 +59,238 @@ npm install
 # Start development server
 npm run dev
 
-# Open browser to http://localhost:5174
+# Open browser to http://localhost:3000
 ```
 
 ### Available Scripts
 
 ```bash
-npm run dev          # Start development server
+npm run dev          # Start development server with Turbopack
 npm run build        # Build for production
-npm run preview      # Preview production build
-npm run test         # Run tests
-npm run test:ui      # Run tests with UI
-npm run test:coverage # Run tests with coverage
+npm run start        # Start production server
 npm run lint         # Lint code
-npm run lint:fix     # Fix linting issues
-npm run format       # Format code with Prettier
-npm run type-check   # Type check without emitting
+npm run test         # Run unit tests
+npm run test:e2e     # Run E2E tests
+npm run test:all     # Run all tests including performance
+./deploy-investigation.sh  # Deploy to Vercel
 ```
 
-## 🏗️ Project Structure
+## 📁 **Project Structure**
 
 ```
 src/
-├── components/          # Reusable UI components
-│   ├── ui/             # Basic UI components (Button, Input, etc.)
-│   ├── navigation/     # Navigation components (Header, Footer)
-│   ├── forms/          # Form components with validation
-│   └── layout/         # Layout components
-├── context/            # React contexts (Theme, etc.)
-├── hooks/              # Custom React hooks
-├── pages/              # Page components
-├── styles/             # Global styles and themes
-├── types/              # TypeScript type definitions
-├── utils/              # Utility functions
-├── test/               # Test utilities and setup
-└── assets/             # Static assets
+├── app/                    # Next.js 15 App Router
+│   ├── layout.tsx         # Root layout with theme provider
+│   ├── page.tsx           # Homepage - investigation overview
+│   ├── (docs)/            # Subdomain routing group
+│   │   └── docs/          # Documentation pages
+│   ├── noah-dummett/      # Detailed investigation files
+│   ├── evidence/          # Evidence archive system
+│   ├── legal/             # Legal documentation
+│   └── globals.css        # Global styles with theme system
+├── components/
+│   ├── layout/            # Header, Footer, Navigation
+│   ├── ui/                # Reusable UI components
+│   └── docs/              # Documentation components
+├── providers/             # React context providers
+├── lib/                   # Utility functions
+├── content/               # MDX content and evidence files
+├── middleware.ts          # Subdomain routing middleware
+├── __tests__/             # Unit tests
+├── tests/                 # E2E tests
+└── docs/                  # Project documentation
 ```
 
-## 🎨 Theme System
+## 🎨 **Theme System**
 
-The boilerplate includes 5 beautiful themes that can be switched dynamically:
+Professional investigation themes optimized for evidence presentation:
 
-- **Dark** - Classic dark theme with red accents
-- **Violet** - Purple-themed dark variant
-- **Emerald** - Green-themed dark variant  
-- **Amber** - Orange-themed dark variant
-- **Aurora** - Purple gradient dark variant
+- **Dark** - Primary investigation theme with red accents
+- **Violet** - Purple-themed variant for legal documentation
+- **Emerald** - Green-themed variant for evidence analysis
+- **Amber** - Orange-themed variant for blockchain data
+- **Aurora** - Gradient variant for special presentations
 
-### Using Themes
+## 🌐 **Subdomain Routing**
 
-```tsx
-import { useTheme } from '@/context/ThemeContext';
+### Architecture
+The platform implements sophisticated subdomain routing for optimal user experience:
 
-function MyComponent() {
-  const { theme, setTheme, availableThemes } = useTheme();
-  
-  return (
-    <select value={theme} onChange={(e) => setTheme(e.target.value)}>
-      {availableThemes.map(theme => (
-        <option key={theme} value={theme}>{theme}</option>
-      ))}
-    </select>
-  );
+- **Main Domain**: `noahdummett.com` - Investigation platform
+- **Docs Subdomain**: `docs.noahdummett.com` - Documentation hub
+- **Seamless Integration**: Middleware-powered routing without redirects
+
+### Features
+- ⚡ **Zero Redirect** - Direct path rewriting for performance
+- 🔒 **Secure Headers** - Professional security implementation
+- 📱 **Mobile Optimized** - Responsive design across all subdomains
+- 🚀 **Production Ready** - Vercel-optimized deployment
+
+### Technical Implementation
+```typescript
+// Middleware automatically rewrites docs.noahdummett.com to /docs paths
+const DOCS_DOMAIN = 'docs.noahdummett.com';
+
+export function middleware(req: NextRequest) {
+  const hostname = req.headers.get('host') ?? '';
+  if (hostname === DOCS_DOMAIN) {
+    // Rewrite to /docs path structure
+  }
 }
 ```
 
-## 🧩 Components
+## 📊 **Evidence System**
 
-### Button Component
+### Evidence Categories
+- **Blockchain Evidence** - On-chain transaction analysis
+- **Legal Documentation** - Whistleblower reports and filings
+- **Platform Analysis** - Trustpilot, Reddit, Casino Guru investigations
+- **Community Research** - Independent investigations and findings
 
-```tsx
-import { Button } from '@/components/ui/Button';
-import { Send } from 'lucide-react';
+## 🔗 **Blockchain Integration**
 
-<Button 
-  variant="primary" 
-  size="lg"
-  leftIcon={<Send className="h-4 w-4" />}
-  loading={isLoading}
-  onClick={handleClick}
->
-  Send Message
-</Button>
-```
+Professional blockchain analysis with:
+- Transaction hash verification
+- Etherscan integration
+- Amount tracking and visualization
+- Timeline analysis
+- Professional analyst validation
 
-### Input Component
+## 🧪 **Testing Infrastructure**
 
-```tsx
-import { Input } from '@/components/ui/Input';
+### Unit Testing
+- **Framework**: Jest with TypeScript support
+- **Coverage**: Middleware, utilities, and components
+- **Focus**: Subdomain routing logic and edge cases
 
-<Input
-  label="Email"
-  type="email"
-  placeholder="your.email@example.com"
-  error={errors.email?.message}
-  {...register('email')}
-/>
-```
+### E2E Testing
+- **Framework**: Playwright with multi-browser support
+- **Coverage**: Cross-browser compatibility (Chromium, Firefox, WebKit)
+- **Features**: Responsive design, navigation, accessibility
 
-### Card Component
+### Preview Deployment Testing
+- **Framework**: Playwright with VERCEL_URL integration
+- **Coverage**: Homepage (200 status), docs subdomain rewrite, cross-domain navigation
+- **Visual Regression**: Mobile viewport snapshots across 5 themes
+- **CI/CD**: Automated testing on every PR with build failure on issues
 
-```tsx
-import { Card, CardHeader, CardContent } from '@/components/ui/Card';
+### Performance Testing
+- **Tool**: Lighthouse auditing
+- **Metrics**: Performance, accessibility, SEO, best practices
+- **Automation**: CI/CD integration for continuous monitoring
 
-<Card hover>
-  <CardHeader title="Card Title" subtitle="Card description" />
-  <CardContent>
-    <p>Card content goes here</p>
-  </CardContent>
-</Card>
-```
-
-## 🔧 Customization
-
-### Adding New Themes
-
-1. Add theme colors to `src/styles/themes.css`
-2. Update `src/utils/themeConfig.ts`
-3. Add theme variant to `src/types/theme.ts`
-
-### Creating New Components
-
-```tsx
-// src/components/ui/MyComponent.tsx
-import React from 'react';
-import { clsx } from 'clsx';
-
-export interface MyComponentProps {
-  variant?: 'primary' | 'secondary';
-  children: React.ReactNode;
-  className?: string;
-}
-
-export const MyComponent: React.FC<MyComponentProps> = ({
-  variant = 'primary',
-  children,
-  className,
-}) => {
-  return (
-    <div className={clsx('base-styles', variant === 'primary' && 'primary-styles', className)}>
-      {children}
-    </div>
-  );
-};
-```
-
-## 🧪 Testing
-
-The boilerplate includes a comprehensive testing setup with Vitest and React Testing Library.
-
+### Quality Assurance
 ```bash
-# Run all tests
-npm run test
-
-# Run tests in watch mode
-npm run test:watch
-
-# Run tests with coverage
-npm run test:coverage
-
-# Run tests with UI
-npm run test:ui
+npm run test         # Unit tests
+npm run test:e2e     # End-to-end tests
+npm run test:preview # Preview deployment tests
+npm run test:lighthouse # Performance audits
+npm run test:all     # Complete test suite
 ```
 
-### Writing Tests
+## ⚖️ **Legal Compliance**
 
-```tsx
-// src/components/ui/__tests__/MyComponent.test.tsx
-import { describe, it, expect } from 'vitest';
-import { render, screen } from '@/test/utils';
-import { MyComponent } from '../MyComponent';
+- **Whistleblower Protection** - IRS Form 211 compliance
+- **Evidence Standards** - Professional legal documentation
+- **Verification Guidelines** - Independent evidence verification
+- **Disclaimer System** - Proper legal notices and disclaimers
 
-describe('MyComponent', () => {
-  it('renders correctly', () => {
-    render(<MyComponent>Test content</MyComponent>);
-    expect(screen.getByText('Test content')).toBeInTheDocument();
-  });
-});
-```
-
-## 🚀 Deployment
+## 🚀 **Deployment**
 
 ### Vercel (Recommended)
 
 ```bash
-# Install Vercel CLI
-npm i -g vercel
+# Automated deployment
+./deploy-investigation.sh
 
-# Deploy
+# Manual deployment
+npm run build
 vercel --prod
 ```
 
-### Netlify
+## 🔒 **Security**
 
-```bash
-# Build the project
-npm run build
+Professional security implementation:
+- Security headers (XSS, CSRF, etc.)
+- Environment variable protection
+- Legal compliance safeguards
+- Evidence verification systems
 
-# Deploy dist folder to Netlify
-```
+## 📈 **Performance**
 
-### GitHub Pages
+Optimized for investigation platform needs:
+- Next.js 14 App Router optimization
+- Static generation for evidence pages
+- Image optimization for evidence photos
+- Code splitting for large evidence datasets
+- Turbopack for fast development
 
-```bash
-# Install gh-pages
-npm i -D gh-pages
+## 📚 **Documentation**
 
-# Add deploy script to package.json
-"deploy": "gh-pages -d dist"
+- **Main Investigation**: [noahdummett.com](https://noahdummett.com)
+- **Documentation Hub**: [docs.noahdummett.com](https://docs.noahdummett.com)
+- **Evidence Archive**: [noahdummett.com/evidence](https://noahdummett.com/evidence)
+- **Legal Documentation**: [noahdummett.com/legal](https://noahdummett.com/legal)
+- **Technical Documentation**: [docs.noahdummett.com/technical](https://docs.noahdummett.com/technical)
+- **Subdomain Routing Guide**: [docs/SUBDOMAIN_ROUTING.md](docs/SUBDOMAIN_ROUTING.md)
+- **Deployment Guide**: [docs/DEPLOYMENT_GUIDE.md](docs/DEPLOYMENT_GUIDE.md)
+- **Verification Checklist**: [docs/VERIFICATION_CHECKLIST.md](docs/VERIFICATION_CHECKLIST.md)
 
-# Deploy
-npm run build && npm run deploy
-```
+## 📝 **Version History**
 
-## 📚 Tech Stack
+### v3.0.2 (Current)
+- 🏗️ **Project Structure**: Reorganized from nested directory to root level
+- 📋 **Deployment Guide**: Comprehensive deployment documentation
+- 🔒 **Security Enhancement**: Improved security headers and configuration
+- 📊 **Performance**: Additional performance optimizations
+- 🛠️ **Documentation**: Enhanced technical documentation
+- ✅ **Verification**: Complete verification checklist implementation
+- 🧪 **Testing Suite**: Comprehensive E2E and performance testing
+- 📅 **Changelog**: Corrected all release dates and documentation
 
-- **React 18** - Latest React with concurrent features
-- **TypeScript** - Type safety and better developer experience
-- **Vite** - Fast build tool and development server
-- **Tailwind CSS** - Utility-first CSS framework
-- **Framer Motion** - Production-ready motion library
-- **React Router** - Declarative routing for React
-- **React Hook Form** - Performant forms with easy validation
-- **Zod** - TypeScript-first schema validation
-- **Lucide React** - Beautiful & consistent icon toolkit
-- **Vitest** - Fast unit test framework
-- **React Testing Library** - Testing utilities for React components
+### v3.0.1
+- 📋 **Initial Deployment Guide**: Basic deployment documentation
+- ✅ **Verification Checklist**: Initial verification checklist implementation
 
-## 🤝 Contributing
+### v3.0.0
+- 🌐 **Subdomain Routing**: Complete docs.noahdummett.com implementation
+- 🚀 **Next.js 15**: Upgrade to latest framework version
+- 🧪 **Testing Suite**: Comprehensive unit, E2E, and performance tests
+- 🔒 **Security**: Enhanced headers and middleware protection
+- 📊 **Performance**: Optimized builds and static generation
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+### v2.0.0
+- 🎨 **Theme System**: Multiple investigation themes
+- 📱 **Responsive Design**: Mobile-first approach
+- 🔗 **Blockchain Integration**: Enhanced transaction analysis
 
-## 📄 License
+### v1.0.0
+- 🎆 **Initial Release**: Core investigation platform
+
+## ⚖️ **Legal Notice**
+
+**Important**: The allegations presented in this investigation have not been proven in a court of law. Noah Dummett and Shuffle.com have not been formally charged with any crimes related to these allegations. All blockchain evidence is independently verifiable on the Ethereum blockchain.
+
+## 📄 **License**
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## 🙏 **Acknowledgments**
 
-- Built with ❤️ by [Its Different Productions](https://itsdifferentproductions.com)
-- Icons by [Lucide](https://lucide.dev)
-- Animations by [Framer Motion](https://framer.com/motion)
+- Built with ❤️ by [Fused Gaming](https://linkedin.com/in/fusedgaming)
+- Professional blockchain analysis by independent researchers
+- Legal guidance from qualified legal counsel
+- Community support from Web3 accountability advocates
 
 ---
 
-**Project Information:**
-- **Version**: 3.0
-- **Last Updated**: July 4, 2025
-- **Status**: Active Investigation with Documentation Portal
-- **Documentation**: https://docs.noahdummett.com
+**🚨 Investigation Status**: Active - v3.0.2 Production Ready
+**🌐 Subdomain Routing**: docs.noahdummett.com fully operational  
+**📊 Evidence Sources**: 150+ independently verifiable  
+**⚖️ Legal Compliance**: Professional standards maintained  
+**🔗 Blockchain Evidence**: 5 key transactions verified  
+**🧪 Testing Coverage**: Unit, E2E, and performance tests passing  
+**🚀 Performance**: Optimized builds with Next.js 15  
+**🏗️ Project Structure**: Clean organization and deployment
 
-**Ready to build something amazing? 🚀**
+**Ready to expose Web3 fraud and bring accountability to the crypto gambling industry? 🚀**
