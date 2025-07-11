@@ -1,4 +1,6 @@
 {
+  "framework": "nextjs",
+  "buildCommand": "next build",
   "env": {
     "DOCS_DOMAIN": "docs.noahdummett.com"
   },

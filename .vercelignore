@@ -1,5 +1,9 @@
-# Old project files
+# Old project files and conflicting configurations
 old-vite-project/
+**/old-vite-project/**
+**/vercel.json.backup
+**/docs/vercel.json
+**/public/docs/vercel.json
 
 # Development files
 .env.local
