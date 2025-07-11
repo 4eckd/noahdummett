@@ -1,5 +1,11 @@
 {
   "env": {
     "DOCS_DOMAIN": "docs.noahdummett.com"
+  },
+  "regions": ["iad1"],
+  "functions": {
+    "src/app/**/*.{js,ts,jsx,tsx}": {
+      "maxDuration": 30
+    }
   }
 }
