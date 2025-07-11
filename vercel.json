@@ -4,5 +4,18 @@
   "env": {
     "DOCS_DOMAIN": "docs.noahdummett.com"
   },
-  "regions": ["iad1"]
+  "regions": ["iad1"],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "docs.noahdummett.com"
+        }
+      ],
+      "destination": "/docs/:path*",
+      "permanent": false
+    }
+  ]
 }
