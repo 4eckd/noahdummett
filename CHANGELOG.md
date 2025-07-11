@@ -5,6 +5,19 @@ All notable changes to the Noah Dummett Investigation Platform will be documente
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.3] - 2025-01-11
+
+### Fixed
+- 🐛 **MDX Syntax**: Fixed code block syntax highlighting from `ethereum` to `solidity` in blockchain evidence documentation
+- 🔧 **Build Errors**: Resolved Next.js build compilation errors related to unsupported syntax highlighting
+- 🧹 **Cache Issues**: Fixed development server warnings by clearing corrupted `.next` build cache
+- ✅ **Playwright Tests**: Ensured comprehensive E2E testing suite works correctly with preview deployments
+
+### Technical
+- 🛠️ **MDX Processing**: Updated MDX components to properly handle Solidity syntax highlighting
+- 📚 **Documentation**: Improved technical documentation rendering and build stability
+- 🔍 **Code Quality**: Enhanced code block presentation in evidence analysis documents
+
 ## [3.0.2] - 2025-07-09
 
 ### Added
