@@ -5,6 +5,24 @@ All notable changes to the Noah Dummett Investigation Platform will be documente
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.4] - 2025-01-11
+
+### Fixed
+- 🔧 **Production Build**: Fixed MDX parsing errors causing production build failures
+- 📄 **Code Blocks**: Changed problematic `solidity` code blocks to `json` format in blockchain evidence
+- 🏗️ **Static Generation**: Ensured all 21 pages generate successfully during build process
+- 🎯 **MDX Compatibility**: Resolved character parsing conflicts in custom JSX components
+
+### Changed
+- 📊 **Data Format**: Restructured transaction data as JSON objects for better MDX compatibility
+- 🔍 **Syntax Highlighting**: Updated code block syntax from `solidity` to `json` for blockchain evidence
+- 📚 **Documentation**: Improved technical documentation rendering stability
+
+### Technical
+- 🛠️ **Build Process**: Optimized build time (2.0s vs previous 11.0s)
+- 📦 **Bundle Size**: Maintained consistent bundle size with improved stability
+- 🔍 **Error Handling**: Enhanced MDX error handling for complex content structures
+
 ## [3.0.3] - 2025-01-11
 
 ### Fixed

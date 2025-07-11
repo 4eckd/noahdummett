@@ -48,15 +48,17 @@ This document provides a comprehensive analysis of blockchain evidence related t
 
 <EvidenceBlock title="Transaction 1: Initial FTX Transfer" status="verified">
 
-```solidity
-Hash: 0xabc123...def456
-From: FTX Hot Wallet (0x2faf...d4c2)
-To: 0x1234...5678
-Amount: 15,000 ETH ($25M at time)
-Block: 16234567
-Date: January 15, 2022
-Gas Used: 21,000
-Status: ✅ Success
+```json
+{
+  "hash": "0xabc123...def456",
+  "from": "FTX Hot Wallet (0x2faf...d4c2)",
+  "to": "0x1234...5678",
+  "amount": "15,000 ETH ($25M at time)",
+  "block": "16234567",
+  "date": "January 15, 2022",
+  "gasUsed": "21,000",
+  "status": "✅ Success"
+}
 ```
 
 **Analysis**: This transaction occurred 3 days after FTX bankruptcy filing, suggesting coordinated movement of customer funds.
@@ -65,15 +67,17 @@ Status: ✅ Success
 
 <EvidenceBlock title="Transaction 2: Shuffle Contract Conversion" status="verified">
 
-```solidity
-Hash: 0x789xyz...012abc
-From: 0x1234...5678
-To: Shuffle Contract (0x9876...1234)
-Amount: 14,500 ETH
-Block: 16234890
-Date: January 15, 2022
-Gas Used: 65,432
-Status: ✅ Success
+```json
+{
+  "hash": "0x789xyz...012abc",
+  "from": "0x1234...5678",
+  "to": "Shuffle Contract (0x9876...1234)",
+  "amount": "14,500 ETH",
+  "block": "16234890",
+  "date": "January 15, 2022",
+  "gasUsed": "65,432",
+  "status": "✅ Success"
+}
 ```
 
 **Analysis**: Same-day conversion to Shuffle gambling tokens, indicating rapid laundering attempt.
