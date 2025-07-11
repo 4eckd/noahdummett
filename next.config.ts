@@ -7,6 +7,9 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
 const nextConfig: NextConfig = {
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+  output: 'export',
+  distDir: 'dist',
+  trailingSlash: true,
   experimental: {
     mdxRs: true,
   },
