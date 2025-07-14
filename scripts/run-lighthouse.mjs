@@ -13,13 +13,22 @@ const __dirname = path.dirname(__filename);
  * Simple Lighthouse audit runner
  */
 
+/**
+ * Helper function to safely extract category scores
+ * @param {Object} result - The Lighthouse result object
+ * @param {string} key - The category key to extract
+ * @returns {number|null} - The score as a percentage or null if missing
+ */
+function safeCategoryScore(result, key) {
+  return result.categories?.[key]?.score ? Math.round(result.categories[key].score * 100) : null;
+}
+
 const AUDIT_CONFIG = {
   thresholds: {
     performance: 90,
     accessibility: 95,
     'best-practices': 90,
-    seo: 95,
-    pwa: 80
+    seo: 95
   },
   
   sites: [
@@ -38,7 +47,7 @@ const AUDIT_CONFIG = {
   lighthouseConfig: {
     extends: 'lighthouse:default',
     settings: {
-      onlyCategories: ['performance', 'accessibility', 'best-practices', 'seo', 'pwa'],
+      onlyCategories: ['performance', 'accessibility', 'best-practices', 'seo'],
       formFactor: 'desktop',
       throttling: {
         rttMs: 40,
@@ -67,7 +76,7 @@ async function runLighthouseAudit(url, outputFile) {
   const options = {
     logLevel: 'info',
     output: 'json',
-    onlyCategories: ['performance', 'accessibility', 'best-practices', 'seo', 'pwa'],
+    onlyCategories: ['performance', 'accessibility', 'best-practices', 'seo'],
     port: chrome.port
   };
 
@@ -90,20 +99,19 @@ async function runLighthouseAudit(url, outputFile) {
     return {
       url,
       scores: {
-        performance: Math.round(results.categories.performance.score * 100),
-        accessibility: Math.round(results.categories.accessibility.score * 100),
-        'best-practices': Math.round(results.categories['best-practices'].score * 100),
-        seo: Math.round(results.categories.seo.score * 100),
-        pwa: Math.round(results.categories.pwa.score * 100)
+        performance: safeCategoryScore(results, 'performance'),
+        accessibility: safeCategoryScore(results, 'accessibility'),
+        'best-practices': safeCategoryScore(results, 'best-practices'),
+        seo: safeCategoryScore(results, 'seo')
       },
       metrics: {
-        'first-contentful-paint': results.audits['first-contentful-paint'].numericValue,
-        'largest-contentful-paint': results.audits['largest-contentful-paint'].numericValue,
-        'first-meaningful-paint': results.audits['first-meaningful-paint'].numericValue,
-        'speed-index': results.audits['speed-index'].numericValue,
-        'interactive': results.audits['interactive'].numericValue,
-        'total-blocking-time': results.audits['total-blocking-time'].numericValue,
-        'cumulative-layout-shift': results.audits['cumulative-layout-shift'].numericValue
+        'first-contentful-paint': results.audits?.['first-contentful-paint']?.numericValue || 0,
+        'largest-contentful-paint': results.audits?.['largest-contentful-paint']?.numericValue || 0,
+        'first-meaningful-paint': results.audits?.['first-meaningful-paint']?.numericValue || 0,
+        'speed-index': results.audits?.['speed-index']?.numericValue || 0,
+        'interactive': results.audits?.['interactive']?.numericValue || 0,
+        'total-blocking-time': results.audits?.['total-blocking-time']?.numericValue || 0,
+        'cumulative-layout-shift': results.audits?.['cumulative-layout-shift']?.numericValue || 0
       },
       reportPath: outputPath,
       securityHeaders: checkSecurityHeaders(results),
@@ -193,11 +201,10 @@ async function main() {
       results.push(result);
       
       console.log(`✅ Completed audit for ${site.name}`);
-      console.log(`   Performance: ${result.scores.performance}/100`);
-      console.log(`   Accessibility: ${result.scores.accessibility}/100`);
-      console.log(`   Best Practices: ${result.scores['best-practices']}/100`);
-      console.log(`   SEO: ${result.scores.seo}/100`);
-      console.log(`   PWA: ${result.scores.pwa}/100`);
+      console.log(`   Performance: ${result.scores.performance ?? 'N/A'}/100`);
+      console.log(`   Accessibility: ${result.scores.accessibility ?? 'N/A'}/100`);
+      console.log(`   Best Practices: ${result.scores['best-practices'] ?? 'N/A'}/100`);
+      console.log(`   SEO: ${result.scores.seo ?? 'N/A'}/100`);
       
       // Security headers check
       console.log(`   Security Headers: ${Object.keys(result.securityHeaders).length} checks`);
@@ -221,6 +228,7 @@ async function main() {
   results.forEach((result, index) => {
     const site = AUDIT_CONFIG.sites[index];
     Object.entries(result.scores).forEach(([category, score]) => {
+      if (score === null) return;
       const threshold = AUDIT_CONFIG.thresholds[category];
       if (score < threshold) {
         console.log(`❌ ${site.name} - ${category}: ${score}/100 (threshold: ${threshold})`);

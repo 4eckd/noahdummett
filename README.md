@@ -8,7 +8,7 @@ A comprehensive investigation platform exposing concerning allegations surroundi
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
-[![Version](https://img.shields.io/badge/Version-3.0.2-blue?style=for-the-badge)](https://github.com/4eckd/noahdummett)
+[![Version](https://img.shields.io/badge/Version-3.0.6-blue?style=for-the-badge)](https://github.com/4eckd/noahdummett)
 
 ## 🎯 **Critical Allegations**
 
@@ -238,15 +238,15 @@ Optimized for investigation platform needs:
 
 ## 📝 **Version History**
 
-### v3.0.2 (Current)
-- 🏗️ **Project Structure**: Reorganized from nested directory to root level
-- 📋 **Deployment Guide**: Comprehensive deployment documentation
-- 🔒 **Security Enhancement**: Improved security headers and configuration
-- 📊 **Performance**: Additional performance optimizations
-- 🛠️ **Documentation**: Enhanced technical documentation
-- ✅ **Verification**: Complete verification checklist implementation
-- 🧪 **Testing Suite**: Comprehensive E2E and performance testing
-- 📅 **Changelog**: Corrected all release dates and documentation
+### v3.0.6 (Current)
+- 🔍 **Lighthouse Audit Refactoring**: Removed PWA category and enhanced error handling
+- 🛡️ **Error Handling**: Added optional chaining and null checks for missing categories
+- 📊 **Performance Thresholds**: Updated to Performance ≥90%, Accessibility ≥95%, Best Practices ≥90%, SEO ≥95%
+- 🎯 **Safe Category Extraction**: Added safeCategoryScore() helper function
+- 📝 **Summary Generation**: Improved reports to handle missing categories with N/A display
+- ✅ **Unit Tests**: Comprehensive test coverage for new helper functions
+- 🔧 **Jest Configuration**: Updated to support ES modules
+- 📚 **Documentation**: Added detailed refactoring documentation
 
 ### v3.0.1
 - 📋 **Initial Deployment Guide**: Basic deployment documentation
@@ -284,7 +284,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**🚨 Investigation Status**: Active - v3.0.2 Production Ready
+**🚨 Investigation Status**: Active - v3.0.6 Production Ready
 **🌐 Subdomain Routing**: docs.noahdummett.com fully operational  
 **📊 Evidence Sources**: 150+ independently verifiable  
 **⚖️ Legal Compliance**: Professional standards maintained  

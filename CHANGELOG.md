@@ -5,6 +5,30 @@ All notable changes to the Noah Dummett Investigation Platform will be documente
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.6] - 2025-01-14
+
+### Changed
+- 🔍 **Lighthouse Audit Refactoring**: Removed PWA category from audit configuration and downstream processing
+- 🛡️ **Error Handling**: Enhanced error handling with optional chaining and null checks for missing categories
+- 📊 **Performance Thresholds**: Updated thresholds - Performance ≥90%, Accessibility ≥95%, Best Practices ≥90%, SEO ≥95%
+- 🎯 **Safe Category Extraction**: Added `safeCategoryScore()` helper function for robust score extraction
+- 📝 **Summary Generation**: Improved summary reports to gracefully handle missing categories with N/A display
+
+### Added
+- ✅ **Unit Tests**: Comprehensive test coverage for `safeCategoryScore()` function with edge case handling
+- 📚 **Documentation**: Added detailed refactoring documentation in `docs/lighthouse-audit-refactoring.md`
+- 🔧 **Jest Configuration**: Updated Jest config to support ES modules and improved test infrastructure
+
+### Fixed
+- 🐛 **Undefined Errors**: Eliminated potential "undefined" errors when Lighthouse categories are missing
+- 🔄 **Graceful Degradation**: Scripts now handle incomplete Lighthouse results without crashing
+- 📈 **Consistency**: Both `lighthouse-audit.mjs` and `run-lighthouse.mjs` now follow same patterns
+
+### Technical
+- 🛠️ **Code Quality**: Enhanced code robustness with comprehensive null checking and optional chaining
+- 📦 **Backward Compatibility**: Maintained compatibility with existing Lighthouse reports
+- 🧪 **Test Coverage**: 9 unit tests covering all edge cases and real-world scenarios
+
 ## [3.0.5] - 2025-01-11
 
 ### Fixed

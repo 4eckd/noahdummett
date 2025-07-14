@@ -25,6 +25,12 @@ const customJestConfig = {
   ],
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov', 'html'],
+  transform: {
+    '^.+\.mjs$': 'babel-jest',
+  },
+  transformIgnorePatterns: [
+    'node_modules/(?!(lighthouse|chrome-launcher)/)',
+  ],
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
